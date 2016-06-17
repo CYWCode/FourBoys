@@ -57,9 +57,39 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChallengeResource\99ff536a-d2ff-4954-8688-ff07181aef5c.jpg" />
+    <Content Include="ChallengeResource\bootstrap-filestyle.js" />
+    <Content Include="ChallengeResource\bootstrap-select.min.css" />
+    <Content Include="ChallengeResource\bootstrap-select.min.js" />
+    <Content Include="ChallengeResource\bootstrap-switch.min.css" />
+    <Content Include="ChallengeResource\bootstrap-switch.min.js" />
+    <Content Include="ChallengeResource\bootstrap.min.css" />
+    <Content Include="ChallengeResource\bootstrap.min.js" />
+    <Content Include="ChallengeResource\eeabdb21-0363-4094-860f-c8142b40d143.png" />
+    <Content Include="ChallengeResource\font-awesome.min.css" />
+    <Content Include="ChallengeResource\jquery-1.11.0.min.js" />
+    <Content Include="ChallengeResource\jquery.sparkline.min.js" />
+    <Content Include="ChallengeResource\pagination.js" />
+    <Content Include="ChallengeResource\script.js" />
+    <Content Include="ChallengeResource\style%281%29.css" />
+    <Content Include="ChallengeResource\style.css" />
+    <Content Include="ChallengeResource\style_new.css" />
+    <Content Include="ChallengeResource\summernote-bs3.css" />
+    <Content Include="ChallengeResource\summernote.css" />
+    <Content Include="ChallengeManagament.aspx" />
+    <Content Include="ChallengeResource\summernote.min.js" />
+    <Content Include="ChallengeResource\wlogo_sm.png" />
+    <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChallengeManagament.aspx.cs">
+      <DependentUpon>ChallengeManagament.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeManagament.aspx.designer.cs">
+      <DependentUpon>ChallengeManagament.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
