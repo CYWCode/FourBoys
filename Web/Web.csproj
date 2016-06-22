@@ -57,19 +57,62 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Challenge.aspx" />
+    <Content Include="ChallengeDetail.aspx" />
     <Content Include="ChallengeResource\99ff536a-d2ff-4954-8688-ff07181aef5c.jpg" />
+    <Content Include="ChallengeResource\ace.css" />
+    <Content Include="ChallengeResource\ace.js" />
+    <Content Include="ChallengeResource\api-coding-page.js" />
+    <Content Include="ChallengeResource\api-iframe.js" />
+    <Content Include="ChallengeResource\avalon.draggable.js" />
+    <Content Include="ChallengeResource\avalon.js" />
+    <Content Include="ChallengeResource\avalon.resizable.js" />
     <Content Include="ChallengeResource\bootstrap-filestyle.js" />
     <Content Include="ChallengeResource\bootstrap-select.min.css" />
     <Content Include="ChallengeResource\bootstrap-select.min.js" />
     <Content Include="ChallengeResource\bootstrap-switch.min.css" />
     <Content Include="ChallengeResource\bootstrap-switch.min.js" />
+    <Content Include="ChallengeResource\bootstrap.css" />
+    <Content Include="ChallengeResource\bootstrap.js" />
     <Content Include="ChallengeResource\bootstrap.min.css" />
     <Content Include="ChallengeResource\bootstrap.min.js" />
+    <Content Include="ChallengeResource\Challenge\ace.css" />
+    <Content Include="ChallengeResource\Challenge\ace.js" />
+    <Content Include="ChallengeResource\Challenge\api-coding-page.js" />
+    <Content Include="ChallengeResource\Challenge\api-iframe.js" />
+    <Content Include="ChallengeResource\Challenge\avalon.draggable.js" />
+    <Content Include="ChallengeResource\Challenge\avalon.js" />
+    <Content Include="ChallengeResource\Challenge\avalon.resizable.js" />
+    <Content Include="ChallengeResource\Challenge\bootstrap.css" />
+    <Content Include="ChallengeResource\Challenge\bootstrap.js" />
+    <Content Include="ChallengeResource\Challenge\bootstrap.min.css" />
+    <Content Include="ChallengeResource\Challenge\bootstrap.min.js" />
+    <Content Include="ChallengeResource\Challenge\codingConstant.js" />
+    <Content Include="ChallengeResource\Challenge\codingStatistics.js" />
+    <Content Include="ChallengeResource\Challenge\codingUI.js" />
+    <Content Include="ChallengeResource\Challenge\comet4j.js" />
+    <Content Include="ChallengeResource\Challenge\cometd%281%29.js" />
+    <Content Include="ChallengeResource\Challenge\cometd.js" />
+    <Content Include="ChallengeResource\Challenge\ext-language_tools.js" />
+    <Content Include="ChallengeResource\Challenge\font-awesome.min.css" />
+    <Content Include="ChallengeResource\Challenge\jquery-2.1.4%281%29.js" />
+    <Content Include="ChallengeResource\Challenge\jquery-2.1.4.js" />
+    <Content Include="ChallengeResource\Challenge\jquery-ui-1.10.0.custom.css" />
+    <Content Include="ChallengeResource\Challenge\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="ChallengeResource\Challenge\jquery.cometd%281%29.js" />
+    <Content Include="ChallengeResource\Challenge\jquery.cometd.js" />
+    <Content Include="ChallengeResource\Challenge\max.css" />
+    <Content Include="ChallengeResource\Challenge\mode-objectivec.js" />
+    <Content Include="ChallengeResource\Challenge\theme-idle_fingers.js" />
+    <Content Include="ChallengeResource\Challenge\tourist.css" />
+    <Content Include="ChallengeResource\Challenge\waiting.gif" />
     <Content Include="ChallengeResource\eeabdb21-0363-4094-860f-c8142b40d143.png" />
     <Content Include="ChallengeResource\font-awesome.min.css" />
     <Content Include="ChallengeResource\jquery-1.11.0.min.js" />
     <Content Include="ChallengeResource\jquery.sparkline.min.js" />
     <Content Include="ChallengeResource\pagination.js" />
+    <Content Include="ChallengeResource\pass1.png" />
+    <Content Include="ChallengeResource\qrcode.png" />
     <Content Include="ChallengeResource\script.js" />
     <Content Include="ChallengeResource\style%281%29.css" />
     <Content Include="ChallengeResource\style.css" />
@@ -80,15 +123,37 @@
     <Content Include="ChallengeResource\summernote.min.js" />
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
+    <Content Include="ChallengeResult.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Challenge.aspx.cs">
+      <DependentUpon>Challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Challenge.aspx.designer.cs">
+      <DependentUpon>Challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeDetail.aspx.cs">
+      <DependentUpon>ChallengeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeDetail.aspx.designer.cs">
+      <DependentUpon>ChallengeDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChallengeManagament.aspx.cs">
       <DependentUpon>ChallengeManagament.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ChallengeManagament.aspx.designer.cs">
       <DependentUpon>ChallengeManagament.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeResult.aspx.cs">
+      <DependentUpon>ChallengeResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChallengeResult.aspx.designer.cs">
+      <DependentUpon>ChallengeResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
