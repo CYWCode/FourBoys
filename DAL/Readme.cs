@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- *  DAL层是数据访问层
+ *  SqlServerDAL层是数据访问层
+ *      也是IDAL接口的SqlServer实现
  */
 
 namespace DAL

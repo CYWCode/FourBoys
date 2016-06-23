@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IDAL
+/*
+ * sql server工具类
+ */
+
+namespace DALUtil
 {
-    public interface IDataAccess
+    public class SqlServerHelper
     {
 
     }

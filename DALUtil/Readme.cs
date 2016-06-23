@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using IDAL;
+/*
+ *  DALUtil层中的是数据访问工具类
+ */
 
-namespace IDALFac
+namespace DALUtil
 {
-    public interface IDataAccessFactory
+    public class Readme
     {
-        public IDataAccess getDataAccess(String type);
     }
 }

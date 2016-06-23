@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\personalUser.aspx" />
     <Content Include="Challenge.aspx" />
     <Content Include="ChallengeDetail.aspx" />
     <Content Include="ChallengeResource\99ff536a-d2ff-4954-8688-ff07181aef5c.jpg" />
@@ -125,7 +127,6 @@
     <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="ChallengeResult.aspx" />
     <Content Include="Personal\index.aspx" />
-    <Content Include="Personal\Resource.html" />
     <Content Include="Personal\user_resume.aspx" />
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />
@@ -134,6 +135,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\personalUser.aspx.cs">
+      <DependentUpon>personalUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\personalUser.aspx.designer.cs">
+      <DependentUpon>personalUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Challenge.aspx.cs">
       <DependentUpon>Challenge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
