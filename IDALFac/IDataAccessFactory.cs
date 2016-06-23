@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IBLL
+using IDAL;
+
+namespace IDALFac
 {
-    public class Class1
+    public interface IDataAccessFactory
     {
+        public IDataAccess getDataAccess(String type);
     }
 }

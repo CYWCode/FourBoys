@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+/*
+ *  IDAL层中的是数据访问层的接口
+ */
+
+namespace IDAL
 {
-    public class Class1
+    public class Readme
     {
     }
 }

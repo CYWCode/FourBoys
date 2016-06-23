@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IDALFac
+/*
+ *  BLL层是业务逻辑层
+ */
+
+namespace BLL
 {
-    public class Class1
+    public class Readme
     {
+        string a;
     }
 }

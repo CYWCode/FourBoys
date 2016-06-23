@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageEntity
+/*
+ *  IBLL层中的是业务逻辑层工厂的接口
+ */
+
+namespace IBLLFac
 {
-    public class Class1
+    public class Readme
     {
     }
 }

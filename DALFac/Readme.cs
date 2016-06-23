@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLLEntity
+/*
+ *  DALFac层中的是数据访问层工厂
+ */
+
+namespace DALFac
 {
-    public class Class1
+    public class Readme
     {
     }
 }

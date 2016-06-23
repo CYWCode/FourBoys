@@ -124,6 +124,10 @@
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="ChallengeResult.aspx" />
+    <Content Include="Unsigned\customer_case.aspx" />
+    <Content Include="Unsigned\index.aspx" />
+    <Content Include="Unsigned\mediaReports.aspx" />
+    <Content Include="Unsigned\product.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +160,34 @@
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unsigned\customer_case.aspx.cs">
+      <DependentUpon>customer_case.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unsigned\customer_case.aspx.designer.cs">
+      <DependentUpon>customer_case.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unsigned\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unsigned\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unsigned\mediaReports.aspx.cs">
+      <DependentUpon>mediaReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unsigned\mediaReports.aspx.designer.cs">
+      <DependentUpon>mediaReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unsigned\product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unsigned\product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -192,7 +224,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>3009</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:33621/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
