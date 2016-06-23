@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data.Linq;
+
 namespace Test
 {
     class TestLinQ
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Start TestLinQ");
-            DAL.Test.test();
-            string s = Console.ReadLine();
+            
         }
     }
 }
