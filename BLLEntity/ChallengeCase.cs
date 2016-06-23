@@ -17,6 +17,6 @@ namespace BLLEntity
         public String enterpriseTitle { set; get; }
         public int jobSalary { set; get; }
         public int questionNumber { set; get; }
-        String place { set; get; }
+        public String place { set; get; }
     }
 }

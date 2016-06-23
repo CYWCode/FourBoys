@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>猿圈 填写简历</title>
@@ -63,7 +63,7 @@
 		<div class="navbar-collapse collapse" role="navigation">
                             <!-- FIXME: 链接 -->
 			<ul class="nav navbar-nav">
-				<li class="active">
+				<li class="">
 					<a href="index.aspx">首页</a>
 				</li>
 				<li class="">
@@ -72,7 +72,7 @@
 				<li class="">
 					<a href="info/user_center.aspx">个人中心</a>
 				</li>
-				<li class="">
+				<li class="active">
 					<a href="user_resume.aspx">个人简历</a>
 				</li>
 			</ul>

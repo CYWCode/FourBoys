@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html >
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>猿圈 首页</title>
@@ -169,7 +169,7 @@
                             <asp:ListItem Value="台湾">台湾</asp:ListItem>
                         </asp:DropDownList>
 					</div>
-					<div style="col-md-6">
+					<div class="col-md-6">
                         <asp:TextBox id="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等" width="40%"></asp:TextBox>
                         <asp:Button ID="btnSearch" runat="server" Text="搜索" class="btn" />
 					</div>
