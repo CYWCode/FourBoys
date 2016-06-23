@@ -21,7 +21,19 @@ namespace DAL
                 UserName = "testUser",
                 UserPwd = "test"
             };
-            dataContext.User.InsertOnSubmit(testUser);
+            //dataContext.User.InsertOnSubmit(testUser);
+            //dataContext.SubmitChanges();
+
+            EnterPrise enterPrise = new EnterPrise()
+            {
+                EPName = "测试企业",
+                PhomeNum = "12313",
+                Email = "21312@sf.com",
+                EPScale = 1,
+                ContactInfo = "sfds",
+                EPAbbreviation = "sadf"
+            };
+            dataContext.EnterPrise.InsertOnSubmit(enterPrise);
             dataContext.SubmitChanges();
 
             Console.WriteLine("Insert tested");

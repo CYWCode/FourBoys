@@ -1,0 +1,1 @@
+try {AccCallBack([{"cmd":"OK","ecode":"1"}],1466661848864);} catch (e) {}

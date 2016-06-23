@@ -119,62 +119,41 @@
 			</div><!-- /.carousel-inner -->
 		</div><!-- /.carousel -->
 	</div>
+        
 	<div class="container" id="logo-wall">
 		<h1>他们也选择 猿圈</h1>
 		<div class="row">
 			<div class="col-md-12" id="cplb_main" scrollpagination="enabled">
 				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="北京优伯立信科技发展有限公司" target="_blank">
-							<img src="./Resource_files/80cdfd55-2679-492e-9761-02e714672f93.jpg">
-						</a>
-					</div>
+                <asp:Repeater ID="logowall" runat="server" >
+                    <ItemTemplate>
+					    <div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
+						    <a href="javascript:void(0);" title="<%#Eval("title") %>" target="_blank">
+							    <img src="./Resource_files/test.jpg">
+						    </a>
+					    </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+
+			</div>
+		</div>
+	</div>
+        
+    
+	<!--div class="container" id="logo-wall">
+		<h1>他们也选择 猿圈</h1>
+		<div class="row">
+			<div class="col-md-12" id="cplb_main" scrollpagination="enabled">
 				
 					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="梦响强音文化传播（上海）有限公司" target="_blank">
-							<img src="./Resource_files/9fd8eacd-be50-4749-9077-1acb45da128e.png">
-						</a>
-					</div>
-				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="北京小马飞捷网络科技有限公司" target="_blank">
-							<img src="./Resource_files/f5e01ea4-03c1-4ddc-a50e-fa9e2523020c.jpg">
-						</a>
-					</div>
-				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="神马科技（北京）有限公司" target="_blank">
-							<img src="./Resource_files/a17899c1-1339-4ca6-a5c7-ced6cfb7f5d1.png">
-						</a>
-					</div>
-				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="北京天特信科技有限公司" target="_blank">
-							<img src="./Resource_files/10985032-a741-4bae-9a65-d6435ccdba1f.jpg">
-						</a>
-					</div>
-				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="北京盖勒克丝环保科技有限公司" target="_blank">
-							<img src="./Resource_files/5fd1a93a-3432-42c2-a8fa-f195b16f90cc.png">
-						</a>
-					</div>
-				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="http://www.windward.com.cn/" title="成都风起科技有限公司" target="_blank">
-							<img src="./Resource_files/6ee6d626-bf3a-471e-a82e-7dc820c41306.png">
-						</a>
-					</div>
-				
-					<div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						<a href="javascript:void(0);" title="北京拉克沙网络科技有限公司" target="_blank">
-							<img src="./Resource_files/ab107bb1-534f-4be1-be66-11fa94fac7de.jpg">
+						<a href="javascript:void(0);" title="测试企业" target="_blank">
+							<img src="./Resource_files/test.jpg">
 						</a>
 					</div>
 				
 			</div>
 		</div>
-	</div>
+	</!--div>
 	<!-- 引入footer -->
 	
 
