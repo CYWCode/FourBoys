@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -230,6 +231,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLLFac\BLLFac.csproj">
+      <Project>{03ba4d6b-229d-4547-b132-bb6d34401872}</Project>
+      <Name>BLLFac</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IBLLFac\IBLLFac.csproj">
       <Project>{80c33c75-2ad4-49e9-ac9c-df2857d04892}</Project>
       <Name>IBLLFac</Name>

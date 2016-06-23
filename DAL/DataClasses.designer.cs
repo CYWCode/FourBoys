@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL
+namespace SqlServerDAL
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -51,7 +51,7 @@ namespace DAL
     #endregion
 		
 		public DataClassesDataContext() : 
-				base(global::DAL.Properties.Settings.Default.oxcoderConnectionString, mappingSource)
+				base(global::SqlServerDAL.Properties.Settings.Default.oxcoderConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

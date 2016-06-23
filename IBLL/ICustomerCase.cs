@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageEntity
+namespace IBLL
 {
-    public class CustomerCase
+    public interface ICustomerCase
     {
+        string title { set; get; }
+        string imgPath { set; get; }
     }
 }

@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageEntity
+using System.Data.Linq;
+
+namespace IDALFac
 {
-    public class CustomerCase
+    public interface IDataContextFactory
     {
+        DataContext getDataContext(int dbType);
     }
 }

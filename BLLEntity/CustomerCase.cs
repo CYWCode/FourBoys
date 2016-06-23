@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using IBLL;
+
 namespace BLLEntity
 {
-    class CustomerCase
+    public class CustomerCase : ICustomerCase 
     {
         public string title { set; get; }
         public string imgPath { set; get; }

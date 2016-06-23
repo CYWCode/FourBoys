@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,13 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerCaseFactory.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLLEntity\BLLEntity.csproj">
+      <Project>{dad126ce-2e4f-4a28-a3dd-ada7ae74886e}</Project>
+      <Name>BLLEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{129950f2-4871-47a6-8b39-889dc3b41bf0}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFac\DALFac.csproj">
+      <Project>{6cff52a6-9dde-4069-88ba-f06bc40ab07a}</Project>
+      <Name>DALFac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\SqlServerDAL.csproj">
+      <Project>{a7bcc671-7629-4410-aa94-3b1118ec0f1f}</Project>
+      <Name>SqlServerDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\IBLLFac\IBLLFac.csproj">
       <Project>{80c33c75-2ad4-49e9-ac9c-df2857d04892}</Project>
@@ -54,6 +68,10 @@
     <ProjectReference Include="..\IBLL\IBLL.csproj">
       <Project>{d1078bb1-8402-41f0-8168-b1c2088cc943}</Project>
       <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDALFac\IDALFac.csproj">
+      <Project>{f6dab63d-9396-4837-b81a-1c146ecb2879}</Project>
+      <Name>IDALFac</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

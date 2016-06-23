@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageEntity
+using IBLL;
+
+namespace IBLLFac
 {
-    public class CustomerCase
+    public interface ICustomerCaseFactory
     {
+        List<ICustomerCase> getCustomerCaseList();
     }
 }

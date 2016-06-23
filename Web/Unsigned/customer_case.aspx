@@ -128,7 +128,7 @@
                 <asp:Repeater ID="logowall" runat="server" >
                     <ItemTemplate>
 					    <div class="logo-item col-xs-12 col-sm-6 col-md-3 hvr-buzz-out" rel="loaded">
-						    <a href="javascript:void(0);" title="<%#Eval("title") %>" target="_blank">
+						    <a href="javascript:void(0);" title="<%#((BLLEntity.CustomerCase)Container.DataItem).title%>" target="_blank">
 							    <img src="./Resource_files/test.jpg">
 						    </a>
 					    </div>
