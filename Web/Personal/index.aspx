@@ -80,7 +80,7 @@
 						</li>
 						<li>
                             <!-- FIXME -->
-							<a href="http://www.oxcoder.com/security_logout">注销</a>
+							<a href="security_logout">注销</a>
 						</li>
 					</ul>
 				</li>
@@ -120,59 +120,57 @@
 			<div class="col-md-8 col-no-left-padding col-md-offset-2">
 				<section class="middle">
 					<div class="col-md-2 col-no-left-padding" style="margin-bottom:10px;">
-						<select onchange="onSelectChange()" id="directions_id" class="form-control">
-							<option value="0">技术方向</option>
-							
-								<option value="1">Java</option>
-							
-								<option value="2">Android</option>
-							
-								<option value="3">iOS</option>
-							
-								<option value="4">C语言(beta)</option>
-							
-								<option value="5">C++(beta)</option>
-							
-								<option value="6">php(beta)</option>
-							
-								<option value="7">Python(beta)</option>
-							
-						</select>
-					</div>
-					<div class="col-md-2 col-no-left-padding" style="margin-bottom:10px;">
-						<select onchange="onSelectChange()" id="level_id" class="form-control">
-							<option value="0">起始薪资</option>
-							
-								<option value="1">2K~5K</option>
-							
-								<option value="2">5K~8K</option>
-							
-								<option value="3">8K~10K</option>
-							
-								<option value="4">10K~12K</option>
-							
-								<option value="5">12K~15K</option>
-							
-								<option value="6">15K以上</option>
-							
-						</select>
+                        <asp:DropDownList ID="selectSalary" runat="server" class="form-control">
+                            <asp:ListItem Selected="True" Value="0">起始薪资</asp:ListItem>
+                            <asp:ListItem Value="1">2K~5K</asp:ListItem>
+                            <asp:ListItem Value="2">5K~8K</asp:ListItem>
+                            <asp:ListItem Value="3">8K~10K</asp:ListItem>
+                            <asp:ListItem Value="4">10K~12K</asp:ListItem>
+                            <asp:ListItem Value="5">12K~15K</asp:ListItem>
+                            <asp:ListItem Value="6">15K以上</asp:ListItem>
+                        </asp:DropDownList>
 					</div>
 					<div class="col-md-2 col-no-left-padding" id="warp" style="margin-bottom:10px;">
-						<select onchange="onSelectChange()" id="province_id" class="form-control prov"><option value="0">全部地区</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西省">广西省</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option></select>
-						<div style="display: none">
-							<select class="form-control city" style="display:none"></select>
-							<select class="form-control dist" style="display:none"></select>
-						</div>
+                        <asp:DropDownList ID="selectProvince" runat="server" class="form-control prov">
+                            <asp:ListItem Selected="True" Value="0">全部地区</asp:ListItem>
+                            <asp:ListItem Value="北京市">北京市</asp:ListItem>
+                            <asp:ListItem Value="天津市">天津市</asp:ListItem>
+                            <asp:ListItem Value="河北省">河北省</asp:ListItem>
+                            <asp:ListItem Value="山西省">山西省</asp:ListItem>
+                            <asp:ListItem Value="内蒙古">内蒙古</asp:ListItem>
+                            <asp:ListItem Value="辽宁省">辽宁省</asp:ListItem>
+                            <asp:ListItem Value="吉林省">吉林省</asp:ListItem>
+                            <asp:ListItem Value="黑龙江省">黑龙江省</asp:ListItem>
+                            <asp:ListItem Value="上海市">上海市</asp:ListItem>
+                            <asp:ListItem Value="江苏省">江苏省</asp:ListItem>
+                            <asp:ListItem Value="浙江省">浙江省</asp:ListItem>
+                            <asp:ListItem Value="安徽省">安徽省</asp:ListItem>
+                            <asp:ListItem Value="福建省">福建省</asp:ListItem>
+                            <asp:ListItem Value="江西省">江西省</asp:ListItem>
+                            <asp:ListItem Value="山东省">山东省</asp:ListItem>
+                            <asp:ListItem Value="河南省">河南省</asp:ListItem>
+                            <asp:ListItem Value="湖北省">湖北省</asp:ListItem>
+                            <asp:ListItem Value="湖南省">湖南省</asp:ListItem>
+                            <asp:ListItem Value="广东省">广东省</asp:ListItem>
+                            <asp:ListItem Value="广西省">广西省</asp:ListItem>
+                            <asp:ListItem Value="海南省">海南省</asp:ListItem>
+                            <asp:ListItem Value="重庆市">重庆市</asp:ListItem>
+                            <asp:ListItem Value="四川省">四川省</asp:ListItem>
+                            <asp:ListItem Value="贵州省">贵州省</asp:ListItem>
+                            <asp:ListItem Value="云南省">云南省</asp:ListItem>
+                            <asp:ListItem Value="西藏">西藏</asp:ListItem>
+                            <asp:ListItem Value="陕西省">陕西省</asp:ListItem>
+                            <asp:ListItem Value="甘肃省">甘肃省</asp:ListItem>
+                            <asp:ListItem Value="青海省">青海省</asp:ListItem>
+                            <asp:ListItem Value="宁夏">宁夏</asp:ListItem>
+                            <asp:ListItem Value="新疆">新疆</asp:ListItem>
+                            <asp:ListItem Value="香港">香港</asp:ListItem>
+                            <asp:ListItem Value="澳门">澳门</asp:ListItem>
+                            <asp:ListItem Value="台湾">台湾</asp:ListItem>
+                        </asp:DropDownList>
 					</div>
 					<div style="col-md-6">
-						<div class="input-group">
-							<input onchange="" value="" id="keyWords_id" class="form-control" placeholder="请输入关键词，如公司名称等">
-							<span class="input-group-btn">
-								<button onclick="onSelectChange(this)" type="button" class="btn">
-									<i class="fa fa-search"></i>
-								</button>
-							</span>
-						</div>
+                            <asp:TextBox id="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等" width="60%"></asp:TextBox>
 					</div>
 				</section>
 			</div>
@@ -186,77 +184,42 @@
 			</div>
 			<div class="col-md-12" id="cplb_main" scrollpagination="enabled">
 				
-					<div class="col-xs-12 col-md-4 col-lg-3">
+                <asp:Repeater ID="challengecase" runat="server" >
+                    <ItemTemplate>
+					    
+                        <div class="col-xs-12 col-md-4 col-lg-3">
 						<section id="Section2">
 							<div class="panel panel-default shadow-effect">
 								<div class="col-xs-12 panel-header">
 									<div class="pull-left">
 										<h4 class="line-control">
-											<a href="view_recruit_detail.aspx?recruitId=3046">[高级]iOS工程师</a>
+                                            <!-- FIXME: 具体链接 -->
+											<a href="view_recruit_detail.aspx?recruitId=3046"><%#((BLLEntity.ChallengeCase)Container.DataItem).jobTitle%></a>
 										</h4>
 										<h4 class="line-control" style="min-height:18px;">
-											<a href="cooper_info.aspx?cooperId=2404">世纪创兴（北京）科技有限公司</a>
+                                            <!-- FIXME: 具体链接 -->
+											<a href="cooper_info.aspx?cooperId=2404"><%#((BLLEntity.ChallengeCase)Container.DataItem).enterpriseTitle%></a>
 										</h4>
 									</div>
 									<div class="pull-right client-info hidden-md">
 										<span class="percent text-danger">
-											<img class="img-circle" style="width:60px;height:60px" src="./Resource_files/99ff536a-d2ff-4954-8688-ff07181aef5c.jpg">
+											<img class="img-circle" style="width:60px;height:60px" src="./Resource_files/test.jpg">
 										</span>
 									</div>
-									
-										<span class="hot-tag">推荐</span>
 									
 								</div>
 	
 								<div class="panel-body ">
 									<ul class="list-unstyled">
-										<li>月薪： 
-											
-											15K以上
+										<li>月薪：<%#((BLLEntity.ChallengeCase)Container.DataItem).jobSalary%>K
 										</li>
-										<li>职位诱惑：</li>
-										<li style="min-height:33px;">
-											<ul class="companyTags">
-												
-												
-													<li>五险一金</li>
-												
-													<li>年底双薪</li>
-												
-													<li>弹性工作</li>
-												
-											</ul>
-										</li>
-										<li>试题数量：2</li>
-										<li>
-											挑战难度：
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-										</li>
-										<li>
-											<i class="fa fa-calendar"></i>
-											2016.03.11~2016.05.11
-										</li>
-										<li>
-											<i class="fa fa-user"></i>
-											193人已接受挑战
-										</li>
+										<li>试题数量：<%#((BLLEntity.ChallengeCase)Container.DataItem).questionNumber%></li>
 									</ul>
 	
 								</div>
 								<!-- /.panel-body -->
 								<div class="panel-footer align-center">
+                                            <!-- FIXME: 具体链接 -->
 									<a href="accepted_recruit.aspx?recruitId=3046">
 										<button class="btn btn-new1" onclick="fdisabled(this)">接受挑战</button>
 									</a>
@@ -265,6 +228,9 @@
 							</div>
 						</section>
 					</div>
+
+                    </ItemTemplate>
+                </asp:Repeater>
 				
 			</div>
 		</div>
