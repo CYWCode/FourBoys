@@ -124,6 +124,9 @@
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="ChallengeResult.aspx" />
+    <Content Include="Personal\index.aspx" />
+    <Content Include="Personal\Resource.html" />
+    <Content Include="Personal\user_resume.aspx" />
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />
     <Content Include="Unsigned\mediaReports.aspx" />
@@ -158,6 +161,20 @@
     </Compile>
     <Compile Include="ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personal\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\user_resume.aspx.cs">
+      <DependentUpon>user_resume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personal\user_resume.aspx.designer.cs">
+      <DependentUpon>user_resume.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unsigned\customer_case.aspx.cs">

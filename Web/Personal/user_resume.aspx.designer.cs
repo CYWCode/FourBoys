@@ -7,18 +7,18 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Web.Unsigned {
+namespace Web.Personal {
     
     
-    public partial class mediaReports {
+    public partial class user_resume {
         
         /// <summary>
-        /// mediaReportsForm 控件。
+        /// userResumeForm 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm mediaReportsForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm userResumeForm;
     }
 }
