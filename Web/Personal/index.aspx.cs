@@ -30,13 +30,12 @@ namespace Web.Personal
 
         protected void selectSalary_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // get challenge case list
-            List<IChallengeCase> list = factory.getChallengeCaseList(ChallengeCaseFactory.ORDER_BY_SALARY);
-            // remove
-            int baseSalary;
-            // bind data source
-            challengecase.DataSource = list;
-            challengecase.DataBind();
+            // TODO: 根据薪水筛选
+        }
+
+        protected void selectProvince_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // TODO: 根据省份筛选
         }
 
         protected void btnTime_Click(object sender, EventArgs e)
@@ -56,5 +55,6 @@ namespace Web.Personal
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
+
     }
 }

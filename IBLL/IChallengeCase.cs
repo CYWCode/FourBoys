@@ -15,5 +15,6 @@ namespace IBLL
         String enterpriseTitle { set; get; }
         int jobSalary { set; get; }
         int questionNumber { set; get; }
+        String place { set; get; }
     }
 }

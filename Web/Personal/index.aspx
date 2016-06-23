@@ -131,7 +131,7 @@
                         </asp:DropDownList>
 					</div>
 					<div class="col-md-2 col-no-left-padding" id="warp" style="margin-bottom:10px;">
-                        <asp:DropDownList ID="selectProvince" runat="server" class="form-control prov">
+                        <asp:DropDownList ID="selectProvince" runat="server" class="form-control prov" OnSelectedIndexChanged="selectProvince_SelectedIndexChanged">
                             <asp:ListItem Selected="True" Value="0">全部地区</asp:ListItem>
                             <asp:ListItem Value="北京市">北京市</asp:ListItem>
                             <asp:ListItem Value="天津市">天津市</asp:ListItem>
