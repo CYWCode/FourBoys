@@ -10,6 +10,7 @@ namespace IBLLFac
 {
     public interface IChallengeCaseFactory
     {
-        List<IChallengeCase> getChallengeCaseList();
+        List<IChallengeCase> getChallengeCaseList(int order);
+        List<IChallengeCase> getChallengeCaseListByName(string name);
     }
 }

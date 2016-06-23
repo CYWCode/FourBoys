@@ -120,7 +120,7 @@
 			<div class="col-md-8 col-no-left-padding col-md-offset-2">
 				<section class="middle">
 					<div class="col-md-2 col-no-left-padding" style="margin-bottom:10px;">
-                        <asp:DropDownList ID="selectSalary" runat="server" class="form-control">
+                        <asp:DropDownList ID="selectSalary" runat="server" class="form-control" OnSelectedIndexChanged="selectSalary_SelectedIndexChanged">
                             <asp:ListItem Selected="True" Value="0">起始薪资</asp:ListItem>
                             <asp:ListItem Value="1">2K~5K</asp:ListItem>
                             <asp:ListItem Value="2">5K~8K</asp:ListItem>
@@ -170,16 +170,16 @@
                         </asp:DropDownList>
 					</div>
 					<div style="col-md-6">
-                            <asp:TextBox id="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等" width="60%"></asp:TextBox>
+                        <asp:TextBox id="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等" width="40%"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" Text="搜索" class="btn" />
 					</div>
 				</section>
 			</div>
 			<div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top:10px;">
 				<section id="Section1" style="margin-bottom:20px;">
 					排序：
-					<a href="javascript:void(0)" onclick="onSelectChange(this,0)" class="btn btn-order ">时间</a>
-					<a href="javascript:void(0)" onclick="onSelectChange(this,1)" class="btn btn-order ">热度</a>
-					<a href="javascript:void(0)" onclick="onSelectChange(this,2)" class="btn btn-order ">薪资</a>
+                    <asp:Button ID="btnTime" runat="server" Text="时间" class="btn btn-order " OnClick="btnTime_Click" />
+                    <asp:Button ID="btnSalary" runat="server" Text="薪资" class="btn btn-order " OnClick="btnSalary_Click" />
 				</section>
 			</div>
 			<div class="col-md-12" id="cplb_main" scrollpagination="enabled">
@@ -205,7 +205,7 @@
 										<span class="percent text-danger">
 											<img class="img-circle" style="width:60px;height:60px" src="./Resource_files/test.jpg">
 										</span>
-									</div>
+									&nbsp;&nbsp;</div>
 									
 								</div>
 	
@@ -243,8 +243,8 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">×</span>
-						<span class="sr-only">Close</span>
+						<span aria-hidden="true">×>
+						class="sr-only">Close</span>
 					</button>
 					<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
 				</div>
