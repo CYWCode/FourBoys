@@ -29,10 +29,13 @@ namespace DALFac
                 deadline = DateTime.Parse("2016-7-24 "),
                 finishNumber = 169,
                 place = "北京"
+            
+            
             };
+            list.Add(challengeManagement1);
             IChallengeManagement challengeManagement2 = new ChallengeManagement()
             {
-                id = 1,
+                id = 2,
                 position = "IOS工程师",
                 enterpriseTitle = "海量信息",
                 jobSalary = 5000,

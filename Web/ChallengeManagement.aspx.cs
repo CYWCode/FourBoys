@@ -16,22 +16,32 @@ namespace Web
     public partial class ChallenageManagament : System.Web.UI.Page
     {
 
-        
-
+        public int[] b = new int[10];
+        public static int index=-1;
+        public List<IChallengeManagement> l;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             IChallengeManagementFactory CMFactory = new ChallengeManagementFactory();
             List<IChallengeManagement> list = CMFactory.getChallengeManagementList();
 
-
-            IChallengeManagement IChallengeManagement = list[0];
-            int a = IChallengeManagement.id;
-
-            position.Text = a.ToString();
+            l = list;
            
+
+            b[0] = -1;
+            
             
 
         }
+
+        //public  int a(){
+        //    index++;
+        //    int tmp = index;
+            
+            
+        //    return tmp;
+
+        //}
+        
     }
 }
