@@ -23,6 +23,7 @@
             <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
             <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
         </div>
+        <div>
             <div class="card">
                 <h1><asp:Label ID="personalUserNum" runat="server" Text="0"></asp:Label></h1>
                 <span>个人用户数量</span>
@@ -35,7 +36,7 @@
                 <h1><asp:Label ID="challengeNum" runat="server" Text="0"></asp:Label></h1>
                 <span>挑战数量</span>
             </div>
-        
+        </div>
     </form>
 </body>
 </html>
