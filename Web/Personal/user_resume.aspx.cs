@@ -73,14 +73,21 @@ namespace Web.Personal
                 bool hunting = true;
                 if (rbtnListHunting.SelectedValue.CompareTo("0") == 0) hunting = true;
                 else hunting = false;
-                string resumePath = "测试路径";
+                string resumePath = "";
                 List<string> direction = new List<string>();
                 foreach (ListItem item in cboxListDirection.Items)
                 {
                     if (item.Selected) direction.Add(item.Value);
                 }
-                // FIXBUG: 这里tboxName.Text是旧的数据
+                if (resumeUpload.HasFile)
+                {
+                    string[] fileName = resumeUpload.FileName.Split('.');
+                    string saveName = id + "." + fileName[fileName.Length - 1];
+                    resumePath = Server.MapPath("~/Resume/") + saveName;
+                    resumeUpload.SaveAs(resumePath);
+                }
                 helper.updatePersonalUserInfo(id, name, sex, age, phoneNumber, hunting, resumePath, direction);
+
             }
             else
             {
