@@ -12,6 +12,6 @@ namespace BLL
 {
     public class Readme
     {
-        string a;
+        
     }
 }

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChallengeCase.cs" />
+    <Compile Include="ChallengeManagement.cs" />
     <Compile Include="CustomerCase.cs" />
     <Compile Include="PersonalUserInfo.cs" />
     <Compile Include="Readme.cs" />

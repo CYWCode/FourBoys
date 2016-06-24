@@ -160,7 +160,7 @@
 										<a>[高级]iOS工程师</a>
 										</h4>
 										<h4 class="line-control" style="min-height:18px;">
-											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=2404">世纪创兴（北京）科技有限公司</a>
+											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=2404"><a><asp:Label ID ="enterprise" runat ="server" /></a></a>
 										</h4>
 									</div>
 									<div class="pull-right client-info">
@@ -168,47 +168,16 @@
 											<img class="img-circle" style="width:60px;height:60px" src="./ChallengeResource/99ff536a-d2ff-4954-8688-ff07181aef5c.jpg">
 										</span>
 									</div>
-									
-										<span class="hot-tag">推荐</span>
-									
 								</div>
 	
 								<div class="panel-body ">
 									<ul class="list-unstyled">
 										<li>月薪： 
 											
-											15K以上
+											<a><asp:Label ID ="pay" runat ="server" /></a>
 										</li>
-										<li>职位诱惑：</li>
-										<li style="min-height:33px;">
-											<ul class="companyTags">
-												
-												
-													<li>五险一金</li>
-												
-													<li>年底双薪</li>
-												
-													<li>弹性工作</li>
-												
-											</ul>
-										</li>
+									
 										<li>试题数量：2</li>
-										<li>
-											挑战难度：
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-										</li>
 										<li>
 											<i class="fa fa-calendar"></i>
 											2016.03.11~2016.05.11
@@ -218,16 +187,10 @@
 											196人已接受挑战
 										</li>
 										<li class="progress-info">
-											
-												
-												
-												
 													<span class="fail">
 														挑战没有通过!
 														<a href="http://www.oxcoder.com/user/recruit/his_user_recruit.html?recruitId=3046">查看结果详情</a>
 													</span>
-												
-											
 										</li>
 										
 											<li class="progress-info">&nbsp;</li>
@@ -242,9 +205,6 @@
 												<button class="btn btn-new1" onclick="fdisabled(this)">重新挑战</button>
 											</a>
 											<a href="http://www.oxcoder.com/user/recruit/abandon_recruit.html?userRecruitId=99333" onclick="fdisabled(this)" class="btn btn-new2">放弃</a>
-										
-										
-									
 								</div>
 								<!-- /.panel-footer -->
 							</div>
