@@ -48,6 +48,9 @@ namespace SqlServerDAL
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
+    partial void InsertUserChallengeContent(UserChallengeContent instance);
+    partial void UpdateUserChallengeContent(UserChallengeContent instance);
+    partial void DeleteUserChallengeContent(UserChallengeContent instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -125,6 +128,14 @@ namespace SqlServerDAL
 			get
 			{
 				return this.GetTable<User>();
+			}
+		}
+		
+		public System.Data.Linq.Table<UserChallengeContent> UserChallengeContent
+		{
+			get
+			{
+				return this.GetTable<UserChallengeContent>();
 			}
 		}
 	}
@@ -1004,6 +1015,236 @@ namespace SqlServerDAL
 					this._Email = value;
 					this.SendPropertyChanged("Email");
 					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserChallengeContent")]
+	public partial class UserChallengeContent : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private decimal _无意义主键ID;
+		
+		private string _Position;
+		
+		private string _EnterPrise;
+		
+		private System.Nullable<int> _Pay;
+		
+		private System.Nullable<int> _Questions;
+		
+		private System.Nullable<System.DateTime> _StartTime;
+		
+		private System.Nullable<System.DateTime> _Deadline;
+		
+		private System.Nullable<int> _Number;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void On无意义主键IDChanging(decimal value);
+    partial void On无意义主键IDChanged();
+    partial void OnPositionChanging(string value);
+    partial void OnPositionChanged();
+    partial void OnEnterPriseChanging(string value);
+    partial void OnEnterPriseChanged();
+    partial void OnPayChanging(System.Nullable<int> value);
+    partial void OnPayChanged();
+    partial void OnQuestionsChanging(System.Nullable<int> value);
+    partial void OnQuestionsChanged();
+    partial void OnStartTimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnStartTimeChanged();
+    partial void OnDeadlineChanging(System.Nullable<System.DateTime> value);
+    partial void OnDeadlineChanged();
+    partial void OnNumberChanging(System.Nullable<int> value);
+    partial void OnNumberChanged();
+    #endregion
+		
+		public UserChallengeContent()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_无意义主键ID", AutoSync=AutoSync.OnInsert, DbType="Decimal(18,0) NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public decimal 无意义主键ID
+		{
+			get
+			{
+				return this._无意义主键ID;
+			}
+			set
+			{
+				if ((this._无意义主键ID != value))
+				{
+					this.On无意义主键IDChanging(value);
+					this.SendPropertyChanging();
+					this._无意义主键ID = value;
+					this.SendPropertyChanged("无意义主键ID");
+					this.On无意义主键IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Position", DbType="VarChar(20)")]
+		public string Position
+		{
+			get
+			{
+				return this._Position;
+			}
+			set
+			{
+				if ((this._Position != value))
+				{
+					this.OnPositionChanging(value);
+					this.SendPropertyChanging();
+					this._Position = value;
+					this.SendPropertyChanged("Position");
+					this.OnPositionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EnterPrise", DbType="VarChar(20)")]
+		public string EnterPrise
+		{
+			get
+			{
+				return this._EnterPrise;
+			}
+			set
+			{
+				if ((this._EnterPrise != value))
+				{
+					this.OnEnterPriseChanging(value);
+					this.SendPropertyChanging();
+					this._EnterPrise = value;
+					this.SendPropertyChanged("EnterPrise");
+					this.OnEnterPriseChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pay", DbType="Int")]
+		public System.Nullable<int> Pay
+		{
+			get
+			{
+				return this._Pay;
+			}
+			set
+			{
+				if ((this._Pay != value))
+				{
+					this.OnPayChanging(value);
+					this.SendPropertyChanging();
+					this._Pay = value;
+					this.SendPropertyChanged("Pay");
+					this.OnPayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Questions", DbType="Int")]
+		public System.Nullable<int> Questions
+		{
+			get
+			{
+				return this._Questions;
+			}
+			set
+			{
+				if ((this._Questions != value))
+				{
+					this.OnQuestionsChanging(value);
+					this.SendPropertyChanging();
+					this._Questions = value;
+					this.SendPropertyChanged("Questions");
+					this.OnQuestionsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deadline", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Deadline
+		{
+			get
+			{
+				return this._Deadline;
+			}
+			set
+			{
+				if ((this._Deadline != value))
+				{
+					this.OnDeadlineChanging(value);
+					this.SendPropertyChanging();
+					this._Deadline = value;
+					this.SendPropertyChanged("Deadline");
+					this.OnDeadlineChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Number", DbType="Int")]
+		public System.Nullable<int> Number
+		{
+			get
+			{
+				return this._Number;
+			}
+			set
+			{
+				if ((this._Number != value))
+				{
+					this.OnNumberChanging(value);
+					this.SendPropertyChanging();
+					this._Number = value;
+					this.SendPropertyChanged("Number");
+					this.OnNumberChanged();
 				}
 			}
 		}

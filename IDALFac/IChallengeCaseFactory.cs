@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 using IBLL;
 
-namespace IBLLFac
+namespace IDALFac
 {
     public interface IChallengeCaseFactory
     {
         List<IChallengeCase> getChallengeCaseList(int order);
-        List<IChallengeCase> getChallengeCaseListBySalary(List<IChallengeCase> oriList, int order, int min, int max);
-        List<IChallengeCase> getChallengeCaseListByName(List<IChallengeCase> oriList, int order, string name);
     }
 }

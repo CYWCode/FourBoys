@@ -40,11 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IChallengeCaseFactory.cs" />
+    <Compile Include="ICustomerCaseFactory.cs" />
     <Compile Include="IDataContextFactory.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{d1078bb1-8402-41f0-8168-b1c2088cc943}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{9aa9b5b4-b44b-43fc-8411-9a49ee9e1d4f}</Project>
       <Name>IDAL</Name>

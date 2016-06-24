@@ -40,14 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChallengeCaseFactory.cs" />
+    <Compile Include="CustomerCaseFactory.cs" />
     <Compile Include="DataContextFactory.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLLEntity\BLLEntity.csproj">
+      <Project>{dad126ce-2e4f-4a28-a3dd-ada7ae74886e}</Project>
+      <Name>BLLEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\SqlServerDAL.csproj">
       <Project>{a7bcc671-7629-4410-aa94-3b1118ec0f1f}</Project>
       <Name>SqlServerDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{d1078bb1-8402-41f0-8168-b1c2088cc943}</Project>
+      <Name>IBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\IDALFac\IDALFac.csproj">
       <Project>{f6dab63d-9396-4837-b81a-1c146ecb2879}</Project>

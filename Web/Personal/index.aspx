@@ -120,7 +120,7 @@
 			<div class="col-md-8 col-no-left-padding col-md-offset-2">
 				<section class="middle">
 					<div class="col-md-2 col-no-left-padding" style="margin-bottom:10px;">
-                        <asp:DropDownList ID="selectSalary" runat="server" class="form-control" OnSelectedIndexChanged="selectSalary_SelectedIndexChanged">
+                        <asp:DropDownList ID="selectSalary" runat="server" class="form-control" OnSelectedIndexChanged="selectSalary_SelectedIndexChanged" AutoPostBack="True">
                             <asp:ListItem Selected="True" Value="0">起始薪资</asp:ListItem>
                             <asp:ListItem Value="1">2K~5K</asp:ListItem>
                             <asp:ListItem Value="2">5K~8K</asp:ListItem>
@@ -130,48 +130,11 @@
                             <asp:ListItem Value="6">15K以上</asp:ListItem>
                         </asp:DropDownList>
 					</div>
-					<div class="col-md-2 col-no-left-padding" id="warp" style="margin-bottom:10px;">
-                        <asp:DropDownList ID="selectProvince" runat="server" class="form-control prov" OnSelectedIndexChanged="selectProvince_SelectedIndexChanged">
-                            <asp:ListItem Selected="True" Value="0">全部地区</asp:ListItem>
-                            <asp:ListItem Value="北京市">北京市</asp:ListItem>
-                            <asp:ListItem Value="天津市">天津市</asp:ListItem>
-                            <asp:ListItem Value="河北省">河北省</asp:ListItem>
-                            <asp:ListItem Value="山西省">山西省</asp:ListItem>
-                            <asp:ListItem Value="内蒙古">内蒙古</asp:ListItem>
-                            <asp:ListItem Value="辽宁省">辽宁省</asp:ListItem>
-                            <asp:ListItem Value="吉林省">吉林省</asp:ListItem>
-                            <asp:ListItem Value="黑龙江省">黑龙江省</asp:ListItem>
-                            <asp:ListItem Value="上海市">上海市</asp:ListItem>
-                            <asp:ListItem Value="江苏省">江苏省</asp:ListItem>
-                            <asp:ListItem Value="浙江省">浙江省</asp:ListItem>
-                            <asp:ListItem Value="安徽省">安徽省</asp:ListItem>
-                            <asp:ListItem Value="福建省">福建省</asp:ListItem>
-                            <asp:ListItem Value="江西省">江西省</asp:ListItem>
-                            <asp:ListItem Value="山东省">山东省</asp:ListItem>
-                            <asp:ListItem Value="河南省">河南省</asp:ListItem>
-                            <asp:ListItem Value="湖北省">湖北省</asp:ListItem>
-                            <asp:ListItem Value="湖南省">湖南省</asp:ListItem>
-                            <asp:ListItem Value="广东省">广东省</asp:ListItem>
-                            <asp:ListItem Value="广西省">广西省</asp:ListItem>
-                            <asp:ListItem Value="海南省">海南省</asp:ListItem>
-                            <asp:ListItem Value="重庆市">重庆市</asp:ListItem>
-                            <asp:ListItem Value="四川省">四川省</asp:ListItem>
-                            <asp:ListItem Value="贵州省">贵州省</asp:ListItem>
-                            <asp:ListItem Value="云南省">云南省</asp:ListItem>
-                            <asp:ListItem Value="西藏">西藏</asp:ListItem>
-                            <asp:ListItem Value="陕西省">陕西省</asp:ListItem>
-                            <asp:ListItem Value="甘肃省">甘肃省</asp:ListItem>
-                            <asp:ListItem Value="青海省">青海省</asp:ListItem>
-                            <asp:ListItem Value="宁夏">宁夏</asp:ListItem>
-                            <asp:ListItem Value="新疆">新疆</asp:ListItem>
-                            <asp:ListItem Value="香港">香港</asp:ListItem>
-                            <asp:ListItem Value="澳门">澳门</asp:ListItem>
-                            <asp:ListItem Value="台湾">台湾</asp:ListItem>
-                        </asp:DropDownList>
-					</div>
-					<div class="col-md-6">
-                        <asp:TextBox id="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等" width="40%"></asp:TextBox>
-                        <asp:Button ID="btnSearch" runat="server" Text="搜索" class="btn" />
+					<div class="input-group">
+                        <asp:TextBox id="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等" OnTextChanged="keyWords_id_TextChanged" ></asp:TextBox>
+							<span class="input-group-btn">
+                                <asp:Button ID="btnSearch" runat="server" Text="搜索" class="btn" OnClick="btnSearch_Click" />
+							</span>
 					</div>
 				</section>
 			</div>
@@ -211,9 +174,9 @@
 	
 								<div class="panel-body ">
 									<ul class="list-unstyled">
-										<li>月薪：<%#((BLLEntity.ChallengeCase)Container.DataItem).jobSalary%>K
-										</li>
+										<li>月薪：<%#((BLLEntity.ChallengeCase)Container.DataItem).jobSalary%>K</li>
 										<li>试题数量：<%#((BLLEntity.ChallengeCase)Container.DataItem).questionNumber%></li>
+										<li>发布时间：<%#((BLLEntity.ChallengeCase)Container.DataItem).startTime.ToShortDateString()%></li>
 									</ul>
 	
 								</div>

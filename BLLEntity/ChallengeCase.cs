@@ -18,5 +18,6 @@ namespace BLLEntity
         public int jobSalary { set; get; }
         public int questionNumber { set; get; }
         public String place { set; get; }
+        public DateTime startTime { set; get; }
     }
 }

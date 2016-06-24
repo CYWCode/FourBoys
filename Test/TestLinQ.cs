@@ -10,21 +10,31 @@ using IBLLFac;
 using BLLFac;
 using IBLL;
 
+using SqlServerDAL;
+
 namespace Test
 {
     class TestLinQ
     {
         static void Main(string[] args)
         {
-            // get customer case factory
-            ICustomerCaseFactory fac = new CustomerCaseFactory();
-            // get customer case list
-            List<ICustomerCase> list = fac.getCustomerCaseList();
-            // display
-            foreach (ICustomerCase item in list)
+            DataClassesDataContext db = new DataClassesDataContext();
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(item.title);
+                UserChallengeContent ucc = new UserChallengeContent()
+                {
+                    无意义主键ID = 99 + i,
+                    EnterPrise = "新企业" + i,
+                    Position = "新职位",
+                    StartTime = new DateTime(2016, 6, i + 1),
+                    Pay = 20 - i,
+                    Deadline = new DateTime(2016, 6, i + 10),
+                    Questions = i / 2 + 1,
+                    Number = i / 2
+                };
+                db.UserChallengeContent.InsertOnSubmit(ucc);
             }
+            db.SubmitChanges();
 
             // wait
             Console.Read();

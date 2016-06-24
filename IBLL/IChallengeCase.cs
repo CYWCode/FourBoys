@@ -16,5 +16,6 @@ namespace IBLL
         int jobSalary { set; get; }
         int questionNumber { set; get; }
         String place { set; get; }
+        DateTime startTime { set; get; }
     }
 }
