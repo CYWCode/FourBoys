@@ -204,49 +204,7 @@
 						</div>
 						<div class="form-group" id="resume_file_div_id" style="display: block;">
 							<h3 class="grey">附件简历</h3>
-							<span>请上传pdf格式的简历(50kb-3mb)</span> <span class="file-input file-input-new"><div class="file-preview ">
-    <div class="close fileinput-remove">×</div>
-    <div class="">
-    <div class="file-preview-thumbnails"></div>
-    <div class="clearfix"></div>    <div class="file-preview-status text-center text-success"></div>
-    <div class="kv-fileinput-error"></div>
-    </div>
-</div>
-<div class="kv-upload-progress hide"></div>
-<div class="input-group ">
-   <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
-   <span class="file-caption-ellipsis">…</span>
-   <div class="file-caption-name"></div>
-</div>
-   <div class="input-group-btn">
-       
-       <button type="button" title="取消进行中的上传" class="hide btn btn-default fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i> 取消</button>
-       
-       <div class="btn btn-primary btn-file"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;选择文件 <span class="file-input file-input-new"><div class="file-preview ">
-    <div class="close fileinput-remove">×</div>
-    <div class="">
-    <div class="file-preview-thumbnails"></div>
-    <div class="clearfix"></div>    <div class="file-preview-status text-center text-success"></div>
-    <div class="kv-fileinput-error"></div>
-    </div>
-</div>
-<div class="kv-upload-progress hide"></div>
-<div class="input-group ">
-   <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
-   <span class="file-caption-ellipsis">…</span>
-   <div class="file-caption-name"></div>
-</div>
-   <div class="input-group-btn">
-       
-       <button type="button" title="取消进行中的上传" class="hide btn btn-default fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i> 取消</button>
-       
-       <div class="btn btn-primary btn-file"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;选择文件 <input type="file" name="resumeFile" onchange="modify_hide_resume(this)" id="corp-pic" accept="application/pdf"></div>
-   </div>
-</div></span></div>
-   </div>
-</div></span> <input value="" id="resume_hide_id" type="hidden"> <span class="help-block file-error-message" id="hint2" style="display: none;"></span>
-							<span class="text-danger" id="error2" style="display: none;">请上传简历</span>
-							
+                            <asp:FileUpload ID="resumeUpload" runat="server" />
 						</div>
 						<div class="form-group">
 							<span id="view_error" class="help-block"></span>
