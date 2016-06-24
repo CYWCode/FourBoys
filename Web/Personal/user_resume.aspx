@@ -121,11 +121,11 @@
 							<h3 class="grey">真实姓名</h3>
                             <asp:TextBox ID="tboxName" runat="server" class="form-control" placeholder="真实姓名" ></asp:TextBox>
                             <asp:Label ID="warnName" runat="server" Text="请输入姓名" class="help-block" Visible="False" ></asp:Label>
-						    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入姓名</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">真实姓名只可以是2到6个字符</small><small class="help-block" data-bv-validator="regexp" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入姓名</small>
 						</div>
 						<div class="form-group">
 							<h3 class="grey">年龄</h3>
                             <asp:TextBox ID="tboxAge" runat="server" class="form-control" placeholder="年龄" ></asp:TextBox>
+                            <asp:Label ID="warnAge" runat="server" Text="请输入年龄" class="help-block" Visible="False" ></asp:Label>
 						</div>
 						<div class="form-group">
 							<h3 class="grey">性别</h3>
@@ -133,17 +133,11 @@
                                 <asp:ListItem Value="男">男</asp:ListItem>
                                 <asp:ListItem Value="女">女</asp:ListItem>
                             </asp:RadioButtonList>
-							<!--div>
-								<label class="radio-inline" for="example-inline-radio1">
-									<input type="radio" id="example-inline-radio1" name="sex" value="0" data-bv-field="sex"> 男
-								</label> <label class="radio-inline" for="example-inline-radio2">
-									<input type="radio" id="example-inline-radio2" name="sex" value="1" data-bv-field="sex"> 女
-								</label>
-							</div-->
 						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="sex" data-bv-result="NOT_VALIDATED" style="display: none;">请选择性别</small></!--div>
 						<div class="form-group">
                             <h3 class="grey">手机</h3>
                             <asp:TextBox ID="tboxPhone" runat="server" class="form-control" ></asp:TextBox>
+                            <asp:Label ID="warnPhone" runat="server" Text="请输入手机" class="help-block" Visible="False" ></asp:Label>
 						</div>
 						<div class="form-group">
 							<h3 class="grey">技术方向</h3>
@@ -151,37 +145,6 @@
                                 <asp:ListItem Value="Java">Java</asp:ListItem>
                                 <asp:ListItem Value="Android">Android</asp:ListItem>
                             </asp:CheckBoxList>
-							<!--div>
-								
-									
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="1" data-bv-field="directions"> Java
-	</label>
-								
-									
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="2" data-bv-field="directions"> Android
-	</label>
-								
-									
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="3" data-bv-field="directions"> iOS
-	</label>
-								
-									
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="4" data-bv-field="directions"> C语言(beta)
-	</label>
-								
-									
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="5" data-bv-field="directions"> C++(beta)
-	</label>
-								
-	<br>
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="6" data-bv-field="directions"> php(beta)
-	</label>
-								
-									
-	<label class="radio-inline"> <input type="checkbox" name="directions" value="7" data-bv-field="directions"> Python(beta)
-	</label>
-								
-							</div-->
 							<span class="help-block has-error" id="hint_directions"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="directions" data-bv-result="NOT_VALIDATED" style="display: none;">请选择技术方向</small></span>
 						</div>
 						<div class="form-group">
@@ -191,13 +154,6 @@
                                 <asp:ListItem Value="0" Selected="True">是</asp:ListItem>
                                 <asp:ListItem Value="1">否</asp:ListItem>
                             </asp:RadioButtonList>
-							<!--div>
-								<label class="radio-inline"> <input checked="" type="radio" onclick="hideResumeFile(true)" name="jobstate" value="1" data-bv-field="jobstate">
-									是
-								</!--label> <label class="radio-inline"> <input type="radio" onclick="hideResumeFile(false)" name="jobstate" value="0" data-bv-field="jobstate">
-									否
-								</label> <input type="hidden" value="1" id="jobstate_id_hide">
-							</div-->
 						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="jobstate" data-bv-result="NOT_VALIDATED" style="display: none;">是否求职？</small></div>
 						
 						<div class="form-group" id="resume_file_div_id" style="display: block;">
