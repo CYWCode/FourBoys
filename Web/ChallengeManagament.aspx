@@ -1,9 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChallengeManagement.aspx.cs" Inherits="Web.ChallenageManagament" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChallengeManagament.aspx.cs" Inherits="Web.ChallenageManagament" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0053)http://www.oxcoder.com/user/recruit/user_recruit.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!--<base href="http://www.oxcoder.com:80/">--><base href=".">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
@@ -27,6 +28,14 @@
 <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 <body>
 	
+	
+
+
+
+
+
+
+
 <div class="navbar navbar-default navbar-fixed-top" id="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -42,23 +51,50 @@
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
 				<li class="">
-					<a href="ChallengeManagement.aspx">首页</a>
+					<a href="http://www.oxcoder.com/user/index.html">首页</a>
 				</li>
 				<li class="active">
-					<a href="ChallengeManagement.aspx">挑战</a>
+					<a href="http://www.oxcoder.com/user/recruit/user_recruit.html">挑战</a>
+				</li>
+				<li class="">
+					
+						
+						
+							<a href="http://www.oxcoder.com/user/drivingRange/index.html">练习场</a>
+						
+					
+
+				</li>
+				<li class="">
+					
+						
+						
+							<a href="http://www.oxcoder.com/user/learnCalendar/index.html">学习日历</a>
+						
+					
 				</li>
 				<li class="">
 					<a href="http://www.oxcoder.com/user/info/user_center.html">个人中心</a>
 				</li>
 				<li class="">
-					<a href="Personal/user_resume.aspx">个人简历</a>
+					<a href="http://www.oxcoder.com/user/info/user_resume.html">个人简历</a>
 				</li>
+				<li class="">
+        <a href="http://www.oxcoder.com/competition_info.html">编程大赛</a>
+    </li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown" id="drop_down_nav">
-					<a href="/#" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="text">	
-									UserName	
+					<a href="http://www.oxcoder.com/#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="text">
+							
+								
+								
+								
+									测试
+								
+								
+							
 						</span>
 						<b class="caret"></b>
 					</a>
@@ -81,7 +117,7 @@
 			<div class="col-md-12">
 				<section id="middle" class="col-md-12 col-no-left-padding">
 					<h2 class="h2-tab">
-						<a href="ChallengeManagenment.aspx" class="">我接受的挑战</a>
+						<a href="http://www.oxcoder.com/user/recruit/user_recruit.html" class="">我接受的挑战</a>
 					</h2>
 					<h2 class="h2-tab">
 						<a href="http://www.oxcoder.com/user/recruit/user_recruit.html?isHistory=true" class="off">挑战历史</a>
@@ -121,7 +157,7 @@
 								<div class="col-xs-12 panel-header">
 									<div class="pull-left">
 										<h4 class="line-control">
-										<a><asp:Label ID ="position" runat ="server" /></a>
+										<a>[高级]iOS工程师</a>
 										</h4>
 										<h4 class="line-control" style="min-height:18px;">
 											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=2404">世纪创兴（北京）科技有限公司</a>
