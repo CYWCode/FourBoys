@@ -11,7 +11,13 @@ namespace Web.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack) return;
 
+            IBLLFac.IAdminNumHelper helper = new BLLFac.AdminNumHelper();
+
+            personalUserNum.Text = helper.getPersonalUserNum().ToString();
+            challengeNum.Text = helper.getChallengeNum().ToString();
+            enterpriseUserNum.Text = helper.getEnterpriseUserNum().ToString();
         }
     }
 }

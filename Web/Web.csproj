@@ -223,6 +223,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Web.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

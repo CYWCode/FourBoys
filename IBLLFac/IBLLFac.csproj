@@ -43,6 +43,7 @@
     <Compile Include="IChallengeManagementFactory.cs" />
     <Compile Include="ICustomerCaseFactory.cs" />
     <Compile Include="IPersonalUserResumeHelperFactory.cs" />
+    <Compile Include="IAdminNumHelper.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
