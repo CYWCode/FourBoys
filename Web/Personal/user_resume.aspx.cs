@@ -15,7 +15,6 @@ namespace Web.Personal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
             IPersonalUserResumeHelperFactory factory = new PersonalUserResumeHelperFactory();
             IPersonalUserResumeHelper helper = factory.getPersonalUserResumeHelper();
             
@@ -58,17 +57,13 @@ namespace Web.Personal
         {
             if (validInput())
             {
-                warnName.Visible = false;
-                warnAge.Visible = false;
-                warnPhone.Visible = false;
-
                 IPersonalUserResumeHelperFactory factory = new PersonalUserResumeHelperFactory();
                 IPersonalUserResumeHelper helper = factory.getPersonalUserResumeHelper();
                 // FIXME: id
                 int id = 6;
                 string name = tboxName.Text;
                 string sex = rbtnListSex.SelectedValue;
-                int age = Convert.ToInt32(tboxAge.Text);
+                int age = Convert.ToInt32( tboxAge.Text);
                 string phoneNumber = tboxPhone.Text;
                 bool hunting = true;
                 if (rbtnListHunting.SelectedValue.CompareTo("0") == 0) hunting = true;
@@ -82,26 +77,12 @@ namespace Web.Personal
                 // FIXBUG: 这里tboxName.Text是旧的数据
                 helper.updatePersonalUserInfo(id, name, sex, age, phoneNumber, hunting, resumePath, direction);
             }
-            else
-            {
-                warnName.Visible = true;
-                warnAge.Visible = true;
-                warnPhone.Visible = true;
-            }
         }
 
         private bool validInput()
         {
             // TODO
             if (tboxName.Text.Trim().CompareTo("") == 0)
-            {
-                return false;
-            }
-            else if (tboxAge.Text.Trim().CompareTo("") == 0)
-            {
-                return false;
-            }
-            else if (tboxPhone.Text.Trim().CompareTo("") == 0)
             {
                 return false;
             }
