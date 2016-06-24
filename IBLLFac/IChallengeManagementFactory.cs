@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 using IBLL;
 
-namespace IDALFac
+namespace IBLLFac
 {
     public interface IChallengeManagementFactory
     {
         List<IChallengeManagement> getChallengeManagementList();
+
     }
 }

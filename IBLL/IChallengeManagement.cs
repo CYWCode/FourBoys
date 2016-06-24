@@ -9,12 +9,13 @@ namespace IBLL
     public interface IChallengeManagement
     {
         int id { set; get; }
-        String jobTitle { set; get; }
+        String position { set; get; }
         String enterpriseTitle { set; get; }
         int jobSalary { set; get; }
         int questionNumber { set; get; }
-        String place { set; get; }
         DateTime startTime { set; get; }
-
+        DateTime deadline { set; get; }
+        int finishNumber { set; get; }
+        String place { set; get; }
     }
 }

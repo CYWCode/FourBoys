@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChallengeCaseFactory.cs" />
+    <Compile Include="IChallengeManagementFactory.cs" />
     <Compile Include="ICustomerCaseFactory.cs" />
     <Compile Include="IDataContextFactory.cs" />
     <Compile Include="IPersonalUserInfoFactory.cs" />

@@ -129,7 +129,6 @@
     <Content Include="ChallengeResult.aspx" />
     <Content Include="Personal\index.aspx" />
     <Content Include="Personal\user_resume.aspx" />
-    <Content Include="test.aspx" />
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />
     <Content Include="Unsigned\mediaReports.aspx" />
@@ -194,13 +193,6 @@
       <DependentUpon>user_resume.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Unsigned\customer_case.aspx.cs">
       <DependentUpon>customer_case.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
