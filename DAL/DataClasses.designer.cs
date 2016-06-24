@@ -1305,6 +1305,8 @@ namespace SqlServerDAL
 		
 		private string _CV;
 		
+		private string _Name;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1327,6 +1329,8 @@ namespace SqlServerDAL
     partial void OnIsCandidateChanged();
     partial void OnCVChanging(string value);
     partial void OnCVChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
     #endregion
 		
 		public UserInfo()
@@ -1510,6 +1514,26 @@ namespace SqlServerDAL
 					this._CV = value;
 					this.SendPropertyChanged("CV");
 					this.OnCVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(20)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
 				}
 			}
 		}

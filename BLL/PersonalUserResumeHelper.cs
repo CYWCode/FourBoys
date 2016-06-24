@@ -13,8 +13,7 @@ namespace BLL
         // 判断个人用户信息是否存在
         public bool existPersonalUserInfo(int id)
         {
-            // FIXME
-            return true;
+            return factory.existPersonalUserInfo(id);
         }
         // 获取个人用户信息
         public IBLL.IPersonalUserInfo getPersonalUserInfo(int id)
@@ -24,22 +23,17 @@ namespace BLL
         // 更新个人用户信息
         public void updatePersonalUserInfo(int _id, string _name, string _sex, int _age, string _phoneNumber, bool _hunting, string _resumePath, List<string> _direction)
         {
-            updatePersonalUserInfo(new BLLEntity.PersonalUserInfo()
+            if (existPersonalUserInfo(_id))
             {
-                id = _id,
-                name = _name,
-                sex = _sex,
-                age = _age,
-                phoneNumber = _phoneNumber,
-                hunting = _hunting,
-                resumePath = _resumePath,
-                direction = _direction
-            });
+                // 更新
+                factory.updateUserInfo(_id, _name, _sex, _age, _phoneNumber, _hunting, _resumePath, _direction);
+            }
+            else
+            {
+                // 插入
+                factory.insertUserInfo(_id, _name, _sex, _age, _phoneNumber, _hunting, _resumePath, _direction);
+            }
         }
 
-        private void updatePersonalUserInfo(IBLL.IPersonalUserInfo newInfo)
-        {
-            // FIXME
-        }
     }
 }

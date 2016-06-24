@@ -130,8 +130,8 @@
 						<div class="form-group">
 							<h3 class="grey">性别</h3>
                             <asp:RadioButtonList ID="rbtnListSex" runat="server">
-                                <asp:ListItem Value="0">男</asp:ListItem>
-                                <asp:ListItem Value="1">女</asp:ListItem>
+                                <asp:ListItem Value="男">男</asp:ListItem>
+                                <asp:ListItem Value="女">女</asp:ListItem>
                             </asp:RadioButtonList>
 							<!--div>
 								<label class="radio-inline" for="example-inline-radio1">

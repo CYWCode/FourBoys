@@ -19,38 +19,34 @@ namespace Web.Personal
             IPersonalUserResumeHelper helper = factory.getPersonalUserResumeHelper();
             
             // FIXME: id
-            int id = 19;
+            int id = 6;
             if (helper.existPersonalUserInfo(id))
             {
                 IPersonalUserInfo userInfo = helper.getPersonalUserInfo(id);
 
-                tboxName.Text = userInfo.name;
-                tboxAge.Text = userInfo.age.ToString();
-                tboxPhone.Text = userInfo.phoneNumber;
-                if (userInfo.sex.CompareTo("男") == 0)
+                if (userInfo != null)
                 {
-                    rbtnListSex.SelectedValue = "0";
-                }
-                else
-                {
-                    rbtnListSex.SelectedValue = "1";
-                }
-                if (userInfo.hunting)
-                {
-                    rbtnListHunting.SelectedValue = "0";
-                }
-                else
-                {
-                    rbtnListHunting.SelectedValue = "1";
-                }
-                //cboxListDirection.DataSource = userInfo.direction;
-                foreach (string dirItem in userInfo.direction)
-                {
-                    foreach (ListItem listItem in cboxListDirection.Items)
+                    tboxName.Text = userInfo.name;
+                    tboxAge.Text = userInfo.age.ToString();
+                    tboxPhone.Text = userInfo.phoneNumber;
+                    rbtnListSex.SelectedValue = userInfo.sex;
+                    if (userInfo.hunting)
                     {
-                        if (listItem.Value.CompareTo(dirItem) == 0)
+                        rbtnListHunting.SelectedValue = "0";
+                    }
+                    else
+                    {
+                        rbtnListHunting.SelectedValue = "1";
+                    }
+                    //cboxListDirection.DataSource = userInfo.direction;
+                    foreach (string dirItem in userInfo.direction)
+                    {
+                        foreach (ListItem listItem in cboxListDirection.Items)
                         {
-                            listItem.Selected = true;
+                            if (listItem.Value.CompareTo(dirItem) == 0)
+                            {
+                                listItem.Selected = true;
+                            }
                         }
                     }
                 }
@@ -63,16 +59,22 @@ namespace Web.Personal
             {
                 IPersonalUserResumeHelperFactory factory = new PersonalUserResumeHelperFactory();
                 IPersonalUserResumeHelper helper = factory.getPersonalUserResumeHelper();
-                // FIXME
-                int id = 199;
-                string name = "测试用户" + id;
-                string sex = "男";
-                int age = 21;
-                string phoneNumber = "测试手机号";
+                // FIXME: id
+                int id = 6;
+                string name = tboxName.Text;
+                string sex = rbtnListSex.SelectedValue;
+                int age = Convert.ToInt32( tboxAge.Text);
+                string phoneNumber = tboxPhone.Text;
                 bool hunting = true;
+                if (rbtnListHunting.SelectedValue.CompareTo("0") == 0) hunting = true;
+                else hunting = false;
                 string resumePath = "测试路径";
                 List<string> direction = new List<string>();
-                direction.Add("Android");
+                foreach (ListItem item in cboxListDirection.Items)
+                {
+                    if (item.Selected) direction.Add(item.Value);
+                }
+                // FIXBUG: 这里tboxName.Text是旧的数据
                 helper.updatePersonalUserInfo(id, name, sex, age, phoneNumber, hunting, resumePath, direction);
             }
         }
