@@ -51,6 +51,9 @@ namespace SqlServerDAL
     partial void InsertUserChallengeContent(UserChallengeContent instance);
     partial void UpdateUserChallengeContent(UserChallengeContent instance);
     partial void DeleteUserChallengeContent(UserChallengeContent instance);
+    partial void InsertUserInfo(UserInfo instance);
+    partial void UpdateUserInfo(UserInfo instance);
+    partial void DeleteUserInfo(UserInfo instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -136,6 +139,14 @@ namespace SqlServerDAL
 			get
 			{
 				return this.GetTable<UserChallengeContent>();
+			}
+		}
+		
+		public System.Data.Linq.Table<UserInfo> UserInfo
+		{
+			get
+			{
+				return this.GetTable<UserInfo>();
 			}
 		}
 	}
@@ -1245,6 +1256,260 @@ namespace SqlServerDAL
 					this._Number = value;
 					this.SendPropertyChanged("Number");
 					this.OnNumberChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserInfo")]
+	public partial class UserInfo : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private decimal _无意义主键ID;
+		
+		private string _Position;
+		
+		private System.Nullable<bool> _Sex;
+		
+		private System.Nullable<int> _Age;
+		
+		private string _PhoneNum;
+		
+		private string _Mail;
+		
+		private string _Development;
+		
+		private System.Nullable<bool> _IsCandidate;
+		
+		private string _CV;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void On无意义主键IDChanging(decimal value);
+    partial void On无意义主键IDChanged();
+    partial void OnPositionChanging(string value);
+    partial void OnPositionChanged();
+    partial void OnSexChanging(System.Nullable<bool> value);
+    partial void OnSexChanged();
+    partial void OnAgeChanging(System.Nullable<int> value);
+    partial void OnAgeChanged();
+    partial void OnPhoneNumChanging(string value);
+    partial void OnPhoneNumChanged();
+    partial void OnMailChanging(string value);
+    partial void OnMailChanged();
+    partial void OnDevelopmentChanging(string value);
+    partial void OnDevelopmentChanged();
+    partial void OnIsCandidateChanging(System.Nullable<bool> value);
+    partial void OnIsCandidateChanged();
+    partial void OnCVChanging(string value);
+    partial void OnCVChanged();
+    #endregion
+		
+		public UserInfo()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_无意义主键ID", AutoSync=AutoSync.OnInsert, DbType="Decimal(18,0) NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public decimal 无意义主键ID
+		{
+			get
+			{
+				return this._无意义主键ID;
+			}
+			set
+			{
+				if ((this._无意义主键ID != value))
+				{
+					this.On无意义主键IDChanging(value);
+					this.SendPropertyChanging();
+					this._无意义主键ID = value;
+					this.SendPropertyChanged("无意义主键ID");
+					this.On无意义主键IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Position", DbType="VarChar(20)")]
+		public string Position
+		{
+			get
+			{
+				return this._Position;
+			}
+			set
+			{
+				if ((this._Position != value))
+				{
+					this.OnPositionChanging(value);
+					this.SendPropertyChanging();
+					this._Position = value;
+					this.SendPropertyChanged("Position");
+					this.OnPositionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sex", DbType="Bit")]
+		public System.Nullable<bool> Sex
+		{
+			get
+			{
+				return this._Sex;
+			}
+			set
+			{
+				if ((this._Sex != value))
+				{
+					this.OnSexChanging(value);
+					this.SendPropertyChanging();
+					this._Sex = value;
+					this.SendPropertyChanged("Sex");
+					this.OnSexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Age", DbType="Int")]
+		public System.Nullable<int> Age
+		{
+			get
+			{
+				return this._Age;
+			}
+			set
+			{
+				if ((this._Age != value))
+				{
+					this.OnAgeChanging(value);
+					this.SendPropertyChanging();
+					this._Age = value;
+					this.SendPropertyChanged("Age");
+					this.OnAgeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNum", DbType="VarChar(15)")]
+		public string PhoneNum
+		{
+			get
+			{
+				return this._PhoneNum;
+			}
+			set
+			{
+				if ((this._PhoneNum != value))
+				{
+					this.OnPhoneNumChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneNum = value;
+					this.SendPropertyChanged("PhoneNum");
+					this.OnPhoneNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mail", DbType="VarChar(50)")]
+		public string Mail
+		{
+			get
+			{
+				return this._Mail;
+			}
+			set
+			{
+				if ((this._Mail != value))
+				{
+					this.OnMailChanging(value);
+					this.SendPropertyChanging();
+					this._Mail = value;
+					this.SendPropertyChanged("Mail");
+					this.OnMailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Development", DbType="VarChar(20)")]
+		public string Development
+		{
+			get
+			{
+				return this._Development;
+			}
+			set
+			{
+				if ((this._Development != value))
+				{
+					this.OnDevelopmentChanging(value);
+					this.SendPropertyChanging();
+					this._Development = value;
+					this.SendPropertyChanged("Development");
+					this.OnDevelopmentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsCandidate", DbType="Bit")]
+		public System.Nullable<bool> IsCandidate
+		{
+			get
+			{
+				return this._IsCandidate;
+			}
+			set
+			{
+				if ((this._IsCandidate != value))
+				{
+					this.OnIsCandidateChanging(value);
+					this.SendPropertyChanging();
+					this._IsCandidate = value;
+					this.SendPropertyChanged("IsCandidate");
+					this.OnIsCandidateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CV", DbType="VarChar(50)")]
+		public string CV
+		{
+			get
+			{
+				return this._CV;
+			}
+			set
+			{
+				if ((this._CV != value))
+				{
+					this.OnCVChanging(value);
+					this.SendPropertyChanging();
+					this._CV = value;
+					this.SendPropertyChanged("CV");
+					this.OnCVChanged();
 				}
 			}
 		}

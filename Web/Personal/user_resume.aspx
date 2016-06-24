@@ -120,7 +120,9 @@
 						<div class="form-group">
 							<h3 class="grey">真实姓名</h3>
                             <asp:TextBox ID="tboxName" runat="server" class="form-control" placeholder="真实姓名" ></asp:TextBox>
-						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入姓名</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">真实姓名只可以是2到6个字符</small><small class="help-block" data-bv-validator="regexp" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入中文</small></div>
+                            <asp:Label ID="warnName" runat="server" Text="请输入姓名" class="help-block" Visible="False" ></asp:Label>
+						    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入姓名</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">真实姓名只可以是2到6个字符</small><small class="help-block" data-bv-validator="regexp" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入姓名</small>
+						</div>
 						<div class="form-group">
 							<h3 class="grey">年龄</h3>
                             <asp:TextBox ID="tboxAge" runat="server" class="form-control" placeholder="年龄" ></asp:TextBox>
@@ -146,8 +148,8 @@
 						<div class="form-group">
 							<h3 class="grey">技术方向</h3>
                             <asp:CheckBoxList ID="cboxListDirection" runat="server">
-                                <asp:ListItem Value="1">Java</asp:ListItem>
-                                <asp:ListItem Value="2">Android</asp:ListItem>
+                                <asp:ListItem Value="Java">Java</asp:ListItem>
+                                <asp:ListItem Value="Android">Android</asp:ListItem>
                             </asp:CheckBoxList>
 							<!--div>
 								
@@ -206,7 +208,7 @@
 							<span id="view_error" class="help-block"></span>
 						</div>
 						<div class="form-group form-actions pull-right">
-                            <asp:Button ID="btnSubmit" runat="server" Text="保存" class="btn btn-new1 btn-lg" style="border-radius: 3px;"/>
+                            <asp:Button ID="btnSubmit" AutoPostBack="false" runat="server" Text="保存" class="btn btn-new1 btn-lg" style="border-radius: 3px;" OnClick="btnSubmit_Click" />
 						</div>
 					</form>
 				</section>

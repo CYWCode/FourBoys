@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ChallengeCase.cs" />
     <Compile Include="CustomerCase.cs" />
+    <Compile Include="PersonalUserInfo.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

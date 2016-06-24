@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersonalUserResumeHelper.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -46,6 +47,10 @@
     <ProjectReference Include="..\BLLEntity\BLLEntity.csproj">
       <Project>{dad126ce-2e4f-4a28-a3dd-ada7ae74886e}</Project>
       <Name>BLLEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFac\DALFac.csproj">
+      <Project>{6cff52a6-9dde-4069-88ba-f06bc40ab07a}</Project>
+      <Name>DALFac</Name>
     </ProjectReference>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
       <Project>{d1078bb1-8402-41f0-8168-b1c2088cc943}</Project>
