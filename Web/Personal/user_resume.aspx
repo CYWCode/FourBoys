@@ -119,89 +119,85 @@
 						<input type="hidden" value="Bzj4THeNEcjSF6uDXvWpE6fSFP9OTHfSbv1ybdfxED9ObH7pXzfKEZ09kgT5bvYpfcAunhe1khX1lhq2kDq1kDq1" name="callback">
 						<div class="form-group">
 							<h3 class="grey">真实姓名</h3>
-							<input name="name" value="" type="text" id="corp-name" class="form-control" placeholder="真实姓名" data-bv-field="name">
+                            <asp:TextBox ID="tboxName" runat="server" class="form-control" placeholder="真实姓名" ></asp:TextBox>
 						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入姓名</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">真实姓名只可以是2到6个字符</small><small class="help-block" data-bv-validator="regexp" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">请输入中文</small></div>
 						<div class="form-group">
 							<h3 class="grey">年龄</h3>
-							<input name="age" value="" type="text" id="corp-sname" class="form-control" placeholder="年龄" data-bv-field="age"> <span class="text-danger" id="error1" style="display: none;"></span> <span class="help-block" id="hint1"></span>
-						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="age" data-bv-result="NOT_VALIDATED" style="display: none;">请输入年龄</small><small class="help-block" data-bv-validator="regexp" data-bv-for="age" data-bv-result="NOT_VALIDATED" style="display: none;">请输入数字</small><small class="help-block" data-bv-validator="between" data-bv-for="age" data-bv-result="NOT_VALIDATED" style="display: none;">年龄应在1到100之间</small></div>
+                            <asp:TextBox ID="tboxAge" runat="server" class="form-control" placeholder="年龄" ></asp:TextBox>
+						</div>
 						<div class="form-group">
 							<h3 class="grey">性别</h3>
-							<div>
+                            <asp:RadioButtonList ID="rbtnListSex" runat="server">
+                                <asp:ListItem Value="0">男</asp:ListItem>
+                                <asp:ListItem Value="1">女</asp:ListItem>
+                            </asp:RadioButtonList>
+							<!--div>
 								<label class="radio-inline" for="example-inline-radio1">
 									<input type="radio" id="example-inline-radio1" name="sex" value="0" data-bv-field="sex"> 男
 								</label> <label class="radio-inline" for="example-inline-radio2">
 									<input type="radio" id="example-inline-radio2" name="sex" value="1" data-bv-field="sex"> 女
 								</label>
-							</div>
-						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="sex" data-bv-result="NOT_VALIDATED" style="display: none;">请选择性别</small></div>
+							</div-->
+						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="sex" data-bv-result="NOT_VALIDATED" style="display: none;">请选择性别</small></!--div>
 						<div class="form-group">
-							
-								
-									<h3 class="grey">手机</h3>
-									<input value="" type="text" id="" name="phone" class="form-control" data-bv-field="phone">
-								
-								
-							
-							<small id="hint5" class="has-error"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="phone" data-bv-result="NOT_VALIDATED" style="display: none;">请输入手机</small><small class="help-block" data-bv-validator="phone" data-bv-for="phone" data-bv-result="NOT_VALIDATED" style="display: none;">请输入正确的联系方式</small></small>
+                            <h3 class="grey">手机</h3>
+                            <asp:TextBox ID="tboxPhone" runat="server" class="form-control" ></asp:TextBox>
 						</div>
 						<div class="form-group">
 							<h3 class="grey">技术方向</h3>
-							<div>
+                            <asp:CheckBoxList ID="cboxListDirection" runat="server">
+                                <asp:ListItem Value="1">Java</asp:ListItem>
+                                <asp:ListItem Value="2">Android</asp:ListItem>
+                            </asp:CheckBoxList>
+							<!--div>
 								
 									
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="1" data-bv-field="directions"> Java
-									</label>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="1" data-bv-field="directions"> Java
+	</label>
 								
 									
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="2" data-bv-field="directions"> Android
-									</label>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="2" data-bv-field="directions"> Android
+	</label>
 								
 									
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="3" data-bv-field="directions"> iOS
-									</label>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="3" data-bv-field="directions"> iOS
+	</label>
 								
 									
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="4" data-bv-field="directions"> C语言(beta)
-									</label>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="4" data-bv-field="directions"> C语言(beta)
+	</label>
 								
 									
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="5" data-bv-field="directions"> C++(beta)
-									</label>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="5" data-bv-field="directions"> C++(beta)
+	</label>
 								
-									<br>
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="6" data-bv-field="directions"> php(beta)
-									</label>
+	<br>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="6" data-bv-field="directions"> php(beta)
+	</label>
 								
 									
-									<label class="radio-inline"> <input type="checkbox" name="directions" value="7" data-bv-field="directions"> Python(beta)
-									</label>
+	<label class="radio-inline"> <input type="checkbox" name="directions" value="7" data-bv-field="directions"> Python(beta)
+	</label>
 								
-							</div>
+							</div-->
 							<span class="help-block has-error" id="hint_directions"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="directions" data-bv-result="NOT_VALIDATED" style="display: none;">请选择技术方向</small></span>
 						</div>
 						<div class="form-group">
 							<h3 class="grey">现在是否求职</h3>
 							<p style="color: #777;">若选择求职状态，企业就可以看到你的联系方式及报告详情，同时猿圈会将您推荐到更多企业，助你极速入职。</p>
-							<div>
+                            <asp:RadioButtonList ID="rbtnListHunting" runat="server">
+                                <asp:ListItem Value="0" Selected="True">是</asp:ListItem>
+                                <asp:ListItem Value="1">否</asp:ListItem>
+                            </asp:RadioButtonList>
+							<!--div>
 								<label class="radio-inline"> <input checked="" type="radio" onclick="hideResumeFile(true)" name="jobstate" value="1" data-bv-field="jobstate">
 									是
-								</label> <label class="radio-inline"> <input type="radio" onclick="hideResumeFile(false)" name="jobstate" value="0" data-bv-field="jobstate">
+								</!--label> <label class="radio-inline"> <input type="radio" onclick="hideResumeFile(false)" name="jobstate" value="0" data-bv-field="jobstate">
 									否
 								</label> <input type="hidden" value="1" id="jobstate_id_hide">
-							</div>
+							</div-->
 						<small class="help-block" data-bv-validator="notEmpty" data-bv-for="jobstate" data-bv-result="NOT_VALIDATED" style="display: none;">是否求职？</small></div>
-						<div class="form-group" id="resume_loc_div_id" style="display: block;">
-							<h3 class="grey">期望工作地点</h3>
-							<div id="warp">
-								<div id="Div1" class="form-inline">
-									<div class="form-group">
-										<label class="sr-only" for="exampleInputEmail3">省</label> <select name="province" class="form-control prov" data-bv-field="province"><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西省">广西省</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option></select>
-									</div>
-								</div>
-							</div>
-							<span id="hint_work_add" class="has-error"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="province" data-bv-result="NOT_VALIDATED" style="display: none;">请选择工作地点</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="city" data-bv-result="NOT_VALIDATED" style="display: none;">请选择工作地点</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="region" data-bv-result="NOT_VALIDATED" style="display: none;">请选择工作地点</small></span>
-						</div>
+						
 						<div class="form-group" id="resume_file_div_id" style="display: block;">
 							<h3 class="grey">附件简历</h3>
                             <asp:FileUpload ID="resumeUpload" runat="server" />
@@ -210,7 +206,7 @@
 							<span id="view_error" class="help-block"></span>
 						</div>
 						<div class="form-group form-actions pull-right">
-							<button type="submit" class="btn btn-new1 btn-lg" id="sub_btn_id" style="border-radius: 3px;">保存</button>
+                            <asp:Button ID="btnSubmit" runat="server" Text="保存" class="btn btn-new1 btn-lg" style="border-radius: 3px;"/>
 						</div>
 					</form>
 				</section>
