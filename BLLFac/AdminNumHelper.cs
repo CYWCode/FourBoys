@@ -26,5 +26,10 @@ namespace BLLFac
         {
             return factory.getEnterpriseUserNum();
         }
+
+        public List<IBLL.IAdminPersonalUser> getPersonUserList()
+        {
+            return factory.getPersonUserList();
+        }
     }
 }

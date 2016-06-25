@@ -166,6 +166,50 @@ namespace DALFac
                         select item;
             return query.Count<EnterPrise>();
         }
+
+        public List<IBLL.IAdminPersonalUser> getPersonUserList()
+        {
+            List<IBLL.IAdminPersonalUser> list = new List<IBLL.IAdminPersonalUser>();
+
+            DataClassesDataContext context = new DataClassesDataContext();
+            var query = from item in context.User
+                        select item;
+            foreach (User user in query)
+            {
+                string _sex = "未知";
+                int _age = -1;
+                bool _hunting = true;
+                var infoQuery = from item in context.UserInfo
+                               select item;
+                foreach (UserInfo info in infoQuery)
+                {
+                    if (info.无意义主键ID == user.ID)
+                    {
+                        if ((bool)info.Sex) _sex = "男";
+                        else _sex = "女";
+
+                        _age = (int) info.Age;
+                        _hunting = (bool) info.IsCandidate;
+
+                        break;
+                    }
+                }
+
+                IBLL.IAdminPersonalUser newUser = new BLLEntity.AdminPersonalUserInfo()
+                {
+                    id = (int)user.ID,
+                    email = user.Email,
+                    phoneNumber = user.PhoneNum,
+                    name = user.UserName,
+                    sex = _sex,
+                    age = _age,
+                    hunting = _hunting
+                };
+                list.Add(newUser);
+            }
+
+            return list;
+        }
     }
 
 }

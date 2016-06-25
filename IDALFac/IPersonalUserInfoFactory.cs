@@ -17,5 +17,6 @@ namespace IDALFac
         int getPersonalUserNum();
         int getChallengeNum();
         int getEnterpriseUserNum();
+        List<IBLL.IAdminPersonalUser> getPersonUserList();
     }
 }

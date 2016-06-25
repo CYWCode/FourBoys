@@ -20,14 +20,13 @@
             <asp:Table ID="tableUser" runat="server">
                 <asp:TableHeaderRow ID="tableUserHeader">
                     <asp:TableHeaderCell>ID</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>Email</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>邮箱</asp:TableHeaderCell>
                     <asp:TableHeaderCell>姓名</asp:TableHeaderCell>
                     <asp:TableHeaderCell>年龄</asp:TableHeaderCell>
                     <asp:TableHeaderCell>性别</asp:TableHeaderCell>
                     <asp:TableHeaderCell>手机</asp:TableHeaderCell>
                     <asp:TableHeaderCell>是否求职</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
-                <asp:TableRow ID="tableUserRow"></asp:TableRow>
             </asp:Table>
         </div>
     </form>
