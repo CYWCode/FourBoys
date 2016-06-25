@@ -9,6 +9,8 @@ using System.Data.Linq;
 using IDALFac;
 using SqlServerDAL;
 
+// 王韵倩
+
 namespace DALFac
 {
     public class DataContextFactory : IDataContextFactory

@@ -14,6 +14,8 @@ using IDALFac;
 using DALFac;
 using SqlServerDAL;
 
+// 王韵倩
+
 namespace BLLFac
 {
     public class ChallengeCaseFactory : IBLLFac.IChallengeCaseFactory
