@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdminPersonalUser.cs" />
     <Compile Include="IChallengeCase.cs" />
     <Compile Include="IChallengeManagement.cs" />
     <Compile Include="ICustomerCase.cs" />

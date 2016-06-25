@@ -7,7 +7,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>后台管理系统</title>
     <style>
-        
+        .userTable {
+            display: inline-block;
+            margin: 30px;
+            padding: 10px;
+        }
+        .userTableHeader {
+            background-color: cornflowerblue;
+            color: floralwhite;
+        }
+        .userTableRow {
+            background-color: lightgrey
+        }
+        .userTableCell {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -17,17 +31,17 @@
             <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
         </div>
         <div>
-            <asp:Table ID="tableUser" runat="server">
-                <asp:TableHeaderRow ID="tableUserHeader">
-                    <asp:TableHeaderCell>ID</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>Email</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>姓名</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>年龄</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>性别</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>手机</asp:TableHeaderCell>
-                    <asp:TableHeaderCell>是否求职</asp:TableHeaderCell>
+            <asp:Table ID="tableUser" runat="server" CssClass="userTable">
+                <asp:TableHeaderRow ID="tableUserHeader" CssClass="userTableHeader">
+                    <asp:TableHeaderCell CssClass="userTableCell">ID</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">邮箱</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">用户名</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">姓名</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">年龄</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">性别</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">手机</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">是否求职</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
-                <asp:TableRow ID="tableUserRow"></asp:TableRow>
             </asp:Table>
         </div>
     </form>
