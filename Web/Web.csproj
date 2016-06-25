@@ -58,7 +58,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1111.aspx" />
     <Content Include="Admin\index.aspx" />
     <Content Include="Admin\personalUser.aspx" />
     <Content Include="Challenge.aspx" />
@@ -139,9 +138,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1111.aspx.cs">
-    <Compile Include="1111.aspx.designer.cs">
-      <DependentUpon>1111.aspx</DependentUpon>
+
     <Compile Include="Admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
