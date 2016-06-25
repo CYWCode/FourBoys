@@ -80,8 +80,7 @@
 
 
          }</script>
-				
-	
+
 <div class="navbar navbar-default navbar-fixed-top" id="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -180,10 +179,10 @@
 								</div>
 								<!-- /.panel-body -->
 								<div class="panel-footer align-center">
-											<a href="http://www.oxcoder.com/user/recruit/start_recruit.html?userRecruitId=102455">
-												<button class="btn btn-new1" onclick="fdisabled(this)">开始挑战</button>
-											</a>
-											<a href="http://www.oxcoder.com/user/recruit/abandon_recruit.html?userRecruitId=102455" onclick="fdisabled(this)" class="btn btn-new2">放弃</a>							
+                                            
+                                             <a href="ChallengeDetail.aspx" onclick="fdisabled(this)" class="btn btn-new1">开始挑战</a>	
+										
+											<a href="" onclick="fdisabled(this)" class="btn btn-new2">放弃</a>							
 								</div>
 								<!-- /.panel-footer -->
 							</div>
