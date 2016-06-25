@@ -191,7 +191,7 @@
 
                <script language="javascript">
                    var s = "<%= l.Count%>";
-                   for (var q = 0; q < s; q++) {
+                   for (var q = 0; q < s-1; q++) {
                        add();
                    }
                    var div1 = document.getElementById("abc");
