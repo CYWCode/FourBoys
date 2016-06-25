@@ -123,7 +123,9 @@
     <Content Include="ChallengeResource\style_new.css" />
     <Content Include="ChallengeResource\summernote-bs3.css" />
     <Content Include="ChallengeResource\summernote.css" />
-    <Content Include="ChallengeManagement.aspx" />
+    <Content Include="ChallengeManagement.aspx">
+      <BrowseToURL>~/ChallengeManagament.aspx</BrowseToURL>
+    </Content>
     <Content Include="ChallengeResource\summernote.min.js" />
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
@@ -138,12 +140,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1111.aspx.cs">
-      <DependentUpon>1111.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="1111.aspx.designer.cs">
       <DependentUpon>1111.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +229,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Web.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -243,10 +242,6 @@
       <Project>{03ba4d6b-229d-4547-b132-bb6d34401872}</Project>
       <Name>BLLFac</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DALFac\DALFac.csproj">
-      <Project>{6cff52a6-9dde-4069-88ba-f06bc40ab07a}</Project>
-      <Name>DALFac</Name>
-    </ProjectReference>
     <ProjectReference Include="..\IBLLFac\IBLLFac.csproj">
       <Project>{80c33c75-2ad4-49e9-ac9c-df2857d04892}</Project>
       <Name>IBLLFac</Name>
@@ -255,14 +250,13 @@
       <Project>{d1078bb1-8402-41f0-8168-b1c2088cc943}</Project>
       <Name>IBLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IDALFac\IDALFac.csproj">
-      <Project>{f6dab63d-9396-4837-b81a-1c146ecb2879}</Project>
-      <Name>IDALFac</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PageEntity\PageEntity.csproj">
       <Project>{e51cbedf-d3c6-4bd8-9724-e951812bbced}</Project>
       <Name>PageEntity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resume\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

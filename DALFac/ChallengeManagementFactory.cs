@@ -48,6 +48,21 @@ namespace DALFac
 
             list.Add(challengeManagement2);
 
+            IChallengeManagement challengeManagement3 = new ChallengeManagement()
+            {
+                id = 2,
+                position = "JAVA工程师",
+                enterpriseTitle = "北京大米",
+                jobSalary = 9000,
+                questionNumber = 5,
+                startTime = DateTime.Parse("2016-5-9"),
+                deadline = DateTime.Parse("2016-6-25"),
+                finishNumber = 256,
+                place = "北京"
+            };
+
+            list.Add(challengeManagement3);
+
             return list;
         }
     }

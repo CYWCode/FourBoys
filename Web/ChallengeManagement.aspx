@@ -29,22 +29,46 @@
 
      <script language="javascript">
          var i = 0;
+
+         var position = new Array();
+         var enterpriseTitle = new Array();
          var jobSalary = new Array();
+         var questionNumber = new Array();
+         var startTime = new Array();
+         var deadline = new Array();
+         var finishNumber = new Array();
+
 
          <%
         for(int k=0;k<l.Count;k++){
          %>
+         position.push("<%=l[k].position%>");
+         enterpriseTitle.push("<%=l[k].enterpriseTitle%>")
          jobSalary.push("<%=l[k].jobSalary%>");
+         questionNumber.push("<%=l[k].questionNumber%>");
+         startTime.push("<%=l[k].startTime%>");
+         deadline.push("<%=l[k].deadline%>");
+         finishNumber.push("<%=l[k].finishNumber%>");
         <%
         }
          %>
-         
+
          function add() {
-             
-            
-             var label = document.getElementById("pay");
-             label.innerHTML = jobSalary[i];
-            
+
+             var label1 = document.getElementById("position");
+             var label2 = document.getElementById("enterprise");
+             var label3 = document.getElementById("jobSalary");
+             var label4 = document.getElementById("questionNumber");
+             var label5 = document.getElementById("startTime");
+             var label6 = document.getElementById("deadline");
+             var label7 = document.getElementById("finishNumber");
+             label1.innerHTML = position[i];
+             label2.innerHTML = enterpriseTitle[i];
+             label3.innerHTML = jobSalary[i];
+             label4.innerHTML = questionNumber[i];
+             label5.innerHTML = startTime[i];
+             label6.innerHTML = deadline[i];
+             label7.innerHTML = finishNumber[i];
 
              var div1 = document.getElementById("abc");
              var divParent = div1.parentNode;
@@ -53,8 +77,8 @@
              clone.id = "abc" + i;
              i++;
              divParent.appendChild(clone);
-             
-            
+
+
          }</script>
 				
 	
@@ -114,73 +138,37 @@
 					<h2 class="h2-tab">
 						<a href="ChallengeManagenment.aspx" class="">我接受的挑战</a>
 					</h2>
-					<h2 class="h2-tab">
-						<a href="http://www.oxcoder.com/user/recruit/user_recruit.html?isHistory=true" class="off">挑战历史</a>
-					</h2>
 				</section>
 			</div>
 			<div class="col-md-12 col-no-left-padding">
-				<section id="Section1" class="col-md-12">
-					<div class="btn-group" style="margin-bottom: 10px;">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							全部
-							<span class="caret"></span>
-						</button>
-						<input id="is_history_id" value="false" type="hidden">
-						<input id="user_state_id" value="" type="hidden">
-						<ul class="dropdown-menu">
-							<li>
-								<a href="http://www.oxcoder.com/user/recruit/user_recruit.html?isHistory=false">全部</a>
-							</li>
-							<li>
-								<a href="http://www.oxcoder.com/user/recruit/user_recruit.html?isHistory=false&amp;userState=0">未完成的挑战</a>
-							</li>
-							<li>
-								<a href="http://www.oxcoder.com/user/recruit/user_recruit.html?isHistory=false&amp;userState=1">通过的挑战</a>
-							</li>
-							<li>
-								<a href="http://www.oxcoder.com/user/recruit/user_recruit.html?isHistory=false&amp;userState=3">不通过的挑战</a>
-							</li>
-						</ul>
-					</div>
-				</section>
-				
-               
-					
-				
 					<div id ="abc" class="col-md-3">
 						<section id="Section3">
 							<div class="panel panel-default shadow-effect" style="background-image:url();background-repeat:no-repeat;background-position:90% 55%;">
 								<div class="col-xs-12 panel-header">
 									<div class="pull-left">
 										<h4 class="line-control">
-										<a>[中级]iOS工程师</a>
+										<a><label id="position"></label></a>
 										</h4>
 										<h4 class="line-control" style="min-height:18px;">
-											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=162">海量信息</a>
+											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=162"><label id="enterprise"></label></a>
 										</h4>
 									</div>
-									<div class="pull-right client-info">
-										<span class="percent text-danger">
-											<img class="img-circle" style="width:60px;height:60px" src="./ChallengeResource/eeabdb21-0363-4094-860f-c8142b40d143.png">
-										</span>
-									</div>
-									
+							
 								</div>
 	
 								<div class="panel-body ">
 									<ul class="list-unstyled">
 										<li>月薪： 
-											<label id="pay"></label>  
+											<label id="jobSalary"></label>  
 										</li>
-										<li>试题数量：3</li>
+										<li>试题数量：<label id="questionNumber"></label></li>
 										<li>
 											<i class="fa fa-calendar"></i>
-											2016.03.14~2016.05.14
+											<label id="startTime"></label>~<label id="deadline"></label>
 										</li>
 										<li>
 											<i class="fa fa-user"></i>
-											964人已接受挑战
+											<label id="finishNumber"></label>人已接受挑战
 										</li>
 										<li class="progress-info">
 													<span class="ongoing">&nbsp;</span>
@@ -203,7 +191,7 @@
 					</div>
 
                <script language="javascript">
-                   var s = "<%= l.Count  %>";
+                   var s = "<%= l.Count%>";
                    for (var q = 0; q < s; q++) {
                        add();
                    }

@@ -16,8 +16,8 @@ namespace Web
     public partial class ChallenageManagament : System.Web.UI.Page
     {
 
-        public int[] b = new int[10];
-        public static int index=-1;
+        ////public int[] b = new int[10];
+        //public static int index=-1;
         public List<IChallengeManagement> l;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -26,13 +26,8 @@ namespace Web
             List<IChallengeManagement> list = CMFactory.getChallengeManagementList();
 
             l = list;
-           
 
-            b[0] = -1;
-            
-            
-
-        }
+          }
 
         //public  int a(){
         //    index++;

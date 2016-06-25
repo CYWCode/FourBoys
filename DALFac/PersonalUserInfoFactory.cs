@@ -140,6 +140,30 @@ namespace DALFac
             context.UserInfo.InsertOnSubmit(newUserInfo);
             context.SubmitChanges();
         }
+
+        public int getPersonalUserNum()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var query = from item in context.User
+                        select item;
+            return query.Count<User>();
+        }
+
+        public int getChallengeNum()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var query = from item in context.UserChallengeContent
+                        select item;
+            return query.Count<UserChallengeContent>();
+        }
+
+        public int getEnterpriseUserNum()
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+            var query = from item in context.EnterPrise
+                        select item;
+            return query.Count<EnterPrise>();
+        }
     }
 
 }
