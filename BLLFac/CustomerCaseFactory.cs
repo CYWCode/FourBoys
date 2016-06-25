@@ -13,6 +13,8 @@ using BLLEntity;
 using IDALFac;
 using DALFac;
 
+// 王韵倩
+
 namespace BLLFac
 {
     public class CustomerCaseFactory : IBLLFac.ICustomerCaseFactory

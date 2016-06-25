@@ -9,6 +9,8 @@ using IDALFac;
 using SqlServerDAL;
 using BLLEntity;
 
+// 王韵倩
+
 namespace DALFac
 {
     public class CustomerCaseFactory : ICustomerCaseFactory
