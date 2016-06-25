@@ -22,15 +22,18 @@ namespace Web.Admin
 
             foreach (IAdminPersonalUser user in list)
             {
-                TableRow newRow = new TableRow();
+                TableRow newRow = new TableRow() { CssClass = "userTableRow" };
 
-                newRow.Cells.Add(new TableCell() { Text = user.id.ToString() });
-                newRow.Cells.Add(new TableCell() { Text = user.email });
-                newRow.Cells.Add(new TableCell() { Text = user.name });
-                newRow.Cells.Add(new TableCell() { Text = user.age.ToString() });
-                newRow.Cells.Add(new TableCell() { Text = user.sex });
-                newRow.Cells.Add(new TableCell() { Text = user.phoneNumber });
-                newRow.Cells.Add(new TableCell() { Text = user.hunting.ToString() });
+                newRow.Cells.Add(new TableCell() { Text = user.id.ToString(), CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.email, CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.userName, CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.name, CssClass = "userTableCell" });
+                string age = user.age.ToString();
+                if (user.age == -1) age = "未知";
+                newRow.Cells.Add(new TableCell() { Text = age, CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.sex, CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.phoneNumber, CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.hunting.ToString(), CssClass = "userTableCell" });
 
                 tableUser.Rows.Add(newRow);
             }
