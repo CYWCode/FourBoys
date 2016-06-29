@@ -20,27 +20,28 @@ namespace Web.Personal
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // get challenge case factory
+            // 创建挑战工厂
             factory = new ChallengeCaseFactory();
-            // get challenge case list
+            // 获取挑战列表
             List<IChallengeCase> list = factory.getChallengeCaseList(sortOrder);
-            // bind data source
+            // 绑定数据源
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
 
         protected void selectSalary_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // 获取筛选后
             List<IChallengeCase> oriList = factory.getChallengeCaseList(sortOrder);
             List<IChallengeCase> list = doSearch(doSalary(oriList));
-            // bind data source
+            // 绑定数据源
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
 
         private List<IChallengeCase> doSalary(List<IChallengeCase> oriList)
         {
-            // get min and max salary
+            // 最大最小工资
             int index = selectSalary.SelectedIndex;
             int minSalary, maxSalary;
             switch (index)
@@ -67,22 +68,22 @@ namespace Web.Personal
                     break;
                 case 6:
                     minSalary = 15;
-                    maxSalary = -1;     // unlimited maxinum
+                    maxSalary = -1;     // 无上限
                     break;
                 default:
                     minSalary = maxSalary = -1;
                     break;
             }
-            // get challenge case list
+            // 获取筛选后
             return factory.getChallengeCaseListBySalary(oriList, sortOrder, minSalary, maxSalary);
         }
 
         protected void btnTime_Click(object sender, EventArgs e)
         {
             sortOrder = ChallengeCaseFactory.ORDER_BY_TIME;
-            // get challenge case list
+            // 获取排序后
             List<IChallengeCase> list = factory.getChallengeCaseList(sortOrder);
-            // bind data source
+            // 绑定数据源
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
@@ -90,9 +91,9 @@ namespace Web.Personal
         protected void btnSalary_Click(object sender, EventArgs e)
         {
             sortOrder = ChallengeCaseFactory.ORDER_BY_SALARY;
-            // get challenge case list
+            // 获取排序后
             List<IChallengeCase> list = factory.getChallengeCaseList(sortOrder);
-            // bind data source
+            // 绑定数据源
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
@@ -101,7 +102,7 @@ namespace Web.Personal
         {
             List<IChallengeCase> oriList = factory.getChallengeCaseList(sortOrder);
             List<IChallengeCase> list = doSearch(doSalary(oriList));
-            // bind data source
+            // 绑定数据源
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
@@ -110,7 +111,7 @@ namespace Web.Personal
         {
             List<IChallengeCase> oriList = factory.getChallengeCaseList(sortOrder);
             List<IChallengeCase> list = doSearch(doSalary(oriList));
-            // bind data source
+            // 绑定数据源
             challengecase.DataSource = list;
             challengecase.DataBind();
         }
@@ -122,7 +123,7 @@ namespace Web.Personal
             {
                 name = null;
             }
-            // get challenge case list
+            // 获取
             return factory.getChallengeCaseListByName(oriList, sortOrder, name);
         }
 
