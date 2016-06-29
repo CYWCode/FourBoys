@@ -21,18 +21,19 @@ namespace DALFac
 
         public List<IChallengeCase> getChallengeCaseList(int order)
         {
-            // get data context
+            // 获取linq to sql的上下文
             DataClassesDataContext dataContext = new DataClassesDataContext();
-            // generate challenge case list
+            // 创建列表
             List<IChallengeCase> list = new List<IChallengeCase>();
-            // get list by order
+            // 获取列表
             switch (order)
             {
                 case ORDER_BY_TIME:
                     {
                         var oriList = from ucc in dataContext.UserChallengeContent
-                                      orderby ucc.StartTime descending
+                                      orderby ucc.StartTime descending  // 排序
                                       select ucc;
+                        // 转换成业务逻辑层的格式
                         foreach (UserChallengeContent item in oriList)
                         {
                             IChallengeCase aCase = new ChallengeCase()
@@ -52,7 +53,7 @@ namespace DALFac
                 case ORDER_BY_SALARY:
                     {
                         var oriList = from ucc in dataContext.UserChallengeContent
-                                      orderby ucc.Pay descending
+                                      orderby ucc.Pay descending  // 排序
                                       select ucc;
                         foreach (UserChallengeContent item in oriList)
                         {

@@ -146,7 +146,7 @@
 				</section>
 			</div>
 			<div class="col-md-12" id="cplb_main" scrollpagination="enabled">
-				
+				<!-- 用Repeater显示列表 -->
                 <asp:Repeater ID="challengecase" runat="server" >
                     <ItemTemplate>
 					    

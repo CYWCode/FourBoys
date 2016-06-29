@@ -15,13 +15,14 @@ namespace Web.Unsigned
 {
     public partial class customer_case : System.Web.UI.Page
     {
+        // 页面载入时调用
         protected void Page_Load(object sender, EventArgs e)
         {
-            // get customer case factory
+            // 创建客户案例工厂
             ICustomerCaseFactory fac = new CustomerCaseFactory();
-            // get customer case list
+            // 获取客户案例列表
             List<ICustomerCase> list = fac.getCustomerCaseList();
-            // bind data source
+            // 把List格式的数据源作为绑定到Repeater控件上作为数据源
             logowall.DataSource = list;
             logowall.DataBind();
         }
