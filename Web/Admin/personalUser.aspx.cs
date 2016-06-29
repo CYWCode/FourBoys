@@ -35,18 +35,18 @@ namespace Web.Admin
                 newRow.Cells.Add(new TableCell() { Text = user.phoneNumber, CssClass = "userTableCell" });
                 newRow.Cells.Add(new TableCell() { Text = user.hunting.ToString(), CssClass = "userTableCell" });
 
-                newRow.Cells.Add(new TableCell());
+                newRow.Cells.Add(new TableCell() { CssClass = "userTableCell" });
 
-                Button delButton = new Button() { Text = "删除", ID = "del_" + user.id.ToString() };
+                Button delButton = new Button() { Text = "删除", ID = "del_" + user.id.ToString(), CssClass = "userTableButton" };
                 delButton.Click += new EventHandler(HandleDeleteClick);
                 newRow.Cells[8].Controls.Add(delButton);
 
-                Button updateButton = new Button() { Text = "修改", ID = "update_" + user.id.ToString() };
+                Button updateButton = new Button() { Text = "修改", ID = "update_" + user.id.ToString(), CssClass = "userTableButton" };
                 updateButton.Click += new EventHandler(HandleUpdateClick);
                 // 通过按钮修改 改为 通过登录来实现修改
                 //newRow.Cells[8].Controls.Add(updateButton);
 
-                Button logasButton = new Button() { Text = "登录", ID = "loginas_" + user.id.ToString() };
+                Button logasButton = new Button() { Text = "登录", ID = "loginas_" + user.id.ToString(), CssClass = "userTableButton" };
                 logasButton.Click += new EventHandler(HandleLoginAsClick);
                 newRow.Cells[8].Controls.Add(logasButton);
 

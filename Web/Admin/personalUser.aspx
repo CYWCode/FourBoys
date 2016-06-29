@@ -22,6 +22,10 @@
         .userTableCell {
             padding: 10px;
         }
+        .userTableButton {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
