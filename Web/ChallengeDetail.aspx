@@ -31,14 +31,51 @@
 	<script type="text/javascript" src="./ChallengeResource/webcam.js"></script>
 <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 <body>
+
+
+
+     <script language="javascript">
+         var i = 0;
+         var position = new Array();
+         var enterpriseTitle = new Array();
+         var jobSalary = new Array();
+         var questionNumber = new Array();
+         var startTime = new Array();
+         var deadline = new Array();
+         var finishNumber = new Array();
+
+         <%
+        for(int k=0;k<l.Count;k++){
+         %>
+         position.push("<%=l[k].position%>");
+         enterpriseTitle.push("<%=l[k].enterpriseTitle%>")
+         jobSalary.push("<%=l[k].jobSalary%>");
+         questionNumber.push("<%=l[k].questionNumber%>");
+         startTime.push("<%=l[k].startTime%>");
+         deadline.push("<%=l[k].deadline%>");
+         finishNumber.push("<%=l[k].finishNumber%>");
+        <%
+        }
+         %>
+
+         function add(){
+
+              var label1 = document.getElementById("position");
+             var label2 = document.getElementById("enterprise");
+             var label3 = document.getElementById("jobSalary");
+             var label5 = document.getElementById("startTime");
+             var label6 = document.getElementById("deadline");
+             var label7 = document.getElementById("finishNumber");
+             label1.innerHTML = position[0];
+             label2.innerHTML = enterpriseTitle[i];
+             label3.innerHTML = jobSalary[i];
+             label5.innerHTML = startTime[i];
+             label6.innerHTML = deadline[i];
+             label7.innerHTML = finishNumber[i];
+         }
+      
+    </script>
 	
-	
-
-
-
-
-
-
 
 <div class="navbar navbar-default navbar-fixed-top" id="navbar">
 	<div class="container">
@@ -58,24 +95,7 @@
 					<a href="http://www.oxcoder.com/user/index.html">首页</a>
 				</li>
 				<li class="">
-					<a href="http://www.oxcoder.com/user/recruit/user_recruit.html">挑战</a>
-				</li>
-				<li class="">
-					
-						
-						
-							<a href="http://www.oxcoder.com/user/drivingRange/index.html">练习场</a>
-						
-					
-
-				</li>
-				<li class="">
-					
-						
-						
-							<a href="http://www.oxcoder.com/user/learnCalendar/index.html">学习日历</a>
-						
-					
+					<a href="ChallengeManagement.aspx">挑战</a>
 				</li>
 				<li class="">
 					<a href="http://www.oxcoder.com/user/info/user_center.html">个人中心</a>
@@ -83,28 +103,20 @@
 				<li class="">
 					<a href="http://www.oxcoder.com/user/info/user_resume.html">个人简历</a>
 				</li>
-				<li class="">
-					<a href="http://www.oxcoder.com/competition_info.html">编程大赛</a>
-				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown" id="drop_down_nav">
 					<a href="http://www.oxcoder.com/#" class="dropdown-toggle" data-toggle="dropdown">
 						<span class="text">
-							
-								
-								
-									c1446843@trbvn.com
-								
-								
-								
-							
+
+									Username
+		
 						</span>
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="http://www.oxcoder.com/user/info/account_binding.html">帐号设置</a>
+							<a href="">帐号设置</a>
 						</li>
 						<li>
 							<a href="http://www.oxcoder.com/security_logout">注销</a>
@@ -127,36 +139,32 @@
 									<section>
 										<div class="page-header" style="border-bottom: none;">
 											<h1>
-												[高级]iOS工程师 —— 世纪创兴（北京）科技有限公司
+												<a><label id="position"></label></a> —— <a><label id="enterprise"></label></a>
 											</h1>
 											<div class="challenge-simple-desc">
 												<span class="desc-label">
 													月薪：
 													
-													15K以上
+													<a><label id="jobSalary"></label></a>
 												</span>
 												<span class="desc-label">
-													职位诱惑：
-													
-													
-														五险一金&nbsp;
-													
-														年底双薪&nbsp;
-													
-														弹性工作&nbsp;
-													
+													时间：<label id="startTime"></label>~<label id="deadline"></label>
 												</span>
 												<span class="desc-label">
-													时间：2016.03.11 ~ 2016.05.11
-												</span>
-												<span class="desc-label">
-													266人已接受挑战
+													<label id="finishNumber"></label>人已接受挑战
 												</span>
 												<p>
 
 												</p>
 											</div>
 										</div>
+
+                                        <script language="javascript">
+                                           
+                                                add();
+                                         </script>
+
+
 										<!-- /.page-header -->
 										<div id="Div1">
 											<div class="row">
@@ -286,7 +294,7 @@
 									</section>
 								</div>
 								<div style="text-align: center;" class="col-md-12">
-									<a id="btn-run-not-sub" href="http://www.oxcoder.com/user/accepted_recruit.html?recruitId=3046" class="btn btn-new1">
+									<a id="btn-run-not-sub" href="Challenge.aspx" class="btn btn-new1">
 										接受挑战
 									</a>
 								</div>

@@ -5,32 +5,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using System.Data.Linq;
-
 using IBLLFac;
 using IBLL;
 using BLLFac;
 
-namespace Web
+namespace Web.Admin
 {
-    public partial class ChallenageManagament : System.Web.UI.Page
+    public partial class Challenge : System.Web.UI.Page
     {
-
-        
-
+        public List<IChallengeManagement> l;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             IChallengeManagementFactory CMFactory = new ChallengeManagementFactory();
             List<IChallengeManagement> list = CMFactory.getChallengeManagementList();
 
+            l = list;
 
-            IChallengeManagement IChallengeManagement = list[0];
-            int a = IChallengeManagement.id;
-
-            position.Text = a.ToString();
-           
-          
 
         }
     }
