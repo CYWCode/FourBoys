@@ -22,31 +22,31 @@ namespace Web.Admin
 
             foreach (IAdminPersonalUser user in list)
             {
-                TableRow newRow = new TableRow() { CssClass = "userTableRow" };
+                TableRow newRow = new TableRow();
 
-                newRow.Cells.Add(new TableCell() { Text = user.id.ToString(), CssClass = "userTableCell" });
-                newRow.Cells.Add(new TableCell() { Text = user.email, CssClass = "userTableCell" });
-                newRow.Cells.Add(new TableCell() { Text = user.userName, CssClass = "userTableCell" });
-                newRow.Cells.Add(new TableCell() { Text = user.name, CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = user.id.ToString() });
+                newRow.Cells.Add(new TableCell() { Text = user.email });
+                newRow.Cells.Add(new TableCell() { Text = user.userName });
+                newRow.Cells.Add(new TableCell() { Text = user.name });
                 string age = user.age.ToString();
                 if (user.age == -1) age = "未知";
-                newRow.Cells.Add(new TableCell() { Text = age, CssClass = "userTableCell" });
-                newRow.Cells.Add(new TableCell() { Text = user.sex, CssClass = "userTableCell" });
-                newRow.Cells.Add(new TableCell() { Text = user.phoneNumber, CssClass = "userTableCell" });
-                newRow.Cells.Add(new TableCell() { Text = user.hunting.ToString(), CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell() { Text = age });
+                newRow.Cells.Add(new TableCell() { Text = user.sex });
+                newRow.Cells.Add(new TableCell() { Text = user.phoneNumber });
+                newRow.Cells.Add(new TableCell() { Text = user.hunting.ToString() });
 
-                newRow.Cells.Add(new TableCell() { CssClass = "userTableCell" });
+                newRow.Cells.Add(new TableCell());
 
-                Button delButton = new Button() { Text = "删除", ID = "del_" + user.id.ToString(), CssClass = "userTableButton" };
+                Button delButton = new Button() { Text = "删除", ID = "del_" + user.id.ToString(), CssClass = "tableButton btn btn-danger" };
                 delButton.Click += new EventHandler(HandleDeleteClick);
                 newRow.Cells[8].Controls.Add(delButton);
 
-                Button updateButton = new Button() { Text = "修改", ID = "update_" + user.id.ToString(), CssClass = "userTableButton" };
+                Button updateButton = new Button() { Text = "修改", ID = "update_" + user.id.ToString() };
                 updateButton.Click += new EventHandler(HandleUpdateClick);
                 // 通过按钮修改 改为 通过登录来实现修改
                 //newRow.Cells[8].Controls.Add(updateButton);
 
-                Button logasButton = new Button() { Text = "登录", ID = "loginas_" + user.id.ToString(), CssClass = "userTableButton" };
+                Button logasButton = new Button() { Text = "登录", ID = "loginas_" + user.id.ToString(), CssClass = "tableButton btn btn-primary" };
                 logasButton.Click += new EventHandler(HandleLoginAsClick);
                 newRow.Cells[8].Controls.Add(logasButton);
 
