@@ -43,7 +43,8 @@ namespace Web.Admin
 
                 Button updateButton = new Button() { Text = "修改", ID = "update_" + user.id.ToString() };
                 updateButton.Click += new EventHandler(HandleUpdateClick);
-                newRow.Cells[8].Controls.Add(updateButton);
+                // 通过按钮修改 改为 通过登录来实现修改
+                //newRow.Cells[8].Controls.Add(updateButton);
 
                 Button logasButton = new Button() { Text = "登录", ID = "loginas_" + user.id.ToString() };
                 logasButton.Click += new EventHandler(HandleLoginAsClick);
@@ -59,7 +60,9 @@ namespace Web.Admin
             string idStr = ((Button)sender).ID;
             idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
             // TODO: 删除
-            tableUser.Rows[0].Cells[0].Text = "delete " + idStr;
+            IAdminNumHelper helper = new AdminNumHelper();
+            helper.deletePersonalUser(Convert.ToInt32(idStr));
+            Response.AddHeader("Refresh", "0"); 
         }
 
         private void HandleUpdateClick(object sender, EventArgs e)
@@ -67,8 +70,7 @@ namespace Web.Admin
             // 获取被点击按钮对应的用户id
             string idStr = ((Button)sender).ID;
             idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
-            // TODO: 弹框更新
-            tableUser.Rows[0].Cells[0].Text = "update " + idStr;
+            //tableUser.Rows[0].Cells[0].Text = "update " + idStr;
         }
 
         private void HandleLoginAsClick(object sender, EventArgs e)
@@ -77,7 +79,7 @@ namespace Web.Admin
             string idStr = ((Button)sender).ID;
             idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
             // TODO: 与用户管理系统连接
-            tableUser.Rows[0].Cells[0].Text = "login as " + idStr;
+            //tableUser.Rows[0].Cells[0].Text = "login as " + idStr;
         }
 
     }

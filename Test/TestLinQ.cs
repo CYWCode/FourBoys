@@ -25,7 +25,7 @@ namespace Test
             {
                 User user = new User()
                 {
-                    UserName = "测试用户" + i,
+                    UserName = "测试用户L" + i,
                     PhoneNum = "测试手机号",
                     Email = "测试邮箱",
                     UserPwd = "测试密码"
