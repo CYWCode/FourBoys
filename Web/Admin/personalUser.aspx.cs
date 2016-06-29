@@ -20,6 +20,14 @@ namespace Web.Admin
             IAdminNumHelper helper = new AdminNumHelper();
             List<IAdminPersonalUser> list = helper.getPersonUserList();
 
+            showTable(list);
+
+            //tboxKeyword.TextChanged += new EventHandler(doSearch);
+            //btnSearch.Click += new EventHandler(doSearch);
+        }
+
+        private void showTable(List<IAdminPersonalUser> list)
+        {
             foreach (IAdminPersonalUser user in list)
             {
                 TableRow newRow = new TableRow();
@@ -59,10 +67,11 @@ namespace Web.Admin
             // 获取被点击按钮对应的用户id
             string idStr = ((Button)sender).ID;
             idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
-            // TODO: 删除
+            // 删除
             IAdminNumHelper helper = new AdminNumHelper();
             helper.deletePersonalUser(Convert.ToInt32(idStr));
-            Response.AddHeader("Refresh", "0"); 
+            // 更新
+            Response.AddHeader("Refresh", "0");
         }
 
         private void HandleUpdateClick(object sender, EventArgs e)
@@ -80,6 +89,29 @@ namespace Web.Admin
             idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
             // TODO: 与用户管理系统连接
             //tableUser.Rows[0].Cells[0].Text = "login as " + idStr;
+        }
+
+        protected void doSearch(object sender, EventArgs e)
+        {
+            // 获取搜索关键词
+            string keyword = tboxKeyword.Text;
+            if (keyword.Trim() == "") { return; }
+            // 搜索
+            for (int i = 1; i < tableUser.Rows.Count; i ++)
+            {
+                TableRow row = tableUser.Rows[i];
+                bool existKeyword = false;
+                foreach (TableCell cell in row.Cells)
+                {
+                    if (cell.Text.Contains(keyword))
+                    {
+                        existKeyword = true;
+                    }
+                }
+                if (!existKeyword) {
+                    row.Visible = false;
+                }
+            }
         }
 
     }

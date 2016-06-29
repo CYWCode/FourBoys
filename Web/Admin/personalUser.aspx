@@ -22,9 +22,9 @@
         </div>
 		<div class="col-md-8 col-no-left-padding col-md-offset-2" style="margin-top: 30px; margin-bottom: 30px">
 	        <div class="input-group">
-                <asp:TextBox id="tboxKeyword" runat="server" class="form-control" placeholder="用户名关键词" ></asp:TextBox>
+                <asp:TextBox id="tboxKeyword" runat="server" class="form-control" placeholder="关键词" OnTextChanged="doSearch" ></asp:TextBox>
 			    <span class="input-group-btn">
-                    <asp:Button ID="btnSearch" runat="server" Text="搜索" class="btn" />
+                    <asp:Button ID="btnSearch" runat="server" Text="搜索" class="btn" OnClick="doSearch" />
 			    </span>
 	        </div>
 		</div>
