@@ -15,7 +15,7 @@ namespace Web.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
+            //if (IsPostBack) return;
             
             IAdminNumHelper helper = new AdminNumHelper();
             List<IAdminPersonalUser> list = helper.getPersonUserList();
@@ -35,8 +35,50 @@ namespace Web.Admin
                 newRow.Cells.Add(new TableCell() { Text = user.phoneNumber, CssClass = "userTableCell" });
                 newRow.Cells.Add(new TableCell() { Text = user.hunting.ToString(), CssClass = "userTableCell" });
 
+                newRow.Cells.Add(new TableCell());
+
+                Button delButton = new Button() { Text = "删除", ID = "del_" + user.id.ToString() };
+                delButton.Click += new EventHandler(HandleDeleteClick);
+                newRow.Cells[8].Controls.Add(delButton);
+
+                Button updateButton = new Button() { Text = "修改", ID = "update_" + user.id.ToString() };
+                updateButton.Click += new EventHandler(HandleUpdateClick);
+                newRow.Cells[8].Controls.Add(updateButton);
+
+                Button logasButton = new Button() { Text = "登录", ID = "loginas_" + user.id.ToString() };
+                logasButton.Click += new EventHandler(HandleLoginAsClick);
+                newRow.Cells[8].Controls.Add(logasButton);
+
                 tableUser.Rows.Add(newRow);
             }
         }
+
+        private void HandleDeleteClick(object sender, EventArgs e)
+        {
+            // 获取被点击按钮对应的用户id
+            string idStr = ((Button)sender).ID;
+            idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
+            // TODO: 删除
+            tableUser.Rows[0].Cells[0].Text = "delete " + idStr;
+        }
+
+        private void HandleUpdateClick(object sender, EventArgs e)
+        {
+            // 获取被点击按钮对应的用户id
+            string idStr = ((Button)sender).ID;
+            idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
+            // TODO: 弹框更新
+            tableUser.Rows[0].Cells[0].Text = "update " + idStr;
+        }
+
+        private void HandleLoginAsClick(object sender, EventArgs e)
+        {
+            // 获取被点击按钮对应的用户id
+            string idStr = ((Button)sender).ID;
+            idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
+            // TODO: 与用户管理系统连接
+            tableUser.Rows[0].Cells[0].Text = "login as " + idStr;
+        }
+
     }
 }

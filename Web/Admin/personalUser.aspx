@@ -41,6 +41,7 @@
                     <asp:TableHeaderCell CssClass="userTableCell">性别</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="userTableCell">手机</asp:TableHeaderCell>
                     <asp:TableHeaderCell CssClass="userTableCell">是否求职</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="userTableCell">管理操作</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
             </asp:Table>
         </div>
