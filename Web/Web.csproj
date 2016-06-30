@@ -130,8 +130,11 @@
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="ChallengeResult.aspx" />
+    <Content Include="Enterprise\new_recruit_1.aspx" />
     <Content Include="Enterprise\oxcoder_corp_index.aspx" />
     <Content Include="Enterprise\Resource.html" />
+    <Content Include="Enterprise\index.aspx" />
+    <Content Include="Enterprise\screening_list.aspx" />
     <Content Include="Personal\cooper_info.aspx" />
     <Content Include="Personal\index.aspx" />
     <Content Include="Personal\Resource.html" />
@@ -192,12 +195,33 @@
     <Compile Include="ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Enterprise\new_recruit_1.aspx.cs">
+      <DependentUpon>new_recruit_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\new_recruit_1.aspx.designer.cs">
+      <DependentUpon>new_recruit_1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Enterprise\oxcoder_corp_index.aspx.cs">
       <DependentUpon>oxcoder_corp_index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Enterprise\oxcoder_corp_index.aspx.designer.cs">
       <DependentUpon>oxcoder_corp_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\screening_list.aspx.cs">
+      <DependentUpon>screening_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\screening_list.aspx.designer.cs">
+      <DependentUpon>screening_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personal\cooper_info.aspx.cs">
       <DependentUpon>cooper_info.aspx</DependentUpon>

@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<!-- saved from url=(0198)file:///C:/Users/chenyu.yqwang/Desktop/Workspace/%E7%82%B9net/%E7%BD%91%E9%A1%B5/%E4%BC%81%E4%B8%9A%E7%94%A8%E6%88%B7/%E7%8C%BF%E5%9C%88%20%E6%96%B0%E5%A2%9E%E6%8C%91%E6%88%98%E9%82%80%E8%AF%B7.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--<base href="http://www.oxcoder.com:80/">--><!--<base href=".">--><base href=".">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="new_recruit_1.aspx.cs" Inherits="Web.Enterprise.new_recruit_1" %>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="BootstrapStyler">
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>猿圈 新增挑战邀请</title>
 <link href="./Resource_files/bootstrap.min.css" rel="stylesheet">
 <link href="./Resource_files/font-awesome.min.css" rel="stylesheet">
@@ -52,17 +50,14 @@
 	}
 }
 </style>
-<link href="./Resource_files/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><link href="file:///C:/Users/chenyu.yqwang/Desktop/Workspace/%E7%82%B9net/%E7%BD%91%E9%A1%B5/%E4%BC%81%E4%B8%9A%E7%94%A8%E6%88%B7/%E7%8C%BF%E5%9C%88%20%E6%96%B0%E5%A2%9E%E6%8C%91%E6%88%98%E9%82%80%E8%AF%B7_files/skin/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
-<body onload="">
-	
-	
+<link href="./Resource_files/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><link href="file:///C:/Users/chenyu.yqwang/Desktop/Workspace/%E7%82%B9net/%E7%BD%91%E9%A1%B5/%E4%BC%81%E4%B8%9A%E7%94%A8%E6%88%B7/%E7%8C%BF%E5%9C%88%20%E6%96%B0%E5%A2%9E%E6%8C%91%E6%88%98%E9%82%80%E8%AF%B7_files/skin/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
+</head>
+<body>
+    <form id="newRecruit1" runat="server">
+    
+        
 
-
-
-
-
-
-
+        
 <div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
 	<div class="container">
 		<div class="navbar-header">
@@ -71,31 +66,29 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/cooper/index.html" style="padding: 0;">
+			<a class="navbar-brand hidden-sm" href="index.aspx" style="padding: 0;">
 				<img src="./Resource_files/wlogo_sm.png" style="max-height: 35px;margin:7px;">
 			</a>
 		</div>
 		<div class="navbar-collapse collapse" role="navigation">
 			<ul class="nav navbar-nav">
 				<li class="">
-					<a href="http://www.oxcoder.com/cooper/oxcoder_corp_index.html">首页</a>
-				</li>
-				<li class="">
-					<a href="http://www.oxcoder.com/cooper/recommended/talent/index.html">人才推荐</a>
+					<a href="oxcoder_corp_index.aspx">首页</a>
 				</li>
 				<li class="active">
-					<a href="http://www.oxcoder.com/cooper/index.html">挑战管理</a>
+					<a href="index.aspx">挑战管理</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- FIXME -->
 						<span class="text">
 							
 								
 								
 								
-									c1447888@trbvn.com
+									UserName
 								
 							
 						</span>
@@ -103,16 +96,11 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="http://www.oxcoder.com/cooper/pay/view_balance.html">去打赏</a>
+							<a href="cooperInfo/view_cooper_info.aspx">企业信息</a>
 						</li>
 						<li>
-							<a href="http://www.oxcoder.com/cooper/cooperInfo/view_cooper_info.html">企业信息</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/cooper/cooperInfo/account_binding.html">帐号设置</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/security_logout">注销</a>
+                            <!-- FIXME -->
+							<a href="security_logout">注销</a>
 						</li>
 					</ul>
 				</li>
@@ -120,6 +108,7 @@
 		</div>
 	</div>
 </div>
+
 
 	<div class="container">
 		<div class="row">
@@ -406,61 +395,62 @@
 	
 	<script src="./Resource_files/zmUtil.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#profile_info_div").load("cooper/cooper_left_info.html");
-			$(".test div").click(function(e) {
-				e.preventDefault();
-				$(".test div").removeClass("active");
-				$(this).addClass("active");
-			});
-			$(".level-tag a").click(function(e) {
-				if ($(".active").length = 2) {
-					$("#new_challenge_btn_1").removeAttr("disabled");
-					$("#hint1").hide();
-				} else {
-					$("#new_challenge_btn_1").attr("disabled", "true");
-					$("#hint1").show();
-				}
-			});
+	    $(document).ready(function () {
+	        $("#profile_info_div").load("cooper/cooper_left_info.html");
+	        $(".test div").click(function (e) {
+	            e.preventDefault();
+	            $(".test div").removeClass("active");
+	            $(this).addClass("active");
+	        });
+	        $(".level-tag a").click(function (e) {
+	            if ($(".active").length = 2) {
+	                $("#new_challenge_btn_1").removeAttr("disabled");
+	                $("#hint1").hide();
+	            } else {
+	                $("#new_challenge_btn_1").attr("disabled", "true");
+	                $("#hint1").show();
+	            }
+	        });
 
-			$("#new_challenge_form_1").bootstrapValidator({
-			}).on("success.form.bv", function(e) {
-		        e.preventDefault();
-		        var $form = $(e.target);
-		        $form.data("bootstrapValidator");
-		        if ($Util.isEmpty($("#directions_id").val())) {
-					$("#hint1").html("请选择挑战类型");
-					$("#hint1").show();
-					return false;
-				}
-		        if ($Util.isEmpty($("#level_id").val())) {
-		        	$("#hint1").html("请选择挑战等级");
-		        	$("#hint1").show();
-					return false;
-				}
-		        $.post("cooper/new/recruit/save_new_recruit_1.html", $form.serialize(), function(data) {
-					if(data.su){
-						location.href = data.url;
-					}else{
-						$("#hint1").html(data.msg);
-					}
-				}, "json");
-		    });
-		});
-		function selectDirection(obj){
-			$("#directions_id").val(obj);
-			$("#hint1").hide();
-			$("#new_challenge_btn_1").removeAttr("disabled");
-		};
-		function selectLevel(obj){
-			$("#level_id").val(obj);
-			$("#hint1").hide();
-			$("#new_challenge_btn_1").removeAttr("disabled");
-		};
-		function go_to_import_job_url(){
-			location.href = "cooper/oxcoder_corp_in.html";
-		}
+	        $("#new_challenge_form_1").bootstrapValidator({
+	        }).on("success.form.bv", function (e) {
+	            e.preventDefault();
+	            var $form = $(e.target);
+	            $form.data("bootstrapValidator");
+	            if ($Util.isEmpty($("#directions_id").val())) {
+	                $("#hint1").html("请选择挑战类型");
+	                $("#hint1").show();
+	                return false;
+	            }
+	            if ($Util.isEmpty($("#level_id").val())) {
+	                $("#hint1").html("请选择挑战等级");
+	                $("#hint1").show();
+	                return false;
+	            }
+	            $.post("cooper/new/recruit/save_new_recruit_1.html", $form.serialize(), function (data) {
+	                if (data.su) {
+	                    location.href = data.url;
+	                } else {
+	                    $("#hint1").html(data.msg);
+	                }
+	            }, "json");
+	        });
+	    });
+	    function selectDirection(obj) {
+	        $("#directions_id").val(obj);
+	        $("#hint1").hide();
+	        $("#new_challenge_btn_1").removeAttr("disabled");
+	    };
+	    function selectLevel(obj) {
+	        $("#level_id").val(obj);
+	        $("#hint1").hide();
+	        $("#new_challenge_btn_1").removeAttr("disabled");
+	    };
+	    function go_to_import_job_url() {
+	        location.href = "cooper/oxcoder_corp_in.html";
+	    }
 	</script>
 
-
-</body></html>
+    </form>
+</body>
+</html>
