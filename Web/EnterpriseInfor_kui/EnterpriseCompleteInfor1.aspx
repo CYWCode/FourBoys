@@ -66,7 +66,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="http://www.oxcoder.com/signup2-sub.action#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">有限公司</span> <b class="caret"></b></a>
+                            <a href="http://www.oxcoder.com/signup2-sub.action#" class="dropdown-toggle" data-toggle="dropdown"><span class="text">风生水有限公司</span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:;">去打赏</a></li>
                                 <li><a href="javascript:;">企业信息</a></li>
@@ -88,11 +88,11 @@
                             <form id="defaultForm" method="post" class="form-vertical bv-form" action="http://www.oxcoder.com/hr-info-step2-sub.action" enctype="multipart/form-data" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                                 <input id="input-provincework" type="hidden" value="">
                                 <input id="input-citywork" type="hidden" value="">
-                       <!--      <img src="./EnterpriseCompleteInfor/corp_step1.png">    -->
+                                <img src="./EnterpriseCompleteInfor/corp_step1.png">
                                 
                                 <div class="form-group">
                                     <label><h3 class="grey">公司全称</h3></label>
-                                    <input type="text" runat="server" id="wholename" name="wnameshort" class="form-control"  placeholder="请输入公司全称" value="" data-bv-field="cnameshort">
+                                    <input type="text" runat="server" id="wholename" name="wnameshort" class="form-control"  placeholder="请输入公司简称" value="" data-bv-field="cnameshort">
                                     <span class="text-danger" id="error0" style="display:none;">请输入公司全称</span>
                                     <span class="help-block has-error" id="Span1"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="cname" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司全称</small></span>
                                 </div>
@@ -104,7 +104,7 @@
                                    <span class="help-block has-error" id="hint1"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="cnameshort" data-bv-result="NOT_VALIDATED" style="display: none;">请输入公司简称</small></span>
                                 </div>
 
-                          <!--      <div class="form-group">
+                                <div class="form-group">
                                     <label><h3 class="grey">公司LOGO</h3></label>
                                 <asp:FileUpload ID="FileUpload1" runat="server" placeholder="Choose~~ file" />
                                       <!--<div class="bootstrap-filestyle input-group">
@@ -112,14 +112,9 @@
                                       <span class="input-group-btn" tabindex="0">
                                         <label for="corp-pic" class="btn btn-default"><span class="glyphicon glyphicon-folder-open"></span></label>
                                        </span>
-                                     </div>
-
-
+                                     </div>-->
                                 <span class="text-danger" id="error2" style="display: none;">请上传公司logo</span> <span class="help-block" id="hint2"></span>
                                 </div>
-
-
-                        -->
 
                                 <div class="form-group">
                                     <label><h3 class="grey">公司网址</h3></label>

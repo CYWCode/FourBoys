@@ -47,7 +47,7 @@ namespace Web.Login_Register
                         Response.Redirect("~/PersonCenter/PersonInfo.aspx");
                     }
                     else
-                        Response.Redirect("~/PersonCenter/homepage.aspx");
+                        Response.Redirect("~/PersonCenter/personCenter.aspx");
                 }
                 else if (result == 2)
                 {
