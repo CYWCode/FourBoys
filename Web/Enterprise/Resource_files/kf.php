@@ -1,4 +1,4 @@
-var acc_host='accwww15.53kf.com';var companyid='72124917';var hz6d_guest_ip='60.23.15.19';var ipstr='%E8%BE%BD%E5%AE%81%E7%9C%81%E9%94%A6%E5%B7%9E%E5%B8%82%5B%E8%81%94%E9%80%9A%5D';var in_timestamp='1462196286410';var hz6d_guest_id='10007366015004';var style_id= '1';
+var acc_host='accwww15.53kf.com';var companyid='72124917';var hz6d_guest_ip='60.23.15.19';var ipstr='%E8%BE%BD%E5%AE%81%E7%9C%81%E9%94%A6%E5%B7%9E%E5%B8%82%5B%E8%81%94%E9%80%9A%5D';var in_timestamp='1462265960365';var hz6d_guest_id='10007366015004';var style_id= '1';
 /* 
     变量：
     acc_host        acc.www4.53kf.com

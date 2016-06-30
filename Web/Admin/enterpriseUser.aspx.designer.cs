@@ -10,7 +10,7 @@
 namespace Web.Admin {
     
     
-    public partial class personalUser {
+    public partial class enterpriseUser {
         
         /// <summary>
         /// Head1 控件。

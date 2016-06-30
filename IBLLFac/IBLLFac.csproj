@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdminHelper.cs" />
     <Compile Include="IChallengeCaseFactory.cs" />
     <Compile Include="IChallengeManagementFactory.cs" />
     <Compile Include="ICustomerCaseFactory.cs" />
