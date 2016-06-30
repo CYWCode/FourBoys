@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminHelper.cs" />
     <Compile Include="ChallengeCaseFactory.cs" />
     <Compile Include="ChallengeManagementFactory.cs" />
     <Compile Include="DataAccess.cs" />

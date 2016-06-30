@@ -11,7 +11,14 @@ namespace Web.Personal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(Request["cooperId"]);
 
+            IBLL.IEnterpriseAdminData data = new BLLFac.AdminHelper().getEnterPrise(id);
+
+            lTitle.Text = data.title;
+            lName.Text = data.title;
+            lEmail.Text = data.email;
+            lScale.Text = data.scale;
         }
     }
 }

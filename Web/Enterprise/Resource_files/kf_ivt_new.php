@@ -59,7 +59,7 @@
     */
     
 	function hz6d_cus_web_msg_open(){
-		var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Foxcoder_corp_index.html&keyword=&brief=&logo=&question=";
+		var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Findex.html&keyword=&brief=&logo=&question=";
 		try{
 			window.open(openurl,"_blank","height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no");
 		}catch(e){}
@@ -233,7 +233,7 @@
 			//	mini悬浮对话窗口 转到正常聊天窗口 
 			function max_from_company_mini(t)
 			{
-				var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Foxcoder_corp_index.html&keyword=&brief=&logo=&question=&tfrom=2"+force_kf;
+				var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Findex.html&keyword=&brief=&logo=&question=&tfrom=2"+force_kf;
 				try{
 					chatWindow = window.open(openurl,"_blank","height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no");
 					if(chatWindow==null){
@@ -655,7 +655,7 @@
 			function get_location(type){
 				// type:1 覆盖本窗口 2 新窗口 如果被拦截，则本窗口刷新 3 悬浮对话窗口 
 				try{
-					var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Foxcoder_corp_index.html&keyword=&brief=&logo=&question=&tfrom=2"+force_kf;
+					var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Findex.html&keyword=&brief=&logo=&question=&tfrom=2"+force_kf;
 					if(type==1){
 						location.href = openurl;
 					}else if(type==2){
@@ -841,7 +841,7 @@
 					$53("kfiframe").style.display = "";
 				}catch(e){}
 
-				var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Foxcoder_corp_index.html&keyword=&brief=&logo=&question=&tfrom=2" + force_kf;
+				var openurl = "http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Findex.html&keyword=&brief=&logo=&question=&tfrom=2" + force_kf;
 				if(is_autoyqk == 1){
 					once_autoyqk = Number(once_autoyqk) + 1;
 					if(once_autoyqk == 1){
@@ -1324,10 +1324,10 @@
 						switch(valst[0])
 						{
 							case 'KF': 
-								case 'KF': var click_open_url = 'window.open(\"http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Foxcoder_corp_index.html&keyword=&brief=&logo=&question=&tfrom=2\",\"_blank\",\"height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no\")';
+								case 'KF': var click_open_url = 'window.open(\"http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Findex.html&keyword=&brief=&logo=&question=&tfrom=2\",\"_blank\",\"height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no\")';
 								click_open_url = encodeURIComponent(click_open_url);
 								click_str ='onliner_zdfq=2;hz6d_is_exist(\"'+click_open_url+'\");hidden_ivt();';break;
-								//click_str ='onliner_zdfq=2;get_open_start();window.open(\"http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Foxcoder_corp_index.html&keyword=&brief=&logo=&question=&tfrom=2\",\"_blank\",\"height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no\");hidden_ivt();';break;
+								//click_str ='onliner_zdfq=2;get_open_start();window.open(\"http://www15.53kf.com/webCompany.php?arg=10124917&style=1&kflist=off&kf=&zdkf_type=1&language=zh-cn&charset=gbk&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.oxcoder.com%2Fcooper%2Findex.html&keyword=&brief=&logo=&question=&tfrom=2\",\"_blank\",\"height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no\");hidden_ivt();';break;
 							case 'CLOSE': click_str = 'onliner_zdfq=3;hidden_ivt();'; break;
 							case 'ETEL': click_str = 'window.open(\'http://tb.53kf.com/eht.php?company_id=72124917&style_id=106167293\',\'_blank\',\'height=400,width=300,top=100,left=200,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=no,location=no,titlebar=no\')'; break;
 							case 'QQ': 

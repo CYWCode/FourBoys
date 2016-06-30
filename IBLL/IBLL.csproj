@@ -43,6 +43,8 @@
     <Compile Include="IChallengeCase.cs" />
     <Compile Include="IChallengeManagement.cs" />
     <Compile Include="ICustomerCase.cs" />
+    <Compile Include="IEnterpriseAdminData.cs" />
+    <Compile Include="IEPC.cs" />
     <Compile Include="IPersonalUserInfo.cs" />
     <Compile Include="IPersonalUserResumeHelper.cs" />
     <Compile Include="Readme.cs" />
