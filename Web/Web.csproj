@@ -130,7 +130,9 @@
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="ChallengeResult.aspx" />
+    <Content Include="Personal\cooper_info.aspx" />
     <Content Include="Personal\index.aspx" />
+    <Content Include="Personal\Resource.html" />
     <Content Include="Personal\user_resume.aspx" />
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />
@@ -187,6 +189,13 @@
     </Compile>
     <Compile Include="ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\cooper_info.aspx.cs">
+      <DependentUpon>cooper_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personal\cooper_info.aspx.designer.cs">
+      <DependentUpon>cooper_info.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personal\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -260,6 +269,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Enterprise\" />
     <Folder Include="Resume\" />
   </ItemGroup>
   <PropertyGroup>
