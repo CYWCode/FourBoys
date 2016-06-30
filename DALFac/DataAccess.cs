@@ -53,7 +53,7 @@ namespace DALFac
         // People
         public static IDALFac.IPeople CreatePeople()
         {
-            string className = "SqlServerDAL.People";
+            string className = "SQLServerDAL.People";
             return (IDALFac.IPeople)Assembly.Load(path).CreateInstance(className);
         }
 
@@ -101,7 +101,7 @@ namespace DALFac
         
        public static IDALFac.IEnterpriceCompleteInfor1 CreateEnterpriceCompleteInfor1()
        {
-           string className = "SqlServerDAL.EnterpriceCompleteInfor1";
+           string className = "SQLServerDAL.EnterpriceCompleteInfor1";
            return (IDALFac.IEnterpriceCompleteInfor1)Assembly.Load(path).CreateInstance(className);
        }
 
