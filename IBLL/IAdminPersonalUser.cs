@@ -10,7 +10,6 @@ namespace IBLL
     {
         int id { set; get; }
         string email { set; get; }
-        string userName { set; get; }
         string name { set; get; }
         int age { set; get; }
         string sex { set; get; }

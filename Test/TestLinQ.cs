@@ -23,14 +23,18 @@ namespace Test
             DataClassesDataContext db = new DataClassesDataContext();
             for (int i = 0; i < 5; i++)
             {
-                User user = new User()
+                UserChallengeContent ucc = new UserChallengeContent()
                 {
-                    UserName = "测试用户" + i,
-                    PhoneNum = "测试手机号",
-                    Email = "测试邮箱",
-                    UserPwd = "测试密码"
+                    无意义主键ID = 99 + i,
+                    EnterPrise = "新企业" + i,
+                    Position = "新职位",
+                    StartTime = new DateTime(2016, 6, i + 1),
+                    Pay = 20 - i,
+                    Deadline = new DateTime(2016, 6, i + 10),
+                    Questions = i / 2 + 1,
+                    Number = i / 2
                 };
-                db.User.InsertOnSubmit(user);
+                db.UserChallengeContent.InsertOnSubmit(ucc);
             }
             db.SubmitChanges();
 

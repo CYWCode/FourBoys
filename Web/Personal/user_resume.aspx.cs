@@ -16,7 +16,6 @@ namespace Web.Personal
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack) return;
-
             IPersonalUserResumeHelperFactory factory = new PersonalUserResumeHelperFactory();
             IPersonalUserResumeHelper helper = factory.getPersonalUserResumeHelper();
             
@@ -86,10 +85,6 @@ namespace Web.Personal
                     string saveName = id + "." + fileName[fileName.Length - 1];
                     resumePath = Server.MapPath("~/Resume/") + saveName;
                     resumeUpload.SaveAs(resumePath);
-                }
-                else
-                {
-                    resumePath = helper.getPersonalUserInfo(id).resumePath;
                 }
                 helper.updatePersonalUserInfo(id, name, sex, age, phoneNumber, hunting, resumePath, direction);
 

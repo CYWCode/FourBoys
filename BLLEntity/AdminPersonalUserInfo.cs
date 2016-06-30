@@ -10,7 +10,6 @@ namespace BLLEntity
     {
         public int id { set; get; }
         public string email { set; get; }
-        public string userName { set; get; }
         public string name { set; get; }
         public int age { set; get; }
         public string sex { set; get; }

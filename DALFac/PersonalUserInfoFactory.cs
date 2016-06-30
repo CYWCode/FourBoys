@@ -179,9 +179,6 @@ namespace DALFac
                 string _sex = "未知";
                 int _age = -1;
                 bool _hunting = true;
-                string _name = "未知";
-                string _phoneNum = "未知";
-
                 var infoQuery = from item in context.UserInfo
                                select item;
                 foreach (UserInfo info in infoQuery)
@@ -193,8 +190,6 @@ namespace DALFac
 
                         _age = (int) info.Age;
                         _hunting = (bool) info.IsCandidate;
-                        _name = info.Name;
-                        _phoneNum = info.PhoneNum;
 
                         break;
                     }
@@ -204,9 +199,8 @@ namespace DALFac
                 {
                     id = (int)user.ID,
                     email = user.Email,
-                    phoneNumber = _phoneNum,
-                    userName = user.UserName,
-                    name = _name,
+                    phoneNumber = user.PhoneNum,
+                    name = user.UserName,
                     sex = _sex,
                     age = _age,
                     hunting = _hunting
