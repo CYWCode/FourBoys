@@ -160,8 +160,7 @@
 											<a href="view_recruit_detail.aspx?recruitId=3046"><%#((BLLEntity.ChallengeCase)Container.DataItem).jobTitle%></a>
 										</h4>
 										<h4 class="line-control" style="min-height:18px;">
-                                            <!-- FIXME: 具体链接 -->
-											<a href="cooper_info.aspx?cooperId=2404"><%#((BLLEntity.ChallengeCase)Container.DataItem).enterpriseTitle%></a>
+											<a href="cooper_info.aspx?cooperId=<%#((BLLEntity.ChallengeCase)Container.DataItem).enterpriseId%>"><%#((BLLEntity.ChallengeCase)Container.DataItem).enterpriseTitle%></a>
 										</h4>
 									</div>
 									<div class="pull-right client-info hidden-md">

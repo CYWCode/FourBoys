@@ -36,10 +36,16 @@ namespace DALFac
                         // 转换成业务逻辑层的格式
                         foreach (UserChallengeContent item in oriList)
                         {
+                            // 获取企业名称
+                            var epQuery = from ep in dataContext.EnterPrise
+                                          where ep.ID.ToString() == item.EnterPrise
+                                          select ep.EPName;
+
                             IChallengeCase aCase = new ChallengeCase()
                             {
                                 id = (int)item.无意义主键ID,
-                                enterpriseTitle = item.EnterPrise,
+                                enterpriseId = Convert.ToInt32(item.EnterPrise),
+                                enterpriseTitle = epQuery.First<string>(),
                                 jobTitle = item.Position,
                                 jobSalary = (int)item.Pay,
                                 questionNumber = (int)item.Questions,
