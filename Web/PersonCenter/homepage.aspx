@@ -111,7 +111,11 @@
 							<a href="user/info/account_binding.html">帐号设置</a>
 						</li>
 						<li>
+<<<<<<< HEAD
 							<a href="security_logout">注销</a>
+=======
+							<a href="http://localhost:33621/Login_Register/oxcoder_login.aspx">注销</a>
+>>>>>>> FYH
 						</li>
 					</ul>
 				</li>
