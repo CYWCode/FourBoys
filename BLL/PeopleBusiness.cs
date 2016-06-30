@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IDALFac;
 using PageEntity;
+using DALFac;
 
 namespace BLL
 {
@@ -20,7 +21,7 @@ namespace BLL
             return result; //修改用户信息
         }
         public PageEntity.PersonalInfo getPeopleInfo(string ID)
-        {
+        {   
             return dal.getPeopleInfo(ID);
         }
         public bool updatePwd(string oldPwd, string newPwd, string id)
