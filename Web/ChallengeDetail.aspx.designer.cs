@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Web {
+namespace Web.PersonCenter {
     
     
     public partial class ChallengeDetail {

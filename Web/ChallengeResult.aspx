@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChallengeResult.aspx.cs" Inherits="Web.ChallengeResult" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChallengeResult.aspx.cs" Inherits="Web.PersonCenter.ChallengeResult" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0072)http://www.oxcoder.com/user/recruit/his_user_recruit.html?recruitId=3046 -->

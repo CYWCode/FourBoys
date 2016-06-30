@@ -124,7 +124,7 @@
     <Content Include="EnterpriseInfor_kui\猿圈 企业首页_files\summernote.min.js" />
     <Content Include="EnterpriseInfor_kui\猿圈 企业首页_files\wlogo_sm.png" />
     <Content Include="PersonCenter\Challenge.aspx" />
-    <Content Include="PersonCenter\ChallengeDetail.aspx" />
+    <Content Include="ChallengeDetail.aspx" />
     <Content Include="ChallengeResource\99ff536a-d2ff-4954-8688-ff07181aef5c.jpg" />
     <Content Include="ChallengeResource\ace.css" />
     <Content Include="ChallengeResource\ace.js" />
@@ -191,7 +191,7 @@
     <Content Include="ChallengeResource\summernote.min.js" />
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
-    <Content Include="PersonCenter\ChallengeResult.aspx" />
+    <Content Include="ChallengeResult.aspx" />
     <Content Include="Login_Register\oxcoder_login.aspx" />
     <Content Include="Login_Register\oxcoder_login_files\01.png" />
     <Content Include="Login_Register\oxcoder_login_files\bootstrap-filestyle.js" />
@@ -391,11 +391,11 @@
     <Compile Include="PersonCenter\Challenge.aspx.designer.cs">
       <DependentUpon>Challenge.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonCenter\ChallengeDetail.aspx.cs">
+    <Compile Include="ChallengeDetail.aspx.cs">
       <DependentUpon>ChallengeDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonCenter\ChallengeDetail.aspx.designer.cs">
+    <Compile Include="ChallengeDetail.aspx.designer.cs">
       <DependentUpon>ChallengeDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChallengeManagement.aspx.cs">
@@ -405,11 +405,11 @@
     <Compile Include="ChallengeManagement.aspx.designer.cs">
       <DependentUpon>ChallengeManagement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonCenter\ChallengeResult.aspx.cs">
+    <Compile Include="ChallengeResult.aspx.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonCenter\ChallengeResult.aspx.designer.cs">
+    <Compile Include="ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login_Register\oxcoder_login.aspx.cs">

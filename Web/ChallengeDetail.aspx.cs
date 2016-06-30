@@ -9,7 +9,7 @@ using IBLLFac;
 using IBLL;
 using BLLFac;
 
-namespace Web
+namespace Web.PersonCenter
 {
     public partial class ChallengeDetail : System.Web.UI.Page
     {
