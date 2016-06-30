@@ -45,12 +45,6 @@
     <Compile Include="ICustomerCaseFactory.cs" />
     <Compile Include="IPersonalUserResumeHelperFactory.cs" />
     <Compile Include="IAdminNumHelper.cs" />
-    <Compile Include="Personal\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Personal\user_resume.aspx.cs">
-      <DependentUpon>user_resume.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,10 +53,6 @@
       <Project>{d1078bb1-8402-41f0-8168-b1c2088cc943}</Project>
       <Name>IBLL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Personal\index.aspx" />
-    <Content Include="Personal\user_resume.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
