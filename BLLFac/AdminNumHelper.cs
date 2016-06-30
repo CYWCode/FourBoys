@@ -31,10 +31,5 @@ namespace BLLFac
         {
             return factory.getPersonUserList();
         }
-
-        public void deletePersonalUser(int id)
-        {
-            factory.deletePersonalUser(id);
-        }
     }
 }

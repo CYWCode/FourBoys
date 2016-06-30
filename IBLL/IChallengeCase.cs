@@ -14,7 +14,6 @@ namespace IBLL
     {
         int id { set; get; }
         String jobTitle { set; get; }
-        int enterpriseId { set; get; }
         String enterpriseTitle { set; get; }
         int jobSalary { set; get; }
         int questionNumber { set; get; }

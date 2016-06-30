@@ -16,7 +16,6 @@ namespace BLLEntity
     {
         public int id { set; get; }
         public String jobTitle { set; get; }
-        public int enterpriseId { set; get; }
         public String enterpriseTitle { set; get; }
         public int jobSalary { set; get; }
         public int questionNumber { set; get; }

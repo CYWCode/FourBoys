@@ -20,7 +20,7 @@ namespace Web
         //public static int index=-1;
         public List<IChallengeManagement> l;
 
-        protected void Page_Load(object sender, EventArgs e)
+        public void Page_Load(object sender, EventArgs e)
         {
             IChallengeManagementFactory CMFactory = new ChallengeManagementFactory();
             List<IChallengeManagement> list = CMFactory.getChallengeManagementList();

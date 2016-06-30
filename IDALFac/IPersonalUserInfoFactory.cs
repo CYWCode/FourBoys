@@ -18,6 +18,5 @@ namespace IDALFac
         int getChallengeNum();
         int getEnterpriseUserNum();
         List<IBLL.IAdminPersonalUser> getPersonUserList();
-        void deletePersonalUser(int id);
     }
 }

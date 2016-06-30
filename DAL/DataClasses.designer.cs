@@ -36,6 +36,9 @@ namespace SqlServerDAL
     partial void InsertUserChallenge(UserChallenge instance);
     partial void UpdateUserChallenge(UserChallenge instance);
     partial void DeleteUserChallenge(UserChallenge instance);
+    partial void InsertEnterPrise(EnterPrise instance);
+    partial void UpdateEnterPrise(EnterPrise instance);
+    partial void DeleteEnterPrise(EnterPrise instance);
     partial void InsertEPChallenge(EPChallenge instance);
     partial void UpdateEPChallenge(EPChallenge instance);
     partial void DeleteEPChallenge(EPChallenge instance);
@@ -51,9 +54,6 @@ namespace SqlServerDAL
     partial void InsertUserInfo(UserInfo instance);
     partial void UpdateUserInfo(UserInfo instance);
     partial void DeleteUserInfo(UserInfo instance);
-    partial void InsertEnterPrise(EnterPrise instance);
-    partial void UpdateEnterPrise(EnterPrise instance);
-    partial void DeleteEnterPrise(EnterPrise instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -102,6 +102,14 @@ namespace SqlServerDAL
 			}
 		}
 		
+		public System.Data.Linq.Table<EnterPrise> EnterPrise
+		{
+			get
+			{
+				return this.GetTable<EnterPrise>();
+			}
+		}
+		
 		public System.Data.Linq.Table<EPChallenge> EPChallenge
 		{
 			get
@@ -139,14 +147,6 @@ namespace SqlServerDAL
 			get
 			{
 				return this.GetTable<UserInfo>();
-			}
-		}
-		
-		public System.Data.Linq.Table<EnterPrise> EnterPrise
-		{
-			get
-			{
-				return this.GetTable<EnterPrise>();
 			}
 		}
 	}
@@ -394,6 +394,212 @@ namespace SqlServerDAL
 					this._IsChallenge = value;
 					this.SendPropertyChanged("IsChallenge");
 					this.OnIsChallengeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.EnterPrise")]
+	public partial class EnterPrise : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private decimal _ID;
+		
+		private string _PhomeNum;
+		
+		private string _Email;
+		
+		private string _EPName;
+		
+		private string _EPAbbreviation;
+		
+		private System.Nullable<int> _EPScale;
+		
+		private string _ContactInfo;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(decimal value);
+    partial void OnIDChanged();
+    partial void OnPhomeNumChanging(string value);
+    partial void OnPhomeNumChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnEPNameChanging(string value);
+    partial void OnEPNameChanged();
+    partial void OnEPAbbreviationChanging(string value);
+    partial void OnEPAbbreviationChanged();
+    partial void OnEPScaleChanging(System.Nullable<int> value);
+    partial void OnEPScaleChanged();
+    partial void OnContactInfoChanging(string value);
+    partial void OnContactInfoChanged();
+    #endregion
+		
+		public EnterPrise()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Decimal(3,0) NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public decimal ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhomeNum", DbType="VarChar(15)")]
+		public string PhomeNum
+		{
+			get
+			{
+				return this._PhomeNum;
+			}
+			set
+			{
+				if ((this._PhomeNum != value))
+				{
+					this.OnPhomeNumChanging(value);
+					this.SendPropertyChanging();
+					this._PhomeNum = value;
+					this.SendPropertyChanged("PhomeNum");
+					this.OnPhomeNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EPName", DbType="VarChar(50)")]
+		public string EPName
+		{
+			get
+			{
+				return this._EPName;
+			}
+			set
+			{
+				if ((this._EPName != value))
+				{
+					this.OnEPNameChanging(value);
+					this.SendPropertyChanging();
+					this._EPName = value;
+					this.SendPropertyChanged("EPName");
+					this.OnEPNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EPAbbreviation", DbType="VarChar(10)")]
+		public string EPAbbreviation
+		{
+			get
+			{
+				return this._EPAbbreviation;
+			}
+			set
+			{
+				if ((this._EPAbbreviation != value))
+				{
+					this.OnEPAbbreviationChanging(value);
+					this.SendPropertyChanging();
+					this._EPAbbreviation = value;
+					this.SendPropertyChanged("EPAbbreviation");
+					this.OnEPAbbreviationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EPScale", DbType="Int")]
+		public System.Nullable<int> EPScale
+		{
+			get
+			{
+				return this._EPScale;
+			}
+			set
+			{
+				if ((this._EPScale != value))
+				{
+					this.OnEPScaleChanging(value);
+					this.SendPropertyChanging();
+					this._EPScale = value;
+					this.SendPropertyChanged("EPScale");
+					this.OnEPScaleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ContactInfo", DbType="VarChar(20)")]
+		public string ContactInfo
+		{
+			get
+			{
+				return this._ContactInfo;
+			}
+			set
+			{
+				if ((this._ContactInfo != value))
+				{
+					this.OnContactInfoChanging(value);
+					this.SendPropertyChanging();
+					this._ContactInfo = value;
+					this.SendPropertyChanged("ContactInfo");
+					this.OnContactInfoChanged();
 				}
 			}
 		}
@@ -1328,236 +1534,6 @@ namespace SqlServerDAL
 					this._Name = value;
 					this.SendPropertyChanged("Name");
 					this.OnNameChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.EnterPrise")]
-	public partial class EnterPrise : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private decimal _ID;
-		
-		private string _PhomeNum;
-		
-		private string _Email;
-		
-		private string _EPName;
-		
-		private string _EPAbbreviation;
-		
-		private System.Nullable<int> _EPScale;
-		
-		private string _ContactInfo;
-		
-		private string _UserPwd;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(decimal value);
-    partial void OnIDChanged();
-    partial void OnPhomeNumChanging(string value);
-    partial void OnPhomeNumChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnEPNameChanging(string value);
-    partial void OnEPNameChanged();
-    partial void OnEPAbbreviationChanging(string value);
-    partial void OnEPAbbreviationChanged();
-    partial void OnEPScaleChanging(System.Nullable<int> value);
-    partial void OnEPScaleChanged();
-    partial void OnContactInfoChanging(string value);
-    partial void OnContactInfoChanged();
-    partial void OnUserPwdChanging(string value);
-    partial void OnUserPwdChanged();
-    #endregion
-		
-		public EnterPrise()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Decimal(3,0) NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public decimal ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhomeNum", DbType="VarChar(15)")]
-		public string PhomeNum
-		{
-			get
-			{
-				return this._PhomeNum;
-			}
-			set
-			{
-				if ((this._PhomeNum != value))
-				{
-					this.OnPhomeNumChanging(value);
-					this.SendPropertyChanging();
-					this._PhomeNum = value;
-					this.SendPropertyChanged("PhomeNum");
-					this.OnPhomeNumChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EPName", DbType="VarChar(50)")]
-		public string EPName
-		{
-			get
-			{
-				return this._EPName;
-			}
-			set
-			{
-				if ((this._EPName != value))
-				{
-					this.OnEPNameChanging(value);
-					this.SendPropertyChanging();
-					this._EPName = value;
-					this.SendPropertyChanged("EPName");
-					this.OnEPNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EPAbbreviation", DbType="VarChar(10)")]
-		public string EPAbbreviation
-		{
-			get
-			{
-				return this._EPAbbreviation;
-			}
-			set
-			{
-				if ((this._EPAbbreviation != value))
-				{
-					this.OnEPAbbreviationChanging(value);
-					this.SendPropertyChanging();
-					this._EPAbbreviation = value;
-					this.SendPropertyChanged("EPAbbreviation");
-					this.OnEPAbbreviationChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EPScale", DbType="Int")]
-		public System.Nullable<int> EPScale
-		{
-			get
-			{
-				return this._EPScale;
-			}
-			set
-			{
-				if ((this._EPScale != value))
-				{
-					this.OnEPScaleChanging(value);
-					this.SendPropertyChanging();
-					this._EPScale = value;
-					this.SendPropertyChanged("EPScale");
-					this.OnEPScaleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ContactInfo", DbType="VarChar(20)")]
-		public string ContactInfo
-		{
-			get
-			{
-				return this._ContactInfo;
-			}
-			set
-			{
-				if ((this._ContactInfo != value))
-				{
-					this.OnContactInfoChanging(value);
-					this.SendPropertyChanging();
-					this._ContactInfo = value;
-					this.SendPropertyChanged("ContactInfo");
-					this.OnContactInfoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserPwd", DbType="VarChar(20)")]
-		public string UserPwd
-		{
-			get
-			{
-				return this._UserPwd;
-			}
-			set
-			{
-				if ((this._UserPwd != value))
-				{
-					this.OnUserPwdChanging(value);
-					this.SendPropertyChanging();
-					this._UserPwd = value;
-					this.SendPropertyChanged("UserPwd");
-					this.OnUserPwdChanged();
 				}
 			}
 		}

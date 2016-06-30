@@ -216,18 +216,6 @@ namespace DALFac
 
             return list;
         }
-
-        public void deletePersonalUser(int id)
-        {
-            DataClassesDataContext context = new DataClassesDataContext();
-
-            var query = from user in context.User
-                        where user.ID == id
-                        select user;
-            if (query.Count<User>() == 0) return;
-            context.User.DeleteOnSubmit(query.First<User>());
-            context.SubmitChanges();
-        }
     }
 
 }

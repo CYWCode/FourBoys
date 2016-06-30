@@ -21,31 +21,24 @@ namespace DALFac
 
         public List<IChallengeCase> getChallengeCaseList(int order)
         {
-            // 获取linq to sql的上下文
+            // get data context
             DataClassesDataContext dataContext = new DataClassesDataContext();
-            // 创建列表
+            // generate challenge case list
             List<IChallengeCase> list = new List<IChallengeCase>();
-            // 获取列表
+            // get list by order
             switch (order)
             {
                 case ORDER_BY_TIME:
                     {
                         var oriList = from ucc in dataContext.UserChallengeContent
-                                      orderby ucc.StartTime descending  // 排序
+                                      orderby ucc.StartTime descending
                                       select ucc;
-                        // 转换成业务逻辑层的格式
                         foreach (UserChallengeContent item in oriList)
                         {
-                            // 获取企业名称
-                            var epQuery = from ep in dataContext.EnterPrise
-                                          where ep.ID.ToString() == item.EnterPrise
-                                          select ep.EPName;
-
                             IChallengeCase aCase = new ChallengeCase()
                             {
                                 id = (int)item.无意义主键ID,
-                                enterpriseId = Convert.ToInt32(item.EnterPrise),
-                                enterpriseTitle = epQuery.First<string>(),
+                                enterpriseTitle = item.EnterPrise,
                                 jobTitle = item.Position,
                                 jobSalary = (int)item.Pay,
                                 questionNumber = (int)item.Questions,
@@ -59,7 +52,7 @@ namespace DALFac
                 case ORDER_BY_SALARY:
                     {
                         var oriList = from ucc in dataContext.UserChallengeContent
-                                      orderby ucc.Pay descending  // 排序
+                                      orderby ucc.Pay descending
                                       select ucc;
                         foreach (UserChallengeContent item in oriList)
                         {
