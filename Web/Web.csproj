@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Challenge.aspx" />
+    <Content Include="Admin\enterpriseUser.aspx" />
     <Content Include="Admin\index.aspx" />
     <Content Include="Admin\personalUser.aspx" />
     <Content Include="Challenge.aspx" />
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="Admin\Challenge.aspx.designer.cs">
       <DependentUpon>Challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\enterpriseUser.aspx.cs">
+      <DependentUpon>enterpriseUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\enterpriseUser.aspx.designer.cs">
+      <DependentUpon>enterpriseUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

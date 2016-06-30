@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="Admin/index.aspx" title="首页"  description="首页">
-    <siteMapNode url="Admin/personalUser.aspx" title="个人用户管理"  description="个人用户管理"/>
+    <siteMapNode url="#" title="用户管理"  description="用户管理">
+      <siteMapNode url="Admin/personalUser.aspx" title="个人用户管理"  description="个人用户管理"/>
+      <siteMapNode url="Admin/enterpriseUser.aspx" title="企业用户管理"  description="企业用户管理"/>
+    </siteMapNode>
   </siteMapNode>
   
 </siteMap>

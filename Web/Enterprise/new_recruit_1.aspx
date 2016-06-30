@@ -75,7 +75,7 @@
 				<li class="">
 					<a href="oxcoder_corp_index.aspx">首页</a>
 				</li>
-				<li class="active">
+				<li class="">
 					<a href="index.aspx">挑战管理</a>
 				</li>
 			</ul>
@@ -120,14 +120,11 @@
 								<div class="page-header row">
 									<div class="col-md-12 col-no-left-padding">
 										<h3 style="display: inline-block;float: left;">新增挑战邀请</h3>
-										<label style="font-weight: 100;float: right;margin-top: 20px;">如果您已经在别的招聘网站发了职位，那么您可以直接 <a onclick="go_to_import_job_url()" href="javascript:go_to_import_job_url()" style="background-color:#fff;color:#3498db;border: none;">导入企业职位<i class="fa fa-chevron-right"></i></a></label>
+										
 									</div>
 								</div>
 								<div class="page-body">
 									<div class="row">
-										<div style="text-align:center;margin-bottom:20px;">
-											<img src="./Resource_files/nc1.png">
-                                        </div>
 										<form id="new_challenge_form_1" method="post" class="form-horizontal bv-form" action="" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 											<input name="direction" id="directions_id" value="1" type="hidden">
 											<input name="level" id="level_id" value="6" type="hidden">
@@ -166,86 +163,6 @@
 														</div>
 													</div>
 												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;3&#39;)">
-														<div id="a-iOS" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./Resource_files/apple.png">
-																			iOS
-																		</h3>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;4&#39;)">
-														<div id="a-C语言(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./Resource_files/c.png">
-																			C语言(beta)
-																		</h3>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;5&#39;)">
-														<div id="a-C++(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./Resource_files/cpp.png">
-																			C++(beta)
-																		</h3>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;6&#39;)">
-														<div id="a-php(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./Resource_files/php.png">
-																			php(beta)
-																		</h3>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;7&#39;)">
-														<div id="a-Python(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./Resource_files/python.png">
-																			Python(beta)
-																		</h3>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												
 											</div>
 											<h4 class="col-md-12 col-no-left-padding">请选择挑战等级(按薪资划分)</h4>
 											<ul class="nav nav-pills nav-justified col-md-12 col-no-left-padding">
@@ -275,25 +192,12 @@
 													</li>
 												
 											</ul>
-											<h4 class="col-md-12 col-no-left-padding">
-												<label style="font-weight: 100;">
-													<input type="checkbox" value="1" name="is_camera"> 使用随机拍照功能
-												</label>
-											</h4>
-											<span class="col-md-12 col-no-left-padding text-muted">使用该功能后，将开启参加挑战人员的摄像头，保证人员的真实性，但会在一定程度上减少参加挑战的人数。</span>
-											<h4 class="col-md-12 col-no-left-padding">
-												<label style="font-weight: 100;">
-													<input name="is_public" value="1" type="checkbox" checked="checked"> 设为公开挑战
-												</label>
-											</h4>
-											<span class="col-md-12 col-no-left-padding text-muted">选择公开挑战，您发布的挑战将在首页显示，猿圈用户的可自由开始挑战；若不选择，用户只有您邀请后才可开始挑战。</span>
-											<hr>
 											<div class="form-group form-actions col-md-12 col-no-left-padding">
 												<span class="help-block has-error">
 													<small style="margin-left: 20px; display: none;" id="hint1" class="help-block">请选择挑战类型及等级</small>
 												</span>
 												<div class="align-center">
-													<button id="new_challenge_btn_1" class="btn btn-new1" type="submit">保存&amp;下一步</button>
+													<button id="new_challenge_btn_1" class="btn btn-new1" type="submit">确定</button>
 												</div>
 											</div>
 										</form>
@@ -306,65 +210,6 @@
 
 
 
-<div class="panel-user">
-	<div class="panel-heading">
-		<div class="panel-title">
-			<div class="media">
-				<a class="pull-left">
-					<img src="./Resource_files/50a7fbf8-d4fa-487a-805a-52a707a00511.png" class="media-object">
-				</a>
-				<div class="media-body">
-					<h4 class="media-heading">
-						<!-- <span class="welcome">Hello</span> -->
-						<span>c1447888@trbvn.com</span>
-					</h4>
-					<span class="text-muted">
-						<small>
-							上次登录日期:
-							<br>
-							2016-05-02 15:49:56
-						</small>
-					</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="panel panel-outline panel-no-padding hidden-xs">
-	<div class="panel-body">
-		<div class="stat-block stat-danger">
-			<div class="icon">
-				<b class="icon-cover"></b>
-				<i class="fa fa-bell"></i>
-			</div>
-			<div class="details">
-				<div class="number">0</div>
-				<div class="description">今日接受挑战人数</div>
-			</div>
-		</div>
-		<div class="stat-block stat-success">
-			<div class="icon">
-				<b class="icon-cover"></b>
-				<i class="fa fa-bar-chart-o"></i>
-			</div>
-			<div class="details">
-				<div class="number">0</div>
-				<div class="description">今日通过挑战人数</div>
-			</div>
-		</div>
-		<div class="stat-block stat-primary">
-			<div class="icon">
-				<b class="icon-cover"></b>
-				<i class="fa fa-tachometer"></i>
-			</div>
-			<div class="details">
-				<div class="number">0</div>
-				<div class="description">共帮您找到的人才</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.panel-body -->
-</div>
 <!-- /.panel -->
 </div>
 						</div>
