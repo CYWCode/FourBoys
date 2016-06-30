@@ -130,6 +130,8 @@
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
     <Content Include="ChallengeResult.aspx" />
+    <Content Include="Enterprise\oxcoder_corp_index.aspx" />
+    <Content Include="Enterprise\Resource.html" />
     <Content Include="Personal\cooper_info.aspx" />
     <Content Include="Personal\index.aspx" />
     <Content Include="Personal\Resource.html" />
@@ -189,6 +191,13 @@
     </Compile>
     <Compile Include="ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enterprise\oxcoder_corp_index.aspx.cs">
+      <DependentUpon>oxcoder_corp_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enterprise\oxcoder_corp_index.aspx.designer.cs">
+      <DependentUpon>oxcoder_corp_index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personal\cooper_info.aspx.cs">
       <DependentUpon>cooper_info.aspx</DependentUpon>
@@ -269,7 +278,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enterprise\" />
     <Folder Include="Resume\" />
   </ItemGroup>
   <PropertyGroup>
