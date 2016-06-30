@@ -62,7 +62,6 @@
     <Content Include="Admin\enterpriseUser.aspx" />
     <Content Include="Admin\index.aspx" />
     <Content Include="Admin\personalUser.aspx" />
-    <Content Include="cooper_info.aspx" />
     <Content Include="EnterpriseInfor_kui\EnterpriseCompleteInfor1.aspx" />
     <Content Include="EnterpriseInfor_kui\EnterpriseCompleteInfor\bootstrap-filestyle.js" />
     <Content Include="EnterpriseInfor_kui\EnterpriseCompleteInfor\bootstrap-select.min.js" />
@@ -125,7 +124,9 @@
     <Content Include="EnterpriseInfor_kui\猿圈 企业首页_files\summernote.css" />
     <Content Include="EnterpriseInfor_kui\猿圈 企业首页_files\summernote.min.js" />
     <Content Include="EnterpriseInfor_kui\猿圈 企业首页_files\wlogo_sm.png" />
-    <Content Include="index.aspx" />
+    <Content Include="PersonalPage\cooper_info.aspx" />
+    <Content Include="PersonalPage\index.aspx" />
+    <Content Include="PersonalPage\user_resume.aspx" />
     <Content Include="PersonCenter\Challenge.aspx" />
     <Content Include="PersonCenter\ChallengeDetail.aspx" />
     <Content Include="ChallengeResource\99ff536a-d2ff-4954-8688-ff07181aef5c.jpg" />
@@ -356,7 +357,6 @@
     <Content Include="Unsigned\index.aspx" />
     <Content Include="Unsigned\mediaReports.aspx" />
     <Content Include="Unsigned\product.aspx" />
-    <Content Include="user_resume.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -388,13 +388,6 @@
     <Compile Include="Admin\personalUser.aspx.designer.cs">
       <DependentUpon>personalUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cooper_info.aspx.cs">
-      <DependentUpon>cooper_info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="cooper_info.aspx.designer.cs">
-      <DependentUpon>cooper_info.aspx</DependentUpon>
-    </Compile>
     <Compile Include="EnterpriseInfor_kui\EnterpriseCompleteInfor1.aspx.cs">
       <DependentUpon>EnterpriseCompleteInfor1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -409,12 +402,23 @@
     <Compile Include="EnterpriseInfor_kui\EnterpriseHP.aspx.designer.cs">
       <DependentUpon>EnterpriseHP.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="PersonalPage\cooper_info.aspx.cs">
+      <DependentUpon>cooper_info.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="PersonalPage\cooper_info.aspx.designer.cs">
+      <DependentUpon>cooper_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalPage\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalPage\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalPage\user_resume.aspx.cs">
+      <DependentUpon>user_resume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalPage\user_resume.aspx.designer.cs">
+      <DependentUpon>user_resume.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonCenter\Challenge.aspx.cs">
       <DependentUpon>Challenge.aspx</DependentUpon>
@@ -544,13 +548,6 @@
     </Compile>
     <Compile Include="Unsigned\product.aspx.designer.cs">
       <DependentUpon>product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="user_resume.aspx.cs">
-      <DependentUpon>user_resume.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="user_resume.aspx.designer.cs">
-      <DependentUpon>user_resume.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

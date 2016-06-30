@@ -21,20 +21,23 @@ namespace Test
         static void Main(string[] args)
         {
             DataClassesDataContext db = new DataClassesDataContext();
-            for (int i = 0; i < 5; i++)
+            for (int i = 12; i < 18; i++)
             {
-                User user = new User()
+
+                db.UserChallengeContent.InsertOnSubmit(new UserChallengeContent()
                 {
-                    UserName = "测试用户L" + i,
-                    PhoneNum = "测试手机号",
-                    Email = "测试邮箱",
-                    UserPwd = "测试密码"
-                };
-                db.User.InsertOnSubmit(user);
+                    Position = "安卓职位",
+                    EnterPrise = "" + 13,
+                    Questions = i / 3,
+                    Pay = 10 + i,
+                    Number = 0,
+                    StartTime = DateTime.Now,
+                    Deadline = DateTime.Now
+                });
             }
             db.SubmitChanges();
 
-            // wait
+            // wait1
             Console.Read();
         }
     }
