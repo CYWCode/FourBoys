@@ -192,7 +192,7 @@
     <Content Include="ChallengeResource\summernote.min.js" />
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
-<<<<<<< HEAD
+<!--<<<<<< HEAD-->
     <Content Include="ChallengeResult.aspx" />
     <Content Include="Enterprise\new_recruit_1.aspx" />
     <Content Include="Enterprise\oxcoder_corp_index.aspx" />
@@ -202,7 +202,7 @@
     <Content Include="Personal\cooper_info.aspx" />
     <Content Include="Personal\index.aspx" />
     <Content Include="Personal\user_resume.aspx" />
-=======
+<!--=======-->
     <Content Include="PersonCenter\ChallengeResult.aspx" />
     <Content Include="Login_Register\oxcoder_login.aspx" />
     <Content Include="Login_Register\oxcoder_login_files\01.png" />
@@ -354,7 +354,7 @@
     <Content Include="PersonCenter\user_files\user_center.js" />
     <Content Include="PersonCenter\user_files\wlogo_sm.png" />
     <Content Include="PersonCenter\user_files\zmUtil.js" />
->>>>>>> FYH
+<!-->>>>>>> FYH-->
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />
     <Content Include="Unsigned\mediaReports.aspx" />
@@ -432,7 +432,7 @@
     <Compile Include="PersonCenter\ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
     <Compile Include="Enterprise\new_recruit_1.aspx.cs">
       <DependentUpon>new_recruit_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -469,7 +469,10 @@
       <DependentUpon>cooper_info.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personal\index.aspx.cs">
-=======
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+<!--=======-->
     <Compile Include="Login_Register\oxcoder_login.aspx.cs">
       <DependentUpon>oxcoder_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -485,7 +488,7 @@
       <DependentUpon>oxcoder_Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login_Register\Personal\index.aspx.cs">
->>>>>>> FYH
+<!-->>>>>>> FYH-->
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
