@@ -14,7 +14,7 @@ namespace DALFac
     {
         // Look up the DAL implementation we should be using
         //private static readonly string path = ConfigurationManager.AppSettings["WebDAL"];
-        private static readonly string path = "SQLServerDAL";
+        private static readonly string path = "SqlServerDAL";
         private DataAccess() { }
 
         /*
@@ -53,7 +53,7 @@ namespace DALFac
         // People
         public static IDALFac.IPeople CreatePeople()
         {
-            string className = "SQLServerDAL.People";
+            string className = "SqlServerDAL.People";
             return (IDALFac.IPeople)Assembly.Load(path).CreateInstance(className);
         }
 
@@ -101,7 +101,7 @@ namespace DALFac
         
        public static IDALFac.IEnterpriceCompleteInfor1 CreateEnterpriceCompleteInfor1()
        {
-           string className = "SQLServerDAL.EnterpriceCompleteInfor1";
+           string className = "SqlServerDAL.EnterpriceCompleteInfor1";
            return (IDALFac.IEnterpriceCompleteInfor1)Assembly.Load(path).CreateInstance(className);
        }
 
