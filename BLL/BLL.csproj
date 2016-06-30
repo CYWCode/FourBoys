@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnterpriceCompleteInforBusiness1.cs" />
+    <Compile Include="LoginBusiness.cs" />
+    <Compile Include="PeopleBusiness.cs" />
+    <Compile Include="UserRegisterBusiness.cs" />
     <Compile Include="PersonalUserResumeHelper.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +67,10 @@
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{9aa9b5b4-b44b-43fc-8411-9a49ee9e1d4f}</Project>
       <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PageEntity\PageEntity.csproj">
+      <Project>{e51cbedf-d3c6-4bd8-9724-e951812bbced}</Project>
+      <Name>PageEntity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

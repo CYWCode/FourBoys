@@ -43,6 +43,7 @@
     <Compile Include="AdminHelper.cs" />
     <Compile Include="ChallengeCaseFactory.cs" />
     <Compile Include="ChallengeManagementFactory.cs" />
+    <Compile Include="DataAccess.cs" />
     <Compile Include="CustomerCaseFactory.cs" />
     <Compile Include="DataContextFactory.cs" />
     <Compile Include="PersonalUserInfoFactory.cs" />

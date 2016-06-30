@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  *  IDAL层中的是数据访问层的接口
  */
 
-namespace IDAL
+namespace IDALFac
 {
     public class Readme
     {
