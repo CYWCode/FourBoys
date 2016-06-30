@@ -138,7 +138,6 @@
     <Content Include="Enterprise\screening_list.aspx" />
     <Content Include="Personal\cooper_info.aspx" />
     <Content Include="Personal\index.aspx" />
-    <Content Include="Personal\Resource.html" />
     <Content Include="Personal\user_resume.aspx" />
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />

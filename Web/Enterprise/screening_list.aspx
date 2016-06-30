@@ -85,7 +85,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-xs-12 col-no-left-padding">
-					<h1 class="pull-left">[高级]iOS工程师</h1>
+					<h1 class="pull-left">
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
 					
 						
 						

@@ -157,7 +157,7 @@
 									<div class="pull-left">
 										<h4 class="line-control">
                                             <!-- FIXME: 具体链接 -->
-											<a href="view_recruit_detail.aspx?recruitId=3046"><%#((BLLEntity.ChallengeCase)Container.DataItem).jobTitle%></a>
+											<a ><%#((BLLEntity.ChallengeCase)Container.DataItem).jobTitle%></a>
 										</h4>
 										<h4 class="line-control" style="min-height:18px;">
 											<a href="cooper_info.aspx?cooperId=<%#((BLLEntity.ChallengeCase)Container.DataItem).enterpriseId%>"><%#((BLLEntity.ChallengeCase)Container.DataItem).enterpriseTitle%></a>

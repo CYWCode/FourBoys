@@ -44,6 +44,7 @@
     <Compile Include="ChallengeManagement.cs" />
     <Compile Include="CustomerCase.cs" />
     <Compile Include="EnterpriseAdminData.cs" />
+    <Compile Include="EPC.cs" />
     <Compile Include="PersonalUserInfo.cs" />
     <Compile Include="Readme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

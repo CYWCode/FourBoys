@@ -26,6 +26,8 @@
 <body>
     <form id="cooperInfo" runat="server">
 
+
+
 <div class="navbar navbar-default navbar-fixed-top" id="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -41,7 +43,7 @@
 		<div class="navbar-collapse collapse" role="navigation">
                             <!-- FIXME: 链接 -->
 			<ul class="nav navbar-nav">
-				<li class="active">
+				<li class="">
 					<a href="index.aspx">首页</a>
 				</li>
 				<li class="">
@@ -86,207 +88,24 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9 col-no-left-padding">
-				<section class="middle">
-					<h2 class="h2-tab col-md-12">
-						<i class="fa  fa-th-large"></i>
-						世纪创兴（北京）科技有限公司 &nbsp;进行中的挑战
-					</h2>
-					
-						<div class="col-md-4">
-							<section id="middle">
-								<div class="panel panel-default shadow-effect">
-									<div class="col-xs-12 panel-header">
-										<div class="pull-left">
-											<h4 class="line-control">
-												<a href="javascript:;">[高级]iOS工程师</a>
-											</h4>
-											<h4 class="line-control">
-												<a href="javascript:;">世纪创兴（北京）科技有限公司</a>
-											</h4>
-										</div>
-										<div class="pull-right client-info">
-											<span class="percent text-danger">
-												<img class="img-circle" style="width:60px;height:60px" src="./Resource_files/99ff536a-d2ff-4954-8688-ff07181aef5c.jpg">
-											</span>
-										</div>
-										
-									</div>
-	
-									<div class="panel-body ">
-										<ul class="list-unstyled">
-											<li>月薪： 
-												
-												15K以上
-											</li>
-											<li>职位诱惑：</li>
-											<li>
-												<ul class="companyTags">
-													
-													
-														<li>五险一金</li>
-													
-														<li>年底双薪</li>
-													
-														<li>弹性工作</li>
-													
-												</ul>
-											</li>
-											<li>试题数量：2</li>
-											<li>
-												挑战难度：
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-											</li>
-											<li>
-												<i class="fa fa-calendar"></i>
-												2016.03.11~2016.05.11
-											</li>
-											<li>
-												<i class="fa fa-user"></i>
-												185人已接受挑战
-											</li>
-										</ul>
-									</div>
-									<!-- /.panel-footer -->
-								</div>
-							</section>
-						</div>
-					
-						<div class="col-md-4">
-							<section id="Section1">
-								<div class="panel panel-default shadow-effect">
-									<div class="col-xs-12 panel-header">
-										<div class="pull-left">
-											<h4 class="line-control">
-												<a href="javascript:;">[高级]iOS工程师</a>
-											</h4>
-											<h4 class="line-control">
-												<a href="javascript:;">世纪创兴（北京）科技有限公司</a>
-											</h4>
-										</div>
-										<div class="pull-right client-info">
-											<span class="percent text-danger">
-												<img class="img-circle" style="width:60px;height:60px" src="./Resource_files/99ff536a-d2ff-4954-8688-ff07181aef5c.jpg">
-											</span>
-										</div>
-										
-											<span class="hot-tag">推荐</span>
-										
-									</div>
-	
-									<div class="panel-body ">
-										<ul class="list-unstyled">
-											<li>月薪： 
-												
-												15K以上
-											</li>
-											<li>职位诱惑：</li>
-											<li>
-												<ul class="companyTags">
-													
-													
-														<li>五险一金</li>
-													
-														<li>年底双薪</li>
-													
-														<li>弹性工作</li>
-													
-												</ul>
-											</li>
-											<li>试题数量：2</li>
-											<li>
-												挑战难度：
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-													<i class="fa fa-star"></i>
-												
-											</li>
-											<li>
-												<i class="fa fa-calendar"></i>
-												2016.03.11~2016.05.11
-											</li>
-											<li>
-												<i class="fa fa-user"></i>
-												269人已接受挑战
-											</li>
-										</ul>
-									</div>
-									<!-- /.panel-footer -->
-								</div>
-							</section>
-						</div>
-					
-				</section>
-			</div>
-			<div class="col-md-3">
+			<div class="col-md-12">
 				<section id="Section2">
 					<div class="panel panel-default resume-block">
 
 						<div class="panel-body">
 							<h2 class="grey">
-								<img src="./Resource_files/99ff536a-d2ff-4954-8688-ff07181aef5c.jpg" height="40px" width="40px;">
-								世纪创兴（北京）科技有限公司
+                                <asp:Label ID="lTitle" runat="server" Text="Label"></asp:Label>
 							</h2>
 							<p>
-								<span class="resume-label">世纪创兴（北京）科技有限公司</span>
-							</p>
-							<p>
-								<span class="resume-label">地点:北京市</span>
-								<span class="resume-label">规模:
-									
-									暂无
+								<span class="resume-label">
+                                    <asp:Label ID="lName" runat="server" Text="Label"></asp:Label>
+                                    <asp:Label ID="lScale" runat="server" Text="Label"></asp:Label>
 								</span>
 							</p>
 							<p>
 								<span class="resume-label">
-									公司网址:
-									<a href=""></a>
+                                    <asp:Label ID="lEmail" runat="server" Text="Label"></asp:Label>
 								</span>
-							</p>
-							<ul class="companyTags" style="display:inline-block;">
-								
-								
-									<li>五险一金</li>
-								
-									<li>年底双薪</li>
-								
-									<li>弹性工作</li>
-								
-							</ul>
-						</div>
-						<!-- /.panel-body -->
-					</div>
-					<div class="panel panel-default resume-block">
-
-						<div class="panel-body">
-							<h3>
-								<i class="fa fa-align-left"></i>
-								公司简介
-							</h3>
-							<p>
-								
-								
 							</p>
 						</div>
 						<!-- /.panel-body -->
@@ -298,46 +117,6 @@
   
   
 
-<ul class="pagination">
-	
-	
-	
-	
-		
-			<li class="disabled">
-		      <a aria-label="Previous">
-		        <span aria-hidden="true">«</span>
-		      </a>
-		    </li>
-		
-		
-	
-	
-	
-		
-			
-				<li class="active"><a>1</a></li>
-			
-			
-		
-	
-	
-	
-	
-		
-			<li class="disabled">
-		      <a aria-label="Next">
-		        <span aria-hidden="true">»</span>
-		      </a>
-		    </li>
-		
-		
-	
-	
-	
-	
-	<li class="disabled"><a>共2条 1页</a></li>
-</ul>
 
 		<!-- /.row -->
 	</div>

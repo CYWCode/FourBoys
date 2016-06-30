@@ -11,5 +11,7 @@ namespace IBLLFac
         List<IBLL.IEnterpriseAdminData> getEnterPriseList();
         IBLL.IEnterpriseAdminData getEnterPrise(int id);
         void deleteEnterpriseUser(int id);
+        List<IBLL.IEPC> getChallengeList(int id);
+        void addChallenge();
     }
 }

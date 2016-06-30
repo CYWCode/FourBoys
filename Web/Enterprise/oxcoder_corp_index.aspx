@@ -158,18 +158,11 @@
                     </li>
             </div> -->
             <div class="col-md-12 top shadow-effect">
-                    <li class="col-md-6 stat" style="text-align:center;">
+                    <li class="col-md-12 stat" style="text-align:center;">
                         <ul>
-                            <h1 style="font-size:100px;"><a href="index.aspx">1</a></h1>
+                            <h1 style="font-size:100px;"><a href="index.aspx">
+                                <asp:Label ID="lNumber" runat="server" Text="0"></asp:Label></a></h1>
                             <li>正在发布中的挑战</li>
-                            <li>还可发布的挑战：<span class="badge badge-info">0</span>个</li>
-                        </ul>
-                    </li>
-                    <li class="col-md-6 stat" style="text-align:center;">
-                        <ul>
-                          <h1 style="font-size:100px;"><a href="index.aspx">0</a></h1>
-                            <li>今天接受挑战数</li>
-                            <li>共帮您找到的人才：<span class="badge badge-info">0</span>个</li>
                         </ul>
                     </li>
             </div>
@@ -181,12 +174,6 @@
                   </div>
                   <div class="panel-body">
                       <a href="new_recruit_1.aspx" class="sub-action">新增挑战邀请</a><!--  <a href="cooper/recommended/talent/index.aspx" class="sub-action">筛选人才</a>-->
-                  </div>
-                  <div class="panel-heading">
-                      <h3 class="panel-title"><img src="./Resource_files/control.png">控制面板</h3>
-                  </div>
-                  <div class="panel-body">
-                      <a href="view_cooper_info.aspx" class="sub-action">修改企业信息</a>
                   </div>
               </div>
             </div>

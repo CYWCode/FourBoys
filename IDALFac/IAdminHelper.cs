@@ -10,5 +10,7 @@ namespace IDALFac
     {
         List<IBLL.IEnterpriseAdminData> getEnterPriseList();
         void deleteEnterpriseUser(int id);
+        List<IBLL.IEPC> getChallengeList(int id);
+        void addChallenge();
     }
 }

@@ -107,9 +107,15 @@
 										</section>
 										<!-- /.page-header -->
 										<div id="Div1">
+                                            			
+				<!-- 用Repeater显示列表 -->
+                <asp:Repeater ID="challengecase" runat="server" >
+                    <ItemTemplate>
+					    
+                        
 											<div class="row">
 												
-												
+									
 													<div class="col-md-12">
 														<div class="panel panel-default project ">
 															<div class="panel-body">
@@ -117,12 +123,12 @@
 																	<!-- new start-->
 																	<div class="col-md-10">
 																		<h2 style="margin: 12px 0 2px 0;">
-																			<a href="screening/user/screening_listaspx?recruitId=3146">[高级]Android工程师</a>
+																			<a href="screening_listaspx?recruitId=<%#((BLLEntity.ChallengeCase)Container.DataItem).id%>"><%#((BLLEntity.ChallengeCase)Container.DataItem).jobTitle%></a>
 																		</h2>
 																		<!-- <p class="text-muted" style="padding: 0;margin: 0;">2015/01/12</p> -->
 																	</div>
 																	<div class="col-md-2">
-																		<a href="screening_list.aspx?recruit    Id=3146" class="btn btn-new1" style="">
+																		<a href="screening_list.aspx?recruitId=<%#((BLLEntity.ChallengeCase)Container.DataItem).id%>" class="btn btn-new1" style="">
 																			去筛选
 																		</a>
 																		
@@ -138,6 +144,8 @@
 												
 											</div>
 											<!-- /.row -->
+                    </ItemTemplate>
+                </asp:Repeater>
 											
   
   

@@ -53,6 +53,47 @@ namespace DALFac
             context.EnterPrise.DeleteOnSubmit(query.First<EnterPrise>());
             context.SubmitChanges();
         }
+
+        public List<IBLL.IEPC> getChallengeList(int id)
+        {
+            List<IBLL.IEPC> list = new List<IBLL.IEPC>();
+
+            DataClassesDataContext context = new DataClassesDataContext();
+
+            var query = from epc in context.EPChallenge
+                        where epc.ChallengeID == id.ToString()
+                        select epc;
+            foreach (EPChallenge epc in query)
+            {
+                IBLL.IEPC item = new BLLEntity.EPC()
+                {
+                    id = (int) epc.ID,
+                    eid = Convert.ToInt32(epc.ChallengeID),
+                    title = epc.ReleaseChallenge
+                };
+                list.Add(item);
+            }
+            return list;
+        }
+
+        public void addChallenge()
+        {
+
+            DataClassesDataContext context = new DataClassesDataContext();
+
+            context.UserChallengeContent.InsertOnSubmit(new UserChallengeContent()
+            {
+                EnterPrise = "" + 12,
+                Pay = 12,
+                Position = "安卓工程师",
+                Questions = 3,
+                StartTime = DateTime.Now,
+                Deadline = DateTime.Now,
+                Number = 0
+            });
+
+            context.SubmitChanges();
+        }
     }
 
 }

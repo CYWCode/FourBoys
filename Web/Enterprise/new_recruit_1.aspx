@@ -197,7 +197,7 @@
 													<small style="margin-left: 20px; display: none;" id="hint1" class="help-block">请选择挑战类型及等级</small>
 												</span>
 												<div class="align-center">
-													<button id="new_challenge_btn_1" class="btn btn-new1" type="submit">确定</button>
+                                                    <asp:Button ID="Button1" runat="server" Text="确定" OnClick="Button1_Click" />
 												</div>
 											</div>
 										</form>

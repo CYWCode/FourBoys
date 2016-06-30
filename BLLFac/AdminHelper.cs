@@ -26,5 +26,15 @@ namespace BLLFac
         {
             new DALFac.AdminHelper().deleteEnterpriseUser(id);
         }
+
+        public List<IBLL.IEPC> getChallengeList(int id)
+        {
+            return new DALFac.AdminHelper().getChallengeList(id);
+        }
+
+        public void addChallenge()
+        {
+            new DALFac.AdminHelper().addChallenge();
+        }
     }
 }

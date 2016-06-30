@@ -13,5 +13,11 @@ namespace Web.Enterprise
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            new BLLFac.AdminHelper().addChallenge();
+            Response.Redirect("oxcoder_corp_index.aspx", false); 
+        }
     }
 }
