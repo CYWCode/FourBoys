@@ -192,7 +192,7 @@
     <Content Include="ChallengeResource\summernote.min.js" />
     <Content Include="ChallengeResource\wlogo_sm.png" />
     <Content Include="ChallengeResource\zmUtil.js" />
-<!--<<<<<< HEAD-->
+    <!--<<<<<< HEAD-->
     <Content Include="ChallengeResult.aspx" />
     <Content Include="Enterprise\new_recruit_1.aspx" />
     <Content Include="Enterprise\oxcoder_corp_index.aspx" />
@@ -202,7 +202,7 @@
     <Content Include="Personal\cooper_info.aspx" />
     <Content Include="Personal\index.aspx" />
     <Content Include="Personal\user_resume.aspx" />
-<!--=======-->
+    <!--=======-->
     <Content Include="PersonCenter\ChallengeResult.aspx" />
     <Content Include="Login_Register\oxcoder_login.aspx" />
     <Content Include="Login_Register\oxcoder_login_files\01.png" />
@@ -255,8 +255,6 @@
     <Content Include="Login_Register\oxcoder_register_files\summernote.css" />
     <Content Include="Login_Register\oxcoder_register_files\summernote.min.js" />
     <Content Include="Login_Register\oxcoder_register_files\wlogo.png" />
-    <Content Include="Login_Register\Personal\index.aspx" />
-    <Content Include="Login_Register\Personal\user_resume.aspx" />
     <Content Include="PersonCenter\change_files\bootstrap-filestyle.js" />
     <Content Include="PersonCenter\change_files\bootstrap-select.min.css" />
     <Content Include="PersonCenter\change_files\bootstrap-select.min.js" />
@@ -354,7 +352,7 @@
     <Content Include="PersonCenter\user_files\user_center.js" />
     <Content Include="PersonCenter\user_files\wlogo_sm.png" />
     <Content Include="PersonCenter\user_files\zmUtil.js" />
-<!-->>>>>>> FYH-->
+    <!-->>>>>>> FYH-->
     <Content Include="Unsigned\customer_case.aspx" />
     <Content Include="Unsigned\index.aspx" />
     <Content Include="Unsigned\mediaReports.aspx" />
@@ -404,6 +402,10 @@
     <Compile Include="EnterpriseInfor_kui\EnterpriseHP.aspx.designer.cs">
       <DependentUpon>EnterpriseHP.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Personal\user_resume.aspx.cs">
+      <DependentUpon>user_resume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="PersonCenter\Challenge.aspx.cs">
       <DependentUpon>Challenge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -432,7 +434,7 @@
     <Compile Include="PersonCenter\ChallengeResult.aspx.designer.cs">
       <DependentUpon>ChallengeResult.aspx</DependentUpon>
     </Compile>
-<!--<<<<<<< HEAD-->
+    <!--<<<<<<< HEAD-->
     <Compile Include="Enterprise\new_recruit_1.aspx.cs">
       <DependentUpon>new_recruit_1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -472,7 +474,7 @@
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-<!--=======-->
+    <!--=======-->
     <Compile Include="Login_Register\oxcoder_login.aspx.cs">
       <DependentUpon>oxcoder_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -486,21 +488,6 @@
     </Compile>
     <Compile Include="Login_Register\oxcoder_Register.aspx.designer.cs">
       <DependentUpon>oxcoder_Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login_Register\Personal\index.aspx.cs">
-<!-->>>>>>> FYH-->
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login_Register\Personal\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login_Register\Personal\user_resume.aspx.cs">
-      <DependentUpon>user_resume.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login_Register\Personal\user_resume.aspx.designer.cs">
-      <DependentUpon>user_resume.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersonCenter\homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
