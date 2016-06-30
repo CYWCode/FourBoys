@@ -38,5 +38,37 @@ namespace Web.Admin
                 tableUser.Rows.Add(newRow);
             }
         }
+<<<<<<< HEAD
+=======
+
+        private void HandleDeleteClick(object sender, EventArgs e)
+        {
+            // 获取被点击按钮对应的用户id
+            string idStr = ((Button)sender).ID;
+            idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
+            // TODO: 删除
+            IAdminNumHelper helper = new AdminNumHelper();
+            helper.deletePersonalUser(Convert.ToInt32(idStr));
+            Response.AddHeader("Refresh", "0"); 
+        }
+
+        private void HandleUpdateClick(object sender, EventArgs e)
+        {
+            // 获取被点击按钮对应的用户id
+            string idStr = ((Button)sender).ID;
+            idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
+            //tableUser.Rows[0].Cells[0].Text = "update " + idStr;
+        }
+
+        private void HandleLoginAsClick(object sender, EventArgs e)
+        {
+            // 获取被点击按钮对应的用户id
+            string idStr = ((Button)sender).ID;
+            idStr = idStr.Substring(idStr.IndexOf('_') + 1, idStr.Length - idStr.IndexOf('_') - 1);
+            // TODO: 与用户管理系统连接
+            //tableUser.Rows[0].Cells[0].Text = "login as " + idStr;
+        }
+
+>>>>>>> parent of b5666d7... 搜索功能完成
     }
 }
